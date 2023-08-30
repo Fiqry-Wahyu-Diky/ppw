@@ -354,9 +354,11 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#apa-itu-crawling"><strong>1. Apa itu Crawling?</strong></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tujuan-crawling"><strong>2. Tujuan Crawling</strong></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#implementasi-crawling"><strong>3. Implementasi Crawling</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#soal">Soal</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#install-package-request">1. Install package request</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#install-dan-import-library">Install dan import library</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#create-code-implementasi">Create code implementasi</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#install-dan-import-library">2. Install dan import library</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#create-code-implementasi">3. Create code implementasi</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#simpan-file-format-csv">4. Simpan file format csv</a></li>
 </ul>
 </li>
 </ul>
@@ -394,6 +396,19 @@ document.write(`
 </section>
 <section id="implementasi-crawling">
 <h2><strong>3. Implementasi Crawling</strong><a class="headerlink" href="#implementasi-crawling" title="Permalink to this heading">#</a></h2>
+<section id="soal">
+<h3>Soal<a class="headerlink" href="#soal" title="Permalink to this heading">#</a></h3>
+<blockquote>
+<div><p>Lakukan crawling data pada data <a class="reference external" href="http://pta.trunojoyo.ac.id">pta.trunojoyo.ac.id</a> dan data dimpan dalam format .csv</p>
+</div></blockquote>
+<ul class="simple">
+<li><p>Judul</p></li>
+<li><p>Nama penulis</p></li>
+<li><p>Pembimbing I</p></li>
+<li><p>Pembimbing II</p></li>
+<li><p>Abstrak</p></li>
+</ul>
+</section>
 <section id="install-package-request">
 <h3>1. Install package request<a class="headerlink" href="#install-package-request" title="Permalink to this heading">#</a></h3>
 <blockquote>
@@ -417,7 +432,7 @@ Requirement already satisfied: certifi&gt;=2017.4.17 in /usr/local/lib/python3.1
 </div>
 </section>
 <section id="install-dan-import-library">
-<h3>Install dan import library<a class="headerlink" href="#install-dan-import-library" title="Permalink to this heading">#</a></h3>
+<h3>2. Install dan import library<a class="headerlink" href="#install-dan-import-library" title="Permalink to this heading">#</a></h3>
 <blockquote>
 <div><p>Dalam implementasi berikut, saya menggunakan package request dan library BeautifulSoup. serta memanggil modul csv untuk format penyimpanan data</p>
 </div></blockquote>
@@ -433,7 +448,7 @@ Requirement already satisfied: certifi&gt;=2017.4.17 in /usr/local/lib/python3.1
 </div>
 </section>
 <section id="create-code-implementasi">
-<h3>Create code implementasi<a class="headerlink" href="#create-code-implementasi" title="Permalink to this heading">#</a></h3>
+<h3>3. Create code implementasi<a class="headerlink" href="#create-code-implementasi" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># membuat variabel place dan indeks untuk menjadikan fleksibel link yang ingin dicrawling. dengan memasukkan kata kunci tujuan</span>
@@ -485,8 +500,16 @@ Requirement already satisfied: certifi&gt;=2017.4.17 in /usr/local/lib/python3.1
           <span class="s1">&#39;Pembimbing II&#39;</span><span class="p">:</span> <span class="n">data_pembimbing2</span><span class="p">,</span>
           <span class="s1">&#39;Abstrak&#39;</span> <span class="p">:</span> <span class="n">abstrak</span>
           <span class="p">})</span>
-
-<span class="c1"># Menyimpan data dalam bentuk CSV</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="simpan-file-format-csv">
+<h3>4. Simpan file format csv<a class="headerlink" href="#simpan-file-format-csv" title="Permalink to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Menyimpan data dalam bentuk CSV</span>
 <span class="n">csv_filename</span> <span class="o">=</span> <span class="s1">&#39;data_crawling_pta.csv&#39;</span>
 <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">csv_filename</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">,</span> <span class="n">newline</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">csv_file</span><span class="p">:</span>
     <span class="n">fieldnames</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Judul&#39;</span><span class="p">,</span> <span class="s1">&#39;Nama Penulis&#39;</span><span class="p">,</span> <span class="s1">&#39;Pembimbing I&#39;</span><span class="p">,</span> <span class="s1">&#39;Pembimbing II&#39;</span><span class="p">,</span> <span class="s1">&#39;Abstrak&#39;</span><span class="p">]</span>
@@ -583,9 +606,11 @@ Requirement already satisfied: certifi&gt;=2017.4.17 in /usr/local/lib/python3.1
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#apa-itu-crawling"><strong>1. Apa itu Crawling?</strong></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tujuan-crawling"><strong>2. Tujuan Crawling</strong></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#implementasi-crawling"><strong>3. Implementasi Crawling</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#soal">Soal</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#install-package-request">1. Install package request</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#install-dan-import-library">Install dan import library</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#create-code-implementasi">Create code implementasi</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#install-dan-import-library">2. Install dan import library</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#create-code-implementasi">3. Create code implementasi</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#simpan-file-format-csv">4. Simpan file format csv</a></li>
 </ul>
 </li>
 </ul>
