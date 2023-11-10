@@ -32,6 +32,6 @@ Here is a preview of the cell contents:
 -------------------
 ['datas=[]', '', '# ==== perulangan pages berita =====', 'for ipages in range(1,17):', '  if ipages < 17:']
 ...
-["      'Penulis':author,", "      'Judul': judul,", "      'Artikel': artikel,", "      'Label' :  label", '          })']
+['          })', '  if ipages == 16:', "    output_str = 'Sedang Crawling Data : ' + '*' * ipages + '.' * (16 - ipages) + ' (' + str(random_speed)+'Kbps/'+ str(ipages * 6.25) + '%)'", '    print(output_str)', "    print(f'Data berhasil dicrawling sebanyak : {len(datas)}')"]
 -------------------
 
