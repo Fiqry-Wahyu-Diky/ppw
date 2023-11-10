@@ -30,8 +30,8 @@ nbclient.exceptions.CellTimeoutError: A cell timed out while it was being execut
 The message was: Cell execution timed out.
 Here is a preview of the cell contents:
 -------------------
-['datas=[]', '', '# ==== perulangan pages berita =====', 'for ipages in range(1,17):', '']
+['datas=[]', '', '# ==== perulangan pages berita =====', 'for ipages in range(1,17):', '  if ipages < 16:']
 ...
-["      'Judul': judul,", "      'Artikel': artikel,", "      'Label' :  label", '          })', "    print('\\n')"]
+["      'Penulis':author,", "      'Judul': judul,", "      'Artikel': artikel,", "      'Label' :  label", '          })']
 -------------------
 
