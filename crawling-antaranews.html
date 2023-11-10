@@ -569,7 +569,6 @@ Requirement already satisfied: certifi&gt;=2017.4.17 in /usr/local/lib/python3.1
     <span class="n">random_speed</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="mi">2</span><span class="p">)</span>
     <span class="n">output_str</span> <span class="o">=</span> <span class="s1">&#39;Sedang Crawling Data : &#39;</span> <span class="o">+</span> <span class="s1">&#39;*&#39;</span> <span class="o">*</span> <span class="n">ipages</span> <span class="o">+</span> <span class="s1">&#39;.&#39;</span> <span class="o">*</span> <span class="p">(</span><span class="mi">16</span> <span class="o">-</span> <span class="n">ipages</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39; (&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">random_speed</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39;Kbps/&#39;</span><span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">ipages</span> <span class="o">*</span> <span class="mf">6.25</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;%)&#39;</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">output_str</span><span class="p">)</span>
-    <span class="c1"># time.sleep(0.1)</span>
   <span class="k">else</span><span class="p">:</span>
     <span class="n">output_str</span> <span class="o">=</span> <span class="s1">&#39;Sedang Crawling Data : &#39;</span> <span class="o">+</span> <span class="s1">&#39;*&#39;</span> <span class="o">*</span> <span class="n">ipages</span> <span class="o">+</span> <span class="s1">&#39;.&#39;</span> <span class="o">*</span> <span class="p">(</span><span class="mi">16</span> <span class="o">-</span> <span class="n">ipages</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39; (&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">random_speed</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39;Kbps/&#39;</span><span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">ipages</span> <span class="o">*</span> <span class="mf">6.25</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;%)&#39;</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">output_str</span><span class="p">)</span>
@@ -659,52 +658,45 @@ Requirement already satisfied: certifi&gt;=2017.4.17 in /usr/local/lib/python3.1
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Sedang Crawling Data : *............... (1.97Kbps/6.25%)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Sedang Crawling Data : *............... (0.39Kbps/6.25%)
 </pre></div>
 </div>
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">KeyboardInterrupt</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="nn">&lt;ipython-input-5-ea2e2844ceda&gt;</span> in <span class="ni">&lt;cell line: 4&gt;</span><span class="nt">()</span>
-<span class="g g-Whitespace">     </span><span class="mi">79</span> 
-<span class="g g-Whitespace">     </span><span class="mi">80</span>       <span class="c1"># ========= author ======</span>
-<span class="ne">---&gt; </span><span class="mi">81</span>       <span class="n">cek_author</span> <span class="o">=</span> <span class="n">soup_artikel</span><span class="o">.</span><span class="n">findAll</span><span class="p">(</span><span class="s2">&quot;p&quot;</span><span class="p">,</span><span class="s2">&quot;text-muted small mt10&quot;</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">82</span>       <span class="k">if</span> <span class="n">cek_author</span><span class="p">:</span>
-<span class="g g-Whitespace">     </span><span class="mi">83</span>         <span class="n">author</span> <span class="o">=</span> <span class="n">soup_artikel</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;p&quot;</span><span class="p">,</span><span class="s2">&quot;text-muted small mt10&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\t\t</span><span class="s2">&quot;</span><span class="p">,</span><span class="s2">&quot; &quot;</span><span class="p">)</span>
+<span class="nn">&lt;ipython-input-5-24c508fb89e3&gt;</span> in <span class="ni">&lt;cell line: 4&gt;</span><span class="nt">()</span>
+<span class="g g-Whitespace">     </span><span class="mi">54</span> 
+<span class="g g-Whitespace">     </span><span class="mi">55</span>       <span class="c1"># ========== date ========</span>
+<span class="ne">---&gt; </span><span class="mi">56</span>       <span class="n">date</span> <span class="o">=</span> <span class="n">soup_artikel</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;span&quot;</span><span class="p">,</span><span class="s2">&quot;article-date&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">text</span>
+<span class="g g-Whitespace">     </span><span class="mi">57</span>       <span class="c1"># print(&quot;date :&quot;,date)</span>
+<span class="g g-Whitespace">     </span><span class="mi">58</span> 
+
+<span class="nn">/usr/local/lib/python3.10/dist-packages/bs4/element.py</span> in <span class="ni">find</span><span class="nt">(self, name, attrs, recursive, string, **kwargs)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1879</span>         <span class="s2">&quot;&quot;&quot;</span>
+<span class="g g-Whitespace">   </span><span class="mi">1880</span><span class="s2">         r = None</span>
+<span class="ne">-&gt; </span><span class="mi">1881</span><span class="s2">         l = self.find_all(name, attrs, recursive, string, 1, _stacklevel=3,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1882</span><span class="s2">                           **kwargs)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1883</span><span class="s2">         if l:</span>
 
 <span class="nn">/usr/local/lib/python3.10/dist-packages/bs4/element.py</span> in <span class="ni">find_all</span><span class="nt">(self, name, attrs, recursive, string, limit, **kwargs)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1908</span>             <span class="n">generator</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">children</span>
-<span class="g g-Whitespace">   </span><span class="mi">1909</span>         <span class="n">_stacklevel</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s1">&#39;_stacklevel&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
-<span class="ne">-&gt; </span><span class="mi">1910</span>         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_find_all</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">attrs</span><span class="p">,</span> <span class="n">string</span><span class="p">,</span> <span class="n">limit</span><span class="p">,</span> <span class="n">generator</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1911</span>                               <span class="n">_stacklevel</span><span class="o">=</span><span class="n">_stacklevel</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1912</span>     <span class="n">findAll</span> <span class="o">=</span> <span class="n">find_all</span>       <span class="c1"># BS3</span>
+<span class="g g-Whitespace">   </span><span class="mi">1908</span><span class="s2">             generator = self.children</span>
+<span class="g g-Whitespace">   </span><span class="mi">1909</span><span class="s2">         _stacklevel = kwargs.pop(&#39;_stacklevel&#39;, 2)</span>
+<span class="ne">-&gt; </span><span class="mi">1910</span><span class="s2">         return self._find_all(name, attrs, string, limit, generator,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1911</span><span class="s2">                               _stacklevel=_stacklevel+1, **kwargs)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1912</span><span class="s2">     findAll = find_all       # BS3</span>
 
 <span class="nn">/usr/local/lib/python3.10/dist-packages/bs4/element.py</span> in <span class="ni">_find_all</span><span class="nt">(self, name, attrs, string, limit, generator, **kwargs)</span>
-<span class="g g-Whitespace">    </span><span class="mi">840</span>                 <span class="k">break</span>
-<span class="g g-Whitespace">    </span><span class="mi">841</span>             <span class="k">if</span> <span class="n">i</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">842</span>                 <span class="n">found</span> <span class="o">=</span> <span class="n">strainer</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">843</span>                 <span class="k">if</span> <span class="n">found</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">844</span>                     <span class="n">results</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">found</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">840</span><span class="s2">                 break</span>
+<span class="g g-Whitespace">    </span><span class="mi">841</span><span class="s2">             if i:</span>
+<span class="ne">--&gt; </span><span class="mi">842</span><span class="s2">                 found = strainer.search(i)</span>
+<span class="g g-Whitespace">    </span><span class="mi">843</span><span class="s2">                 if found:</span>
+<span class="g g-Whitespace">    </span><span class="mi">844</span><span class="s2">                     results.append(found)</span>
 
 <span class="nn">/usr/local/lib/python3.10/dist-packages/bs4/element.py</span> in <span class="ni">search</span><span class="nt">(self, markup)</span>
-<span class="g g-Whitespace">   </span><span class="mi">2198</span>         <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">markup</span><span class="p">,</span> <span class="n">Tag</span><span class="p">):</span>
-<span class="g g-Whitespace">   </span><span class="mi">2199</span>             <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">string</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">attrs</span><span class="p">:</span>
-<span class="ne">-&gt; </span><span class="mi">2200</span>                 <span class="n">found</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">search_tag</span><span class="p">(</span><span class="n">markup</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">2201</span>         <span class="c1"># If it&#39;s text, make sure the text matches.</span>
-<span class="g g-Whitespace">   </span><span class="mi">2202</span>         <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">markup</span><span class="p">,</span> <span class="n">NavigableString</span><span class="p">)</span> <span class="ow">or</span> \
-
-<span class="nn">/usr/local/lib/python3.10/dist-packages/bs4/element.py</span> in <span class="ni">search_tag</span><span class="nt">(self, markup_name, markup_attrs)</span>
-<span class="g g-Whitespace">   </span><span class="mi">2136</span>             <span class="c1"># searching for a tag with one specific name, and we&#39;re</span>
-<span class="g g-Whitespace">   </span><span class="mi">2137</span>             <span class="c1"># looking at a tag with a different name.</span>
-<span class="ne">-&gt; </span><span class="mi">2138</span>             <span class="k">if</span> <span class="n">markup</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">markup</span><span class="o">.</span><span class="n">prefix</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">!=</span> <span class="n">markup</span><span class="o">.</span><span class="n">name</span><span class="p">:</span>
-<span class="g g-Whitespace">   </span><span class="mi">2139</span>                  <span class="k">return</span> <span class="kc">False</span>
-<span class="g g-Whitespace">   </span><span class="mi">2140</span> 
-
-<span class="nn">/usr/local/lib/python3.10/dist-packages/bs4/element.py</span> in <span class="ni">__bool__</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1546</span>         <span class="k">return</span> <span class="n">x</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">contents</span>
-<span class="g g-Whitespace">   </span><span class="mi">1547</span> 
-<span class="ne">-&gt; </span><span class="mi">1548</span>     <span class="k">def</span> <span class="fm">__bool__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="g g-Whitespace">   </span><span class="mi">1549</span>         <span class="s2">&quot;A tag is non-None even if it has no contents.&quot;</span>
-<span class="g g-Whitespace">   </span><span class="mi">1550</span>         <span class="k">return</span> <span class="kc">True</span>
+<span class="g g-Whitespace">   </span><span class="mi">2202</span><span class="s2">         elif isinstance(markup, NavigableString) or </span><span class="se">\</span>
+<span class="g g-Whitespace">   </span><span class="mi">2203</span><span class="s2">                  isinstance(markup, str):</span>
+<span class="ne">-&gt; </span><span class="mi">2204</span><span class="s2">             if not self.name and not self.attrs and self._matches(markup, self.string):</span>
+<span class="g g-Whitespace">   </span><span class="mi">2205</span><span class="s2">                 found = markup</span>
+<span class="g g-Whitespace">   </span><span class="mi">2206</span><span class="s2">         else:</span>
 
 <span class="ne">KeyboardInterrupt</span>: 
 </pre></div>
