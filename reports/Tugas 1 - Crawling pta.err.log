@@ -30,8 +30,7 @@ nbclient.exceptions.CellTimeoutError: A cell timed out while it was being execut
 The message was: Cell execution timed out.
 Here is a preview of the cell contents:
 -------------------
-['# membuat variabel datas (array kosong) untuk menyimpan semua data yang dicrawling', 'datas = []', '', 'for ipages in range(1,50):', '  response = requests.get(url+str(ipages)) # variabel response melakukan permintaan HTTP get ke url yang disimpan dan mendapatkan data dari halaman web']
-...
-["          'Abstrak' : abstrak", '          })', '    i+=1', '  print("\\n")', 'print ("data telah selesai dicrawling")']
+#panggil fungsi
+datas = crawling(url)
 -------------------
 
