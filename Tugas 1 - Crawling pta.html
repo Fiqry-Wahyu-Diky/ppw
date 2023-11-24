@@ -487,57 +487,47 @@ Requirement already satisfied: certifi&gt;=2017.4.17 in /usr/local/lib/python3.1
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">crawling</span><span class="p">(</span><span class="n">url</span><span class="p">):</span>
-  <span class="c1"># membuat variabel datas (array kosong) untuk menyimpan semua data yang dicrawling</span>
-  <span class="n">datas</span> <span class="o">=</span> <span class="p">[]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># membuat variabel datas (array kosong) untuk menyimpan semua data yang dicrawling</span>
+<span class="n">datas</span> <span class="o">=</span> <span class="p">[]</span>
 
-  <span class="k">for</span> <span class="n">ipages</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">50</span><span class="p">):</span>
-    <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">ipages</span><span class="p">))</span> <span class="c1"># variabel response melakukan permintaan HTTP get ke url yang disimpan dan mendapatkan data dari halaman web</span>
-    <span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">text</span><span class="p">,</span> <span class="s1">&#39;html.parser&#39;</span><span class="p">)</span> <span class="c1">#Isi teks dari respons HTTP yang diterima dari server web setelah melakukan permintaan GET.</span>
-    <span class="n">pages</span> <span class="o">=</span> <span class="n">soup</span><span class="o">.</span><span class="n">findAll</span><span class="p">(</span><span class="s1">&#39;li&#39;</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;data-id&#39;</span> <span class="p">:</span><span class="s1">&#39;id-1&#39;</span><span class="p">})</span> <span class="c1">#menemukan semua &lt;li&gt; yang memuat data-id : id-1</span>
+<span class="k">for</span> <span class="n">ipages</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">50</span><span class="p">):</span>
+  <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">ipages</span><span class="p">))</span> <span class="c1"># variabel response melakukan permintaan HTTP get ke url yang disimpan dan mendapatkan data dari halaman web</span>
+  <span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">text</span><span class="p">,</span> <span class="s1">&#39;html.parser&#39;</span><span class="p">)</span> <span class="c1">#Isi teks dari respons HTTP yang diterima dari server web setelah melakukan permintaan GET.</span>
+  <span class="n">pages</span> <span class="o">=</span> <span class="n">soup</span><span class="o">.</span><span class="n">findAll</span><span class="p">(</span><span class="s1">&#39;li&#39;</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;data-id&#39;</span> <span class="p">:</span><span class="s1">&#39;id-1&#39;</span><span class="p">})</span> <span class="c1">#menemukan semua &lt;li&gt; yang memuat data-id : id-1</span>
 
-    <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
-    <span class="c1"># menemukan data judul, penulis, dan pembimbing</span>
-    <span class="k">for</span> <span class="n">items</span> <span class="ow">in</span> <span class="n">pages</span><span class="p">:</span>
-      <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;...Crawling data pages </span><span class="si">{</span><span class="n">ipages</span><span class="si">}</span><span class="s1"> data ke-</span><span class="si">{</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
-      <span class="c1"># ==== mencari judul ====</span>
-      <span class="n">data_title</span>           <span class="o">=</span> <span class="n">items</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;title&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">text</span> <span class="c1">#setiap iterasi list pages mencari &lt;a&gt; class &#39;title&#39;</span>
-      <span class="c1"># data_span            = items.find_all(&#39;span&#39;)</span>
+  <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+  <span class="c1"># menemukan data judul, penulis, dan pembimbing</span>
+  <span class="k">for</span> <span class="n">items</span> <span class="ow">in</span> <span class="n">pages</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;...Crawling data pages </span><span class="si">{</span><span class="n">ipages</span><span class="si">}</span><span class="s1"> data ke-</span><span class="si">{</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="c1"># ==== mencari judul ====</span>
+    <span class="n">data_title</span>           <span class="o">=</span> <span class="n">items</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;title&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">text</span> <span class="c1">#setiap iterasi list pages mencari &lt;a&gt; class &#39;title&#39;</span>
+    <span class="c1"># data_span            = items.find_all(&#39;span&#39;)</span>
 
-      <span class="c1"># ==== mencari penulis ====</span>
-      <span class="n">data_penulis</span>         <span class="o">=</span> <span class="n">items</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s1">&#39;span&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;Penulis :&#39;</span><span class="p">,</span><span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="c1">#setiap iterasi list pages mencari &lt;span&gt; ambil indeksnya [0]</span>
+    <span class="c1"># ==== mencari penulis ====</span>
+    <span class="n">data_penulis</span>         <span class="o">=</span> <span class="n">items</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s1">&#39;span&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;Penulis :&#39;</span><span class="p">,</span><span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="c1">#setiap iterasi list pages mencari &lt;span&gt; ambil indeksnya [0]</span>
 
-      <span class="c1"># ==== mencari pembimbing ====</span>
-      <span class="n">data_pembimbing1</span>     <span class="o">=</span> <span class="n">items</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s1">&#39;span&#39;</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;Dosen Pembimbing I :&#39;</span><span class="p">,</span><span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="c1">#[1]</span>
-      <span class="n">data_pembimbing2</span>     <span class="o">=</span> <span class="n">items</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s1">&#39;span&#39;</span><span class="p">)[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;Dosen Pembimbing II :&#39;</span><span class="p">,</span><span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="c1">#[2]</span>
+    <span class="c1"># ==== mencari pembimbing ====</span>
+    <span class="n">data_pembimbing1</span>     <span class="o">=</span> <span class="n">items</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s1">&#39;span&#39;</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;Dosen Pembimbing I :&#39;</span><span class="p">,</span><span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="c1">#[1]</span>
+    <span class="n">data_pembimbing2</span>     <span class="o">=</span> <span class="n">items</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s1">&#39;span&#39;</span><span class="p">)[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;Dosen Pembimbing II :&#39;</span><span class="p">,</span><span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="c1">#[2]</span>
 
-      <span class="c1"># ==== mencari abstrak ====</span>
-      <span class="n">button_abstrak_pages</span>   <span class="o">=</span> <span class="n">items</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;gray button&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;href&#39;</span><span class="p">)</span> <span class="c1">#setiap iterasi list pages mencari &lt;a&gt; ambil link href</span>
-      <span class="n">response_abstrak_pages</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">button_abstrak_pages</span><span class="p">)</span> <span class="c1">#meminta HTTP dari setiap link yang ada di variabel button_abstrak_pages</span>
+    <span class="c1"># ==== mencari abstrak ====</span>
+    <span class="n">button_abstrak_pages</span>   <span class="o">=</span> <span class="n">items</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;gray button&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;href&#39;</span><span class="p">)</span> <span class="c1">#setiap iterasi list pages mencari &lt;a&gt; ambil link href</span>
+    <span class="n">response_abstrak_pages</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">button_abstrak_pages</span><span class="p">)</span> <span class="c1">#meminta HTTP dari setiap link yang ada di variabel button_abstrak_pages</span>
 
-      <span class="n">soup_abstrak</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">response_abstrak_pages</span><span class="o">.</span><span class="n">text</span><span class="p">,</span> <span class="s1">&#39;html.parser&#39;</span><span class="p">)</span> <span class="c1"># Isi teks dari respons HTTP yang diterima dari server web</span>
-      <span class="n">abstrak</span> <span class="o">=</span>  <span class="n">soup_abstrak</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;p&#39;</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;align&#39;</span> <span class="p">:</span><span class="s1">&#39;justify&#39;</span><span class="p">})</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;ABSTRAK&#39;</span><span class="p">,</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
-      <span class="c1"># print(abstrak)</span>
+    <span class="n">soup_abstrak</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">response_abstrak_pages</span><span class="o">.</span><span class="n">text</span><span class="p">,</span> <span class="s1">&#39;html.parser&#39;</span><span class="p">)</span> <span class="c1"># Isi teks dari respons HTTP yang diterima dari server web</span>
+    <span class="n">abstrak</span> <span class="o">=</span>  <span class="n">soup_abstrak</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;p&#39;</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;align&#39;</span> <span class="p">:</span><span class="s1">&#39;justify&#39;</span><span class="p">})</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;ABSTRAK&#39;</span><span class="p">,</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+    <span class="c1"># print(abstrak)</span>
 
-      <span class="n">datas</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
-            <span class="s1">&#39;Judul&#39;</span><span class="p">:</span> <span class="n">data_title</span><span class="p">,</span>
-            <span class="s1">&#39;Nama Penulis&#39;</span><span class="p">:</span> <span class="n">data_penulis</span><span class="p">,</span>
-            <span class="s1">&#39;Pembimbing I&#39;</span><span class="p">:</span> <span class="n">data_pembimbing1</span><span class="p">,</span>
-            <span class="s1">&#39;Pembimbing II&#39;</span><span class="p">:</span> <span class="n">data_pembimbing2</span><span class="p">,</span>
-            <span class="s1">&#39;Abstrak&#39;</span> <span class="p">:</span> <span class="n">abstrak</span>
-            <span class="p">})</span>
-      <span class="n">i</span><span class="o">+=</span><span class="mi">1</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
-  <span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;data telah selesai dicrawling&quot;</span><span class="p">)</span>
-  <span class="k">return</span> <span class="n">datas</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#panggil fungsi</span>
-<span class="n">datas</span> <span class="o">=</span> <span class="n">crawling</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+    <span class="n">datas</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
+          <span class="s1">&#39;Judul&#39;</span><span class="p">:</span> <span class="n">data_title</span><span class="p">,</span>
+          <span class="s1">&#39;Nama Penulis&#39;</span><span class="p">:</span> <span class="n">data_penulis</span><span class="p">,</span>
+          <span class="s1">&#39;Pembimbing I&#39;</span><span class="p">:</span> <span class="n">data_pembimbing1</span><span class="p">,</span>
+          <span class="s1">&#39;Pembimbing II&#39;</span><span class="p">:</span> <span class="n">data_pembimbing2</span><span class="p">,</span>
+          <span class="s1">&#39;Abstrak&#39;</span> <span class="p">:</span> <span class="n">abstrak</span>
+          <span class="p">})</span>
+    <span class="n">i</span><span class="o">+=</span><span class="mi">1</span>
+  <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;data telah selesai dicrawling&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -601,16 +591,12 @@ Requirement already satisfied: certifi&gt;=2017.4.17 in /usr/local/lib/python3.1
 </div>
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">KeyboardInterrupt</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="nn">&lt;ipython-input-5-6eefae316b13&gt;</span> in <span class="ni">&lt;cell line: 2&gt;</span><span class="nt">()</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1">#panggil fungsi</span>
-<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">datas</span> <span class="o">=</span> <span class="n">crawling</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
-
-<span class="nn">&lt;ipython-input-4-6228bf34e0bf&gt;</span> in <span class="ni">crawling</span><span class="nt">(url)</span>
-<span class="g g-Whitespace">     </span><span class="mi">25</span>       <span class="c1"># ==== mencari abstrak ====</span>
-<span class="g g-Whitespace">     </span><span class="mi">26</span>       <span class="n">button_abstrak_pages</span>   <span class="o">=</span> <span class="n">items</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;gray button&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;href&#39;</span><span class="p">)</span> <span class="c1">#setiap iterasi list pages mencari &lt;a&gt; ambil link href</span>
-<span class="ne">---&gt; </span><span class="mi">27</span>       <span class="n">response_abstrak_pages</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">button_abstrak_pages</span><span class="p">)</span> <span class="c1">#meminta HTTP dari setiap link yang ada di variabel button_abstrak_pages</span>
-<span class="g g-Whitespace">     </span><span class="mi">28</span> 
-<span class="g g-Whitespace">     </span><span class="mi">29</span>       <span class="n">soup_abstrak</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">response_abstrak_pages</span><span class="o">.</span><span class="n">text</span><span class="p">,</span> <span class="s1">&#39;html.parser&#39;</span><span class="p">)</span> <span class="c1"># Isi teks dari respons HTTP yang diterima dari server web</span>
+<span class="nn">&lt;ipython-input-4-637ebc85a69d&gt;</span> in <span class="ni">&lt;cell line: 4&gt;</span><span class="nt">()</span>
+<span class="g g-Whitespace">     </span><span class="mi">24</span>     <span class="c1"># ==== mencari abstrak ====</span>
+<span class="g g-Whitespace">     </span><span class="mi">25</span>     <span class="n">button_abstrak_pages</span>   <span class="o">=</span> <span class="n">items</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;gray button&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;href&#39;</span><span class="p">)</span> <span class="c1">#setiap iterasi list pages mencari &lt;a&gt; ambil link href</span>
+<span class="ne">---&gt; </span><span class="mi">26</span>     <span class="n">response_abstrak_pages</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">button_abstrak_pages</span><span class="p">)</span> <span class="c1">#meminta HTTP dari setiap link yang ada di variabel button_abstrak_pages</span>
+<span class="g g-Whitespace">     </span><span class="mi">27</span> 
+<span class="g g-Whitespace">     </span><span class="mi">28</span>     <span class="n">soup_abstrak</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">response_abstrak_pages</span><span class="o">.</span><span class="n">text</span><span class="p">,</span> <span class="s1">&#39;html.parser&#39;</span><span class="p">)</span> <span class="c1"># Isi teks dari respons HTTP yang diterima dari server web</span>
 
 <span class="nn">/usr/local/lib/python3.10/dist-packages/requests/api.py</span> in <span class="ni">get</span><span class="nt">(url, params, **kwargs)</span>
 <span class="g g-Whitespace">     </span><span class="mi">71</span>     <span class="s2">&quot;&quot;&quot;</span>
@@ -711,13 +697,6 @@ Requirement already satisfied: certifi&gt;=2017.4.17 in /usr/local/lib/python3.1
 <span class="g g-Whitespace">   </span><span class="mi">1132</span><span class="s2">                 return self._sslobj.read(len)</span>
 
 <span class="ne">KeyboardInterrupt</span>: 
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">datas</span>
 </pre></div>
 </div>
 </div>
