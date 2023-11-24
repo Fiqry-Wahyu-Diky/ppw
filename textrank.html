@@ -1,0 +1,3034 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Data &#8212; Pencarian dan Penambangan WEB</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6" />
+  <script src="_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=365ca57ee442770a23c6"></script>
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'textrank';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logo.png" class="logo__image only-light" alt="Pencarian dan Penambangan WEB - Home"/>
+    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="Pencarian dan Penambangan WEB - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Kumpulan Tugas
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Tugas</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Tugas%201%20-%20Crawling%20pta.html"><strong>Crawling Data Website PTA Trunojoyo</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Tugas%202%20-%20Normalisasi%20Text.html"><strong>Tugas 2 - Normalisasi Data Teks</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Tugas%203%20-%20Reduksi%20dimensi%20%28LDA%29.html"><strong>Tugas 3 - Reduksi Dimensi dengan Menggunakan Latent Dirichlet Allocation (LDA)</strong></a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">UTS</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="UTS-PPW.html"><strong>UTS - Crawling Data Hingga Fit data</strong></a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Prepare UAS</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="crawling-antaranews.html"><strong>Crawling berita</strong></a></li>
+
+
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/Fiqry-Wahyu-Diky/ppw" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/Fiqry-Wahyu-Diky/ppw/issues/new?title=Issue%20on%20page%20%2Ftextrank.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/textrank.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Data</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Data</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#eda-explorasi-data-analysis">EDA (Explorasi Data Analysis)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#download-dataset">Download dataset</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#baca-dataset">Baca dataset</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#banyak-dataset">Banyak dataset</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#banyak-dataset-setiap-kelas">Banyak dataset setiap kelas</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#preprocessing">Preprocessing</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#missing-value">Missing Value</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#duplicate">Duplicate</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#punctuation-process"><strong>Punctuation process</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#stopword"><strong>Stopword</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tokenizing">Tokenizing</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vsm">VSM</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#term-freq">Term Freq</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#co-occurrence-metrics">Co-occurrence metrics</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tambahkan-ke-graf-dan-beri-treshold">Tambahkan ke graf dan beri treshold</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hitung-centrality">Hitung Centrality</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pagerank">Pagerank</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ranking-kata-kunci">Ranking kata kunci</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#meranking-kata-sesuai-kalimat-artikel">Meranking kata sesuai kalimat artikel</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#save">Save</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ex-sentence-tfidf-coocurence-graf">Ex sentence tfidf, coocurence, graf</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#modeling">Modeling</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">EDA (Explorasi Data Analysis)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">1.Download dataset</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">2.Baca dataset</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Banyak dataset</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Preprocessing</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cleaning">Cleaning</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id6"><strong>Stopword</strong></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tfidf">TFIDF</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#model">Model</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#split-dataset">Split dataset</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#naive-bayes">Naive Bayes</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#knn">KNN</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#random-forest">Random Forest</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#evaluasi">Evaluasi</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#implementasi">Implementasi</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="data">
+<h1>Data<a class="headerlink" href="#data" title="Permalink to this heading">#</a></h1>
+<section id="eda-explorasi-data-analysis">
+<h2>EDA (Explorasi Data Analysis)<a class="headerlink" href="#eda-explorasi-data-analysis" title="Permalink to this heading">#</a></h2>
+<blockquote>
+<div><p>proses analisis awal yang dilakukan pada dataset untuk memahami karakteristik, pola, dan struktur data sebelum melakukan analisis lebih lanjut atau membangun model.</p>
+</div></blockquote>
+<section id="download-dataset">
+<h3>Download dataset<a class="headerlink" href="#download-dataset" title="Permalink to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">gdown</span>
+<span class="kn">import</span> <span class="nn">string</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;data_crawling_berita_antaranews.csv&#39;</span>
+<span class="n">gdown</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;https://drive.google.com/uc?id=1iuY-raVaRjcwV63Ua8fIGa9dC01yvPvQ&#39;</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">quiet</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading...
+From: https://drive.google.com/uc?id=1iuY-raVaRjcwV63Ua8fIGa9dC01yvPvQ
+To: /content/drive/MyDrive/KULIAH/SEMESTER 7/PPW/ppw/PAGES/data_crawling_berita_antaranews.csv
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  0%|          | 0.00/1.88M [00:00&lt;?, ?B/s]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>100%|██████████| 1.88M/1.88M [00:00&lt;00:00, 127MB/s]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;data_crawling_berita_antaranews.csv&#39;
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="baca-dataset">
+<h3>Baca dataset<a class="headerlink" href="#baca-dataset" title="Permalink to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;data_crawling_berita_antaranews.csv&quot;</span><span class="p">)</span>
+<span class="n">data</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+  <div id="df-3cd6604e-39b3-433f-8f22-5d650b0afc04" class="colab-df-container">
+    <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Tanggal</th>
+      <th>Penulis</th>
+      <th>Judul</th>
+      <th>Artikel</th>
+      <th>Label</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Senin, 30 Oktober 2023 08:33 WIB</td>
+      <td>Pewarta: Rivan Awal LinggaEditor: Sigit Pinard...</td>
+      <td>Masinton Pasaribu harap pemeriksaan 9 hakim ko...</td>
+      <td>Jakarta (ANTARA) - Politikus PDI Perjuang...</td>
+      <td>politik</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Senin, 30 Oktober 2023 05:28 WIB</td>
+      <td>Pewarta: Laily RahmawatyEditor: Laode Masrafi ...</td>
+      <td>Politik kemarin, Kaesang effect hingga target ...</td>
+      <td>Jakarta (ANTARA) - Lima berita politik pa...</td>
+      <td>politik</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Senin, 30 Oktober 2023 00:11 WIB</td>
+      <td>NaN</td>
+      <td>Din Syamsuddin ajak warga Muhammadiyah tak apa...</td>
+      <td>ANTARA - Tokoh Muhammadiy...</td>
+      <td>politik</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Minggu, 29 Oktober 2023 23:31 WIB</td>
+      <td>Pewarta: Rina Nur AnggrainiEditor: Imam Budila...</td>
+      <td>PKS heran hasil survei AMIN selalu buruk</td>
+      <td>Jakarta (ANTARA) - Sekretaris Jenderal PK...</td>
+      <td>politik</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Minggu, 29 Oktober 2023 23:20 WIB</td>
+      <td>Pewarta: Rivan Awal LinggaEditor: Imam Budilak...</td>
+      <td>Sekjen PKS targetkan tiga perempat warga NU du...</td>
+      <td>Jakarta (ANTARA) - Sekretaris Jenderal (S...</td>
+      <td>politik</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>715</th>
+      <td>Senin, 23 Oktober 2023 15:40 WIB</td>
+      <td>Pewarta: JuraidiEditor: Eka Arifa Rusqiyati  C...</td>
+      <td>Riadi bangga sebagai pembawa bendera di pembuk...</td>
+      <td>Medan (ANTARA) - Atlet Para atletik asal ...</td>
+      <td>olahraga</td>
+    </tr>
+    <tr>
+      <th>716</th>
+      <td>Senin, 23 Oktober 2023 15:30 WIB</td>
+      <td>Pewarta: Arnidhya Nur ZhafiraEditor: Eka Arifa...</td>
+      <td>Pelatih pastikan kondisi atlet powerlifting pr...</td>
+      <td>Xiaoshan, China (ANTARA) - Asisten pelati...</td>
+      <td>olahraga</td>
+    </tr>
+    <tr>
+      <th>717</th>
+      <td>Senin, 23 Oktober 2023 15:23 WIB</td>
+      <td>Pewarta: Arnidhya Nur ZhafiraEditor: Eka Arifa...</td>
+      <td>Saptoyogo raih medali emas pertama untuk Indon...</td>
+      <td>Hangzhou, China (ANTARA) - Pelari Saptoyo...</td>
+      <td>olahraga</td>
+    </tr>
+    <tr>
+      <th>718</th>
+      <td>Senin, 23 Oktober 2023 15:11 WIB</td>
+      <td>NaN</td>
+      <td>Lepas kontingen futsal putra U-18, Babel optim...</td>
+      <td>ANTARA - Pemerintah Provinsi Kepulauan Bangka ...</td>
+      <td>olahraga</td>
+    </tr>
+    <tr>
+      <th>719</th>
+      <td>Senin, 23 Oktober 2023 14:33 WIB</td>
+      <td>Pewarta: A Rauf Andar AdipatiEditor: Eka Arifa...</td>
+      <td>Djokovic dan Swiatek mulai musim 2024 dengan t...</td>
+      <td>Jakarta (ANTARA) - Novak Djokovic dan Iga...</td>
+      <td>olahraga</td>
+    </tr>
+  </tbody>
+</table>
+<p>720 rows × 5 columns</p>
+</div>
+    <div class="colab-df-buttons">
+      
+  <div class="colab-df-container">
+    <button class="colab-df-convert" onclick="convertToInteractive('df-3cd6604e-39b3-433f-8f22-5d650b0afc04')"
+            title="Convert this dataframe to an interactive table."
+            style="display:none;">
+      
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960">
+    <path d="M120-120v-720h720v720H120Zm60-500h600v-160H180v160Zm220 220h160v-160H400v160Zm0 220h160v-160H400v160ZM180-400h160v-160H180v160Zm440 0h160v-160H620v160ZM180-180h160v-160H180v160Zm440 0h160v-160H620v160Z"/>
+  </svg>
+    </button>
+    
+  <style>
+    .colab-df-container {
+      display:flex;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    .colab-df-buttons div {
+      margin-bottom: 4px;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+    <script>
+      const buttonEl =
+        document.querySelector('#df-3cd6604e-39b3-433f-8f22-5d650b0afc04 button.colab-df-convert');
+      buttonEl.style.display =
+        google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+      async function convertToInteractive(key) {
+        const element = document.querySelector('#df-3cd6604e-39b3-433f-8f22-5d650b0afc04');
+        const dataTable =
+          await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                    [key], {});
+        if (!dataTable) return;
+
+        const docLinkHtml = 'Like what you see? Visit the ' +
+          '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+          + ' to learn more about interactive tables.';
+        element.innerHTML = '';
+        dataTable['output_type'] = 'display_data';
+        await google.colab.output.renderOutput(dataTable, element);
+        const docLink = document.createElement('div');
+        docLink.innerHTML = docLinkHtml;
+        element.appendChild(docLink);
+      }
+    </script>
+  </div>
+  
+    </div>
+  </div>
+  </div></div>
+</div>
+<section id="banyak-dataset">
+<h4>Banyak dataset<a class="headerlink" href="#banyak-dataset" title="Permalink to this heading">#</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>720
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="banyak-dataset-setiap-kelas">
+<h4>Banyak dataset setiap kelas<a class="headerlink" href="#banyak-dataset-setiap-kelas" title="Permalink to this heading">#</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">count_ekonomi</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">count_olahraga</span><span class="o">=</span> <span class="mi">0</span>
+<span class="n">count_politik</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="k">for</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;Label&#39;</span><span class="p">]:</span>
+  <span class="k">if</span> <span class="n">value</span> <span class="o">==</span> <span class="s1">&#39;ekonomi&#39;</span><span class="p">:</span>
+    <span class="n">count_ekonomi</span><span class="o">+=</span><span class="mi">1</span>
+  <span class="k">elif</span> <span class="n">value</span> <span class="o">==</span> <span class="s1">&#39;olahraga&#39;</span><span class="p">:</span>
+    <span class="n">count_olahraga</span><span class="o">+=</span><span class="mi">1</span>
+  <span class="k">else</span><span class="p">:</span>
+    <span class="n">count_politik</span> <span class="o">+=</span> <span class="mi">1</span>
+
+<span class="nb">print</span><span class="p">(</span>
+<span class="sa">f</span><span class="s1">&#39;&#39;&#39;</span>
+<span class="s1">Banyak data ekonomi = </span><span class="si">{</span><span class="n">count_ekonomi</span><span class="si">}</span><span class="s1"> data</span>
+<span class="s1">Banyak data olahraga= </span><span class="si">{</span><span class="n">count_olahraga</span><span class="si">}</span><span class="s1"> data</span>
+<span class="s1">Banyak data politik = </span><span class="si">{</span><span class="n">count_politik</span><span class="si">}</span><span class="s1"> data</span>
+
+<span class="s1">Total Data          = </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">)</span><span class="si">}</span><span class="s1"> data</span>
+<span class="s1">&#39;&#39;&#39;</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Banyak data ekonomi = 240 data
+Banyak data olahraga= 240 data
+Banyak data politik = 240 data
+
+Total Data          = 720 data
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+</section>
+<section id="preprocessing">
+<h2>Preprocessing<a class="headerlink" href="#preprocessing" title="Permalink to this heading">#</a></h2>
+<section id="missing-value">
+<h3>Missing Value<a class="headerlink" href="#missing-value" title="Permalink to this heading">#</a></h3>
+<blockquote>
+<div><p>merupakan nilai pada sebuah data yang kosong/none sehingga harus dihapus untuk proses lebih lanjut</p>
+</div></blockquote>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span>
+<span class="n">data</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+  <div id="df-3a24ef40-e5f3-4bf1-b7fe-77ebc000887f" class="colab-df-container">
+    <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Tanggal</th>
+      <th>Penulis</th>
+      <th>Judul</th>
+      <th>Artikel</th>
+      <th>Label</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Senin, 30 Oktober 2023 08:33 WIB</td>
+      <td>Pewarta: Rivan Awal LinggaEditor: Sigit Pinard...</td>
+      <td>Masinton Pasaribu harap pemeriksaan 9 hakim ko...</td>
+      <td>Jakarta (ANTARA) - Politikus PDI Perjuang...</td>
+      <td>politik</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Senin, 30 Oktober 2023 05:28 WIB</td>
+      <td>Pewarta: Laily RahmawatyEditor: Laode Masrafi ...</td>
+      <td>Politik kemarin, Kaesang effect hingga target ...</td>
+      <td>Jakarta (ANTARA) - Lima berita politik pa...</td>
+      <td>politik</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Minggu, 29 Oktober 2023 23:31 WIB</td>
+      <td>Pewarta: Rina Nur AnggrainiEditor: Imam Budila...</td>
+      <td>PKS heran hasil survei AMIN selalu buruk</td>
+      <td>Jakarta (ANTARA) - Sekretaris Jenderal PK...</td>
+      <td>politik</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Minggu, 29 Oktober 2023 23:20 WIB</td>
+      <td>Pewarta: Rivan Awal LinggaEditor: Imam Budilak...</td>
+      <td>Sekjen PKS targetkan tiga perempat warga NU du...</td>
+      <td>Jakarta (ANTARA) - Sekretaris Jenderal (S...</td>
+      <td>politik</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>Minggu, 29 Oktober 2023 22:45 WIB</td>
+      <td>Pewarta: Hendri Sukma IndrawanEditor: Didik Ku...</td>
+      <td>Wakil Ketua MPR: Pilpres adalah kontestasi put...</td>
+      <td>Jakarta (ANTARA) - Wakil Ketua Majelis Pe...</td>
+      <td>politik</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>714</th>
+      <td>Senin, 23 Oktober 2023 15:49 WIB</td>
+      <td>Pewarta: Arnidhya Nur ZhafiraEditor: Eka Arifa...</td>
+      <td>Suparni sebut medali perak di Hangzhou pertaja...</td>
+      <td>Hangzhou, China (ANTARA) - Atlet Para atl...</td>
+      <td>olahraga</td>
+    </tr>
+    <tr>
+      <th>715</th>
+      <td>Senin, 23 Oktober 2023 15:40 WIB</td>
+      <td>Pewarta: JuraidiEditor: Eka Arifa Rusqiyati  C...</td>
+      <td>Riadi bangga sebagai pembawa bendera di pembuk...</td>
+      <td>Medan (ANTARA) - Atlet Para atletik asal ...</td>
+      <td>olahraga</td>
+    </tr>
+    <tr>
+      <th>716</th>
+      <td>Senin, 23 Oktober 2023 15:30 WIB</td>
+      <td>Pewarta: Arnidhya Nur ZhafiraEditor: Eka Arifa...</td>
+      <td>Pelatih pastikan kondisi atlet powerlifting pr...</td>
+      <td>Xiaoshan, China (ANTARA) - Asisten pelati...</td>
+      <td>olahraga</td>
+    </tr>
+    <tr>
+      <th>717</th>
+      <td>Senin, 23 Oktober 2023 15:23 WIB</td>
+      <td>Pewarta: Arnidhya Nur ZhafiraEditor: Eka Arifa...</td>
+      <td>Saptoyogo raih medali emas pertama untuk Indon...</td>
+      <td>Hangzhou, China (ANTARA) - Pelari Saptoyo...</td>
+      <td>olahraga</td>
+    </tr>
+    <tr>
+      <th>719</th>
+      <td>Senin, 23 Oktober 2023 14:33 WIB</td>
+      <td>Pewarta: A Rauf Andar AdipatiEditor: Eka Arifa...</td>
+      <td>Djokovic dan Swiatek mulai musim 2024 dengan t...</td>
+      <td>Jakarta (ANTARA) - Novak Djokovic dan Iga...</td>
+      <td>olahraga</td>
+    </tr>
+  </tbody>
+</table>
+<p>639 rows × 5 columns</p>
+</div>
+    <div class="colab-df-buttons">
+      
+  <div class="colab-df-container">
+    <button class="colab-df-convert" onclick="convertToInteractive('df-3a24ef40-e5f3-4bf1-b7fe-77ebc000887f')"
+            title="Convert this dataframe to an interactive table."
+            style="display:none;">
+      
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960">
+    <path d="M120-120v-720h720v720H120Zm60-500h600v-160H180v160Zm220 220h160v-160H400v160Zm0 220h160v-160H400v160ZM180-400h160v-160H180v160Zm440 0h160v-160H620v160ZM180-180h160v-160H180v160Zm440 0h160v-160H620v160Z"/>
+  </svg>
+    </button>
+    
+  <style>
+    .colab-df-container {
+      display:flex;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    .colab-df-buttons div {
+      margin-bottom: 4px;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+    <script>
+      const buttonEl =
+        document.querySelector('#df-3a24ef40-e5f3-4bf1-b7fe-77ebc000887f button.colab-df-convert');
+      buttonEl.style.display =
+        google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+      async function convertToInteractive(key) {
+        const element = document.querySelector('#df-3a24ef40-e5f3-4bf1-b7fe-77ebc000887f');
+        const dataTable =
+          await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                    [key], {});
+        if (!dataTable) return;
+
+        const docLinkHtml = 'Like what you see? Visit the ' +
+          '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+          + ' to learn more about interactive tables.';
+        element.innerHTML = '';
+        dataTable['output_type'] = 'display_data';
+        await google.colab.output.renderOutput(dataTable, element);
+        const docLink = document.createElement('div');
+        docLink.innerHTML = docLinkHtml;
+        element.appendChild(docLink);
+      }
+    </script>
+  </div>
+  
+    </div>
+  </div>
+  </div></div>
+</div>
+</section>
+<section id="duplicate">
+<h3>Duplicate<a class="headerlink" href="#duplicate" title="Permalink to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span><span class="o">.</span><span class="n">duplicated</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">drop_duplicates</span><span class="p">()</span>
+<span class="n">data</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+  <div id="df-ca1ccc68-b17c-4e6b-a7ca-ddfb4504e50a" class="colab-df-container">
+    <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Tanggal</th>
+      <th>Penulis</th>
+      <th>Judul</th>
+      <th>Artikel</th>
+      <th>Label</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Senin, 30 Oktober 2023 08:33 WIB</td>
+      <td>Pewarta: Rivan Awal LinggaEditor: Sigit Pinard...</td>
+      <td>Masinton Pasaribu harap pemeriksaan 9 hakim ko...</td>
+      <td>Jakarta (ANTARA) - Politikus PDI Perjuang...</td>
+      <td>politik</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Senin, 30 Oktober 2023 05:28 WIB</td>
+      <td>Pewarta: Laily RahmawatyEditor: Laode Masrafi ...</td>
+      <td>Politik kemarin, Kaesang effect hingga target ...</td>
+      <td>Jakarta (ANTARA) - Lima berita politik pa...</td>
+      <td>politik</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Minggu, 29 Oktober 2023 23:31 WIB</td>
+      <td>Pewarta: Rina Nur AnggrainiEditor: Imam Budila...</td>
+      <td>PKS heran hasil survei AMIN selalu buruk</td>
+      <td>Jakarta (ANTARA) - Sekretaris Jenderal PK...</td>
+      <td>politik</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Minggu, 29 Oktober 2023 23:20 WIB</td>
+      <td>Pewarta: Rivan Awal LinggaEditor: Imam Budilak...</td>
+      <td>Sekjen PKS targetkan tiga perempat warga NU du...</td>
+      <td>Jakarta (ANTARA) - Sekretaris Jenderal (S...</td>
+      <td>politik</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>Minggu, 29 Oktober 2023 22:45 WIB</td>
+      <td>Pewarta: Hendri Sukma IndrawanEditor: Didik Ku...</td>
+      <td>Wakil Ketua MPR: Pilpres adalah kontestasi put...</td>
+      <td>Jakarta (ANTARA) - Wakil Ketua Majelis Pe...</td>
+      <td>politik</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>714</th>
+      <td>Senin, 23 Oktober 2023 15:49 WIB</td>
+      <td>Pewarta: Arnidhya Nur ZhafiraEditor: Eka Arifa...</td>
+      <td>Suparni sebut medali perak di Hangzhou pertaja...</td>
+      <td>Hangzhou, China (ANTARA) - Atlet Para atl...</td>
+      <td>olahraga</td>
+    </tr>
+    <tr>
+      <th>715</th>
+      <td>Senin, 23 Oktober 2023 15:40 WIB</td>
+      <td>Pewarta: JuraidiEditor: Eka Arifa Rusqiyati  C...</td>
+      <td>Riadi bangga sebagai pembawa bendera di pembuk...</td>
+      <td>Medan (ANTARA) - Atlet Para atletik asal ...</td>
+      <td>olahraga</td>
+    </tr>
+    <tr>
+      <th>716</th>
+      <td>Senin, 23 Oktober 2023 15:30 WIB</td>
+      <td>Pewarta: Arnidhya Nur ZhafiraEditor: Eka Arifa...</td>
+      <td>Pelatih pastikan kondisi atlet powerlifting pr...</td>
+      <td>Xiaoshan, China (ANTARA) - Asisten pelati...</td>
+      <td>olahraga</td>
+    </tr>
+    <tr>
+      <th>717</th>
+      <td>Senin, 23 Oktober 2023 15:23 WIB</td>
+      <td>Pewarta: Arnidhya Nur ZhafiraEditor: Eka Arifa...</td>
+      <td>Saptoyogo raih medali emas pertama untuk Indon...</td>
+      <td>Hangzhou, China (ANTARA) - Pelari Saptoyo...</td>
+      <td>olahraga</td>
+    </tr>
+    <tr>
+      <th>719</th>
+      <td>Senin, 23 Oktober 2023 14:33 WIB</td>
+      <td>Pewarta: A Rauf Andar AdipatiEditor: Eka Arifa...</td>
+      <td>Djokovic dan Swiatek mulai musim 2024 dengan t...</td>
+      <td>Jakarta (ANTARA) - Novak Djokovic dan Iga...</td>
+      <td>olahraga</td>
+    </tr>
+  </tbody>
+</table>
+<p>637 rows × 5 columns</p>
+</div>
+    <div class="colab-df-buttons">
+      
+  <div class="colab-df-container">
+    <button class="colab-df-convert" onclick="convertToInteractive('df-ca1ccc68-b17c-4e6b-a7ca-ddfb4504e50a')"
+            title="Convert this dataframe to an interactive table."
+            style="display:none;">
+      
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960">
+    <path d="M120-120v-720h720v720H120Zm60-500h600v-160H180v160Zm220 220h160v-160H400v160Zm0 220h160v-160H400v160ZM180-400h160v-160H180v160Zm440 0h160v-160H620v160ZM180-180h160v-160H180v160Zm440 0h160v-160H620v160Z"/>
+  </svg>
+    </button>
+    
+  <style>
+    .colab-df-container {
+      display:flex;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    .colab-df-buttons div {
+      margin-bottom: 4px;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+    <script>
+      const buttonEl =
+        document.querySelector('#df-ca1ccc68-b17c-4e6b-a7ca-ddfb4504e50a button.colab-df-convert');
+      buttonEl.style.display =
+        google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+      async function convertToInteractive(key) {
+        const element = document.querySelector('#df-ca1ccc68-b17c-4e6b-a7ca-ddfb4504e50a');
+        const dataTable =
+          await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                    [key], {});
+        if (!dataTable) return;
+
+        const docLinkHtml = 'Like what you see? Visit the ' +
+          '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+          + ' to learn more about interactive tables.';
+        element.innerHTML = '';
+        dataTable['output_type'] = 'display_data';
+        await google.colab.output.renderOutput(dataTable, element);
+        const docLink = document.createElement('div');
+        docLink.innerHTML = docLinkHtml;
+        element.appendChild(docLink);
+      }
+    </script>
+  </div>
+  
+    </div>
+  </div>
+  </div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="c1">#atur indeks data mulai dari 0 lagi</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="punctuation-process">
+<h3><strong>Punctuation process</strong><a class="headerlink" href="#punctuation-process" title="Permalink to this heading">#</a></h3>
+<blockquote>
+<div><p><strong>Punctuation process</strong> merupakan proses normalisasi data yang bertujuan untuk menghilangkan tanda baca</p>
+</div></blockquote>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">re</span>
+<span class="n">data</span><span class="p">[</span><span class="s1">&#39;clean_artikel&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;Artikel&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;[^\w\s,.?!]&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">regex</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+
+<span class="c1"># Menghilangkan angka dari kolom &#39;new_abstrak&#39;</span>
+<span class="n">data</span><span class="p">[</span><span class="s1">&#39;clean_artikel&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;clean_artikel&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;\d+&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">regex</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ipython-input-10-1bb6b440ed41&gt;:2: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data[&#39;clean_artikel&#39;] = data[&#39;Artikel&#39;].str.replace(r&#39;[^\w\s,.?!]&#39;, &#39;&#39;, regex=True).str.lower()
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ipython-input-10-1bb6b440ed41&gt;:5: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data[&#39;clean_artikel&#39;] = data[&#39;clean_artikel&#39;].str.replace(&#39;\d+&#39;, &#39;&#39;, regex=True)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+  <div id="df-2c10a351-de3e-4695-b309-d529e904a2ea" class="colab-df-container">
+    <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Tanggal</th>
+      <th>Penulis</th>
+      <th>Judul</th>
+      <th>Artikel</th>
+      <th>Label</th>
+      <th>clean_artikel</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Senin, 30 Oktober 2023 08:33 WIB</td>
+      <td>Pewarta: Rivan Awal LinggaEditor: Sigit Pinard...</td>
+      <td>Masinton Pasaribu harap pemeriksaan 9 hakim ko...</td>
+      <td>Jakarta (ANTARA) - Politikus PDI Perjuang...</td>
+      <td>politik</td>
+      <td>jakarta antara  politikus pdi perjuangan ...</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Senin, 30 Oktober 2023 05:28 WIB</td>
+      <td>Pewarta: Laily RahmawatyEditor: Laode Masrafi ...</td>
+      <td>Politik kemarin, Kaesang effect hingga target ...</td>
+      <td>Jakarta (ANTARA) - Lima berita politik pa...</td>
+      <td>politik</td>
+      <td>jakarta antara  lima berita politik pada ...</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Minggu, 29 Oktober 2023 23:31 WIB</td>
+      <td>Pewarta: Rina Nur AnggrainiEditor: Imam Budila...</td>
+      <td>PKS heran hasil survei AMIN selalu buruk</td>
+      <td>Jakarta (ANTARA) - Sekretaris Jenderal PK...</td>
+      <td>politik</td>
+      <td>jakarta antara  sekretaris jenderal pks h...</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Minggu, 29 Oktober 2023 23:20 WIB</td>
+      <td>Pewarta: Rivan Awal LinggaEditor: Imam Budilak...</td>
+      <td>Sekjen PKS targetkan tiga perempat warga NU du...</td>
+      <td>Jakarta (ANTARA) - Sekretaris Jenderal (S...</td>
+      <td>politik</td>
+      <td>jakarta antara  sekretaris jenderal sekje...</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Minggu, 29 Oktober 2023 22:45 WIB</td>
+      <td>Pewarta: Hendri Sukma IndrawanEditor: Didik Ku...</td>
+      <td>Wakil Ketua MPR: Pilpres adalah kontestasi put...</td>
+      <td>Jakarta (ANTARA) - Wakil Ketua Majelis Pe...</td>
+      <td>politik</td>
+      <td>jakarta antara  wakil ketua majelis permu...</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>632</th>
+      <td>Senin, 23 Oktober 2023 15:49 WIB</td>
+      <td>Pewarta: Arnidhya Nur ZhafiraEditor: Eka Arifa...</td>
+      <td>Suparni sebut medali perak di Hangzhou pertaja...</td>
+      <td>Hangzhou, China (ANTARA) - Atlet Para atl...</td>
+      <td>olahraga</td>
+      <td>hangzhou, china antara  atlet para atleti...</td>
+    </tr>
+    <tr>
+      <th>633</th>
+      <td>Senin, 23 Oktober 2023 15:40 WIB</td>
+      <td>Pewarta: JuraidiEditor: Eka Arifa Rusqiyati  C...</td>
+      <td>Riadi bangga sebagai pembawa bendera di pembuk...</td>
+      <td>Medan (ANTARA) - Atlet Para atletik asal ...</td>
+      <td>olahraga</td>
+      <td>medan antara  atlet para atletik asal sum...</td>
+    </tr>
+    <tr>
+      <th>634</th>
+      <td>Senin, 23 Oktober 2023 15:30 WIB</td>
+      <td>Pewarta: Arnidhya Nur ZhafiraEditor: Eka Arifa...</td>
+      <td>Pelatih pastikan kondisi atlet powerlifting pr...</td>
+      <td>Xiaoshan, China (ANTARA) - Asisten pelati...</td>
+      <td>olahraga</td>
+      <td>xiaoshan, china antara  asisten pelatih t...</td>
+    </tr>
+    <tr>
+      <th>635</th>
+      <td>Senin, 23 Oktober 2023 15:23 WIB</td>
+      <td>Pewarta: Arnidhya Nur ZhafiraEditor: Eka Arifa...</td>
+      <td>Saptoyogo raih medali emas pertama untuk Indon...</td>
+      <td>Hangzhou, China (ANTARA) - Pelari Saptoyo...</td>
+      <td>olahraga</td>
+      <td>hangzhou, china antara  pelari saptoyogo ...</td>
+    </tr>
+    <tr>
+      <th>636</th>
+      <td>Senin, 23 Oktober 2023 14:33 WIB</td>
+      <td>Pewarta: A Rauf Andar AdipatiEditor: Eka Arifa...</td>
+      <td>Djokovic dan Swiatek mulai musim 2024 dengan t...</td>
+      <td>Jakarta (ANTARA) - Novak Djokovic dan Iga...</td>
+      <td>olahraga</td>
+      <td>jakarta antara  novak djokovic dan iga sw...</td>
+    </tr>
+  </tbody>
+</table>
+<p>637 rows × 6 columns</p>
+</div>
+    <div class="colab-df-buttons">
+      
+  <div class="colab-df-container">
+    <button class="colab-df-convert" onclick="convertToInteractive('df-2c10a351-de3e-4695-b309-d529e904a2ea')"
+            title="Convert this dataframe to an interactive table."
+            style="display:none;">
+      
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960">
+    <path d="M120-120v-720h720v720H120Zm60-500h600v-160H180v160Zm220 220h160v-160H400v160Zm0 220h160v-160H400v160ZM180-400h160v-160H180v160Zm440 0h160v-160H620v160ZM180-180h160v-160H180v160Zm440 0h160v-160H620v160Z"/>
+  </svg>
+    </button>
+    
+  <style>
+    .colab-df-container {
+      display:flex;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    .colab-df-buttons div {
+      margin-bottom: 4px;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+    <script>
+      const buttonEl =
+        document.querySelector('#df-2c10a351-de3e-4695-b309-d529e904a2ea button.colab-df-convert');
+      buttonEl.style.display =
+        google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+      async function convertToInteractive(key) {
+        const element = document.querySelector('#df-2c10a351-de3e-4695-b309-d529e904a2ea');
+        const dataTable =
+          await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                    [key], {});
+        if (!dataTable) return;
+
+        const docLinkHtml = 'Like what you see? Visit the ' +
+          '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+          + ' to learn more about interactive tables.';
+        element.innerHTML = '';
+        dataTable['output_type'] = 'display_data';
+        await google.colab.output.renderOutput(dataTable, element);
+        const docLink = document.createElement('div');
+        docLink.innerHTML = docLinkHtml;
+        element.appendChild(docLink);
+      }
+    </script>
+  </div>
+  
+    </div>
+  </div>
+  </div></div>
+</div>
+</section>
+<section id="stopword">
+<h3><strong>Stopword</strong><a class="headerlink" href="#stopword" title="Permalink to this heading">#</a></h3>
+<blockquote>
+<div><p>Stopwords digunakan untuk menghilangkan kata umum yang sering muncul dalam teks seperti: di, dan, atau, dari, ke, saya.</p>
+</div></blockquote>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">nltk</span>
+<span class="kn">from</span> <span class="nn">nltk.corpus</span> <span class="kn">import</span> <span class="n">stopwords</span>
+<span class="kn">from</span> <span class="nn">nltk.tokenize</span> <span class="kn">import</span> <span class="n">sent_tokenize</span><span class="p">,</span> <span class="n">word_tokenize</span>
+<span class="kn">from</span> <span class="nn">nltk.corpus</span> <span class="kn">import</span> <span class="n">stopwords</span>
+<span class="kn">import</span> <span class="nn">nltk</span>
+<span class="n">nltk</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="s1">&#39;punkt&#39;</span><span class="p">)</span>
+
+<span class="c1"># Download kamus stop words</span>
+<span class="n">nltk</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="s1">&#39;stopwords&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[nltk_data] Downloading package punkt to /root/nltk_data...
+[nltk_data]   Unzipping tokenizers/punkt.zip.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[nltk_data] Downloading package stopwords to /root/nltk_data...
+[nltk_data]   Unzipping corpora/stopwords.zip.
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Inisialisasi kamus stop words dari NLTK</span>
+<span class="n">stop_words</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">stopwords</span><span class="o">.</span><span class="n">words</span><span class="p">(</span><span class="s1">&#39;indonesian&#39;</span><span class="p">))</span>  <span class="c1"># Inisialisasi kamus stop words</span>
+
+<span class="c1"># Menghapus stop words dari kolom &#39;Abstrak&#39;</span>
+<span class="k">for</span> <span class="n">stop_word</span> <span class="ow">in</span> <span class="n">stop_words</span><span class="p">:</span>
+  <span class="n">data</span><span class="p">[</span><span class="s1">&#39;artikel_stopword&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;clean_artikel&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="sa">rf</span><span class="s1">&#39;\b</span><span class="si">{</span><span class="n">stop_word</span><span class="si">}</span><span class="s1">\b&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">regex</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="c1">#rf untuk formating string</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ipython-input-13-275f9ca362a2&gt;:6: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data[&#39;artikel_stopword&#39;] = data[&#39;clean_artikel&#39;].str.replace(rf&#39;\b{stop_word}\b&#39;, &#39;&#39;, regex=True) #rf untuk formating string
+</pre></div>
+</div>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">KeyboardInterrupt</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
+<span class="nn">&lt;ipython-input-13-275f9ca362a2&gt;</span> in <span class="ni">&lt;cell line: 5&gt;</span><span class="nt">()</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="c1"># Menghapus stop words dari kolom &#39;Abstrak&#39;</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="k">for</span> <span class="n">stop_word</span> <span class="ow">in</span> <span class="n">stop_words</span><span class="p">:</span>
+<span class="ne">----&gt; </span><span class="mi">6</span>   <span class="n">data</span><span class="p">[</span><span class="s1">&#39;artikel_stopword&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;clean_artikel&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="sa">rf</span><span class="s1">&#39;\b</span><span class="si">{</span><span class="n">stop_word</span><span class="si">}</span><span class="s1">\b&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">regex</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="c1">#rf untuk formating string</span>
+
+<span class="nn">/usr/local/lib/python3.10/dist-packages/pandas/core/strings/accessor.py</span> in <span class="ni">wrapper</span><span class="nt">(self, *args, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">127</span>                 <span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">128</span>                 <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">129</span>             <span class="k">return</span> <span class="n">func</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">130</span> 
+<span class="g g-Whitespace">    </span><span class="mi">131</span>         <span class="n">wrapper</span><span class="o">.</span><span class="vm">__name__</span> <span class="o">=</span> <span class="n">func_name</span>
+
+<span class="nn">/usr/local/lib/python3.10/dist-packages/pandas/core/strings/accessor.py</span> in <span class="ni">replace</span><span class="nt">(self, pat, repl, n, case, flags, regex)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1498</span>             <span class="n">case</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="g g-Whitespace">   </span><span class="mi">1499</span> 
+<span class="ne">-&gt; </span><span class="mi">1500</span>         <span class="n">result</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_data</span><span class="o">.</span><span class="n">array</span><span class="o">.</span><span class="n">_str_replace</span><span class="p">(</span>
+<span class="g g-Whitespace">   </span><span class="mi">1501</span>             <span class="n">pat</span><span class="p">,</span> <span class="n">repl</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="n">n</span><span class="p">,</span> <span class="n">case</span><span class="o">=</span><span class="n">case</span><span class="p">,</span> <span class="n">flags</span><span class="o">=</span><span class="n">flags</span><span class="p">,</span> <span class="n">regex</span><span class="o">=</span><span class="n">regex</span>
+<span class="g g-Whitespace">   </span><span class="mi">1502</span>         <span class="p">)</span>
+
+<span class="nn">/usr/local/lib/python3.10/dist-packages/pandas/core/strings/object_array.py</span> in <span class="ni">_str_replace</span><span class="nt">(self, pat, repl, n, case, flags, regex)</span>
+<span class="g g-Whitespace">    </span><span class="mi">163</span>             <span class="n">f</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">pat</span><span class="p">,</span> <span class="n">repl</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">164</span> 
+<span class="ne">--&gt; </span><span class="mi">165</span>         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_str_map</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">str</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">166</span> 
+<span class="g g-Whitespace">    </span><span class="mi">167</span>     <span class="k">def</span> <span class="nf">_str_repeat</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">repeats</span><span class="p">):</span>
+
+<span class="nn">/usr/local/lib/python3.10/dist-packages/pandas/core/strings/object_array.py</span> in <span class="ni">_str_map</span><span class="nt">(self, f, na_value, dtype, convert)</span>
+<span class="g g-Whitespace">     </span><span class="mi">69</span>         <span class="n">map_convert</span> <span class="o">=</span> <span class="n">convert</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">np</span><span class="o">.</span><span class="n">all</span><span class="p">(</span><span class="n">mask</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">70</span>         <span class="k">try</span><span class="p">:</span>
+<span class="ne">---&gt; </span><span class="mi">71</span>             <span class="n">result</span> <span class="o">=</span> <span class="n">lib</span><span class="o">.</span><span class="n">map_infer_mask</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="n">f</span><span class="p">,</span> <span class="n">mask</span><span class="o">.</span><span class="n">view</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">uint8</span><span class="p">),</span> <span class="n">map_convert</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">72</span>         <span class="k">except</span> <span class="p">(</span><span class="ne">TypeError</span><span class="p">,</span> <span class="ne">AttributeError</span><span class="p">)</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
+<span class="g g-Whitespace">     </span><span class="mi">73</span>             <span class="c1"># Reraise the exception if callable `f` got wrong number of args.</span>
+
+<span class="nn">/usr/local/lib/python3.10/dist-packages/pandas/_libs/lib.pyx</span> in <span class="ni">pandas._libs.lib.map_infer_mask</span><span class="nt">()</span>
+
+<span class="nn">/usr/local/lib/python3.10/dist-packages/pandas/core/strings/object_array.py</span> in <span class="ni">&lt;lambda&gt;</span><span class="nt">(x)</span>
+<span class="g g-Whitespace">    </span><span class="mi">159</span> 
+<span class="g g-Whitespace">    </span><span class="mi">160</span>             <span class="n">n</span> <span class="o">=</span> <span class="n">n</span> <span class="k">if</span> <span class="n">n</span> <span class="o">&gt;=</span> <span class="mi">0</span> <span class="k">else</span> <span class="mi">0</span>
+<span class="ne">--&gt; </span><span class="mi">161</span>             <span class="n">f</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">pat</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="n">repl</span><span class="o">=</span><span class="n">repl</span><span class="p">,</span> <span class="n">string</span><span class="o">=</span><span class="n">x</span><span class="p">,</span> <span class="n">count</span><span class="o">=</span><span class="n">n</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">162</span>         <span class="k">else</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">163</span>             <span class="n">f</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">pat</span><span class="p">,</span> <span class="n">repl</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
+
+<span class="ne">KeyboardInterrupt</span>: 
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="tokenizing">
+<h3>Tokenizing<a class="headerlink" href="#tokenizing" title="Permalink to this heading">#</a></h3>
+<blockquote>
+<div><p><strong>Tokenizing</strong> adalah proses memecah teks atau dokumen menjadi potongan-potongan yang lebih kecil, yang disebut token. Disini menggunakan term kalimat</p>
+</div></blockquote>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;tokenizing&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;artikel_stopword&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">sent_tokenize</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;tokenizing&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="vsm">
+<h2>VSM<a class="headerlink" href="#vsm" title="Permalink to this heading">#</a></h2>
+<section id="term-freq">
+<h3>Term Freq<a class="headerlink" href="#term-freq" title="Permalink to this heading">#</a></h3>
+<blockquote>
+<div><p>Term Freq adalah konsep yang digunakan dalam pemrosesan teks dan analisis teks untuk mengukur sejauh mana suatu kata atau term muncul dalam sebuah dokumen atau koleksi dokumen. Term frequency menggambarkan seberapa sering sebuah kata muncul dalam teks relatif terhadap total kata dalam dokumen tersebut.</p>
+</div></blockquote>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.feature_extraction.text</span> <span class="kn">import</span> <span class="n">CountVectorizer</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">hasil_df_tf</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">set_len_doc</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;tokenizing&#39;</span><span class="p">]</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">set_len_doc</span><span class="p">)):</span> <span class="c1">#perulangan setiap artikel/dokumen</span>
+  <span class="n">termFreq_vectorizer</span> <span class="o">=</span> <span class="n">CountVectorizer</span><span class="p">()</span>  <span class="c1">#inisialisasi tfidf</span>
+
+  <span class="n">termFreq_matrix</span> <span class="o">=</span> <span class="n">termFreq_vectorizer</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;tokenizing&#39;</span><span class="p">][</span><span class="n">i</span><span class="p">])</span> <span class="c1">#menjadikan tfidf setiap dokumen</span>
+  <span class="n">terms</span> <span class="o">=</span> <span class="n">termFreq_vectorizer</span><span class="o">.</span><span class="n">get_feature_names_out</span><span class="p">()</span> <span class="c1">#ambil nama fitur</span>
+
+  <span class="n">tf_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">termFreq_matrix</span><span class="o">.</span><span class="n">toarray</span><span class="p">(),</span> <span class="n">columns</span><span class="o">=</span><span class="n">terms</span><span class="p">)</span> <span class="c1">#menjadikan dataframe</span>
+  <span class="n">hasil_df_tf</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">tf_df</span><span class="p">)</span> <span class="c1">#menyimpan dalam variabel df_tf</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># menampilkan hasil banyak kata pada kalimat</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">hasil_df_tf</span><span class="p">[:</span><span class="mi">10</span><span class="p">])):</span>
+  <span class="n">show_df</span> <span class="o">=</span> <span class="n">hasil_df_tf</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+  <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;========= Dokumen ke - </span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2"> ==============&quot;</span><span class="p">)</span>
+  <span class="n">display</span><span class="p">(</span><span class="n">show_df</span><span class="p">)</span>
+  <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="co-occurrence-metrics">
+<h2>Co-occurrence metrics<a class="headerlink" href="#co-occurrence-metrics" title="Permalink to this heading">#</a></h2>
+<blockquote>
+<div><p>merupakan metrik kemunculan bersama merujuk pada ukuran-ukuran atau metode-metode yang digunakan untuk mengukur sejauh mana dua atau lebih elemen muncul bersama-sama dalam sebuah dataset. Ini dapat diterapkan dalam berbagai konteks, tergantung pada jenis data dan tujuan analisisnya. Berikut adalah beberapa contoh metrik kemunculan bersama yang umum digunakan:</p>
+</div></blockquote>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">hasil_co_occurrence_df</span> <span class="o">=</span> <span class="p">[]</span> <span class="c1">#untuk menyimpan dataframe co-occurance</span>
+<span class="n">hasil_co_occurrence_matrix</span> <span class="o">=</span> <span class="p">[]</span> <span class="c1">#menyimpan hasil matrixnya</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">hasil_df_tf</span><span class="p">)):</span>
+  <span class="c1"># Membuat Co-occurrence Matrix</span>
+  <span class="n">co_occurrence_matrix</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">hasil_df_tf</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">T</span><span class="p">,</span><span class="n">hasil_df_tf</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+
+  <span class="c1"># Mengganti diagonal dengan nol (karena kita tidak ingin memperhitungkan kata dengan dirinya sendiri)</span>
+  <span class="n">np</span><span class="o">.</span><span class="n">fill_diagonal</span><span class="p">(</span><span class="n">co_occurrence_matrix</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+
+  <span class="c1"># mengambil columns</span>
+  <span class="n">kolom</span> <span class="o">=</span> <span class="n">hasil_df_tf</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">columns</span>
+
+  <span class="c1"># # Membuat DataFrame Co-occurrence</span>
+  <span class="n">co_occurrence_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">co_occurrence_matrix</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="n">kolom</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="n">kolom</span><span class="p">)</span>
+
+  <span class="n">hasil_co_occurrence_df</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">co_occurrence_df</span><span class="p">)</span> <span class="c1">#simpan dataframe</span>
+  <span class="n">hasil_co_occurrence_matrix</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">co_occurrence_matrix</span><span class="p">)</span> <span class="c1">#simpan hasil matrix</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#menampilkan hasil co-occurence</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">hasil_co_occurrence_df</span><span class="p">[:</span><span class="mi">10</span><span class="p">])):</span>
+  <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;============== Dokumen ke - </span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2"> ==============&quot;</span><span class="p">)</span>
+  <span class="n">display</span><span class="p">(</span><span class="n">hasil_co_occurrence_df</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+  <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="tambahkan-ke-graf-dan-beri-treshold">
+<h2>Tambahkan ke graf dan beri treshold<a class="headerlink" href="#tambahkan-ke-graf-dan-beri-treshold" title="Permalink to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">networkx</span> <span class="k">as</span> <span class="nn">nx</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">graf_results</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">treshold</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">hasil_co_occurrence_df</span><span class="p">)):</span>
+
+  <span class="n">graf</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">Graph</span><span class="p">()</span>  <span class="c1"># Instantiate as a Graph object</span>
+
+  <span class="n">co_occurrence</span> <span class="o">=</span> <span class="n">hasil_co_occurrence_df</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="c1">#mengambil hasil coocurence per indeks yang disimpan array</span>
+  <span class="n">koloms</span> <span class="o">=</span> <span class="n">co_occurrence</span><span class="o">.</span><span class="n">columns</span> <span class="c1">#mengambil nama kolom saja dari coocurence array indeks</span>
+  <span class="n">matrix_coocurrence</span> <span class="o">=</span> <span class="n">hasil_co_occurrence_matrix</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="c1">#mengambil matrix coocurencenya</span>
+
+  <span class="k">for</span> <span class="n">i_koloms</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">koloms</span><span class="p">)):</span> <span class="c1">#perulangan setiap dari panjang kolom dari coocurence</span>
+      <span class="k">for</span> <span class="n">j_koloms</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">i_koloms</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">koloms</span><span class="p">)):</span> <span class="c1">#perulangan dari setiap panjang kolom + 1, maksudna kolom indeks ke dua</span>
+        <span class="n">bobot</span> <span class="o">=</span> <span class="n">matrix_coocurrence</span><span class="p">[</span><span class="n">i_koloms</span><span class="p">,</span><span class="n">j_koloms</span><span class="p">]</span> <span class="c1">#mencari bobot dengan setiap kolom</span>
+
+        <span class="k">if</span> <span class="n">bobot</span> <span class="o">&gt;</span> <span class="n">treshold</span><span class="p">:</span> <span class="c1">#cek apakah bobot lebih dari treshold</span>
+          <span class="n">graf</span><span class="o">.</span><span class="n">add_edge</span><span class="p">(</span><span class="n">koloms</span><span class="p">[</span><span class="n">i_koloms</span><span class="p">],</span> <span class="n">koloms</span><span class="p">[</span><span class="n">j_koloms</span><span class="p">],</span> <span class="n">weight</span><span class="o">=</span><span class="n">matrix_coocurrence</span><span class="p">[</span><span class="n">i_koloms</span><span class="p">,</span> <span class="n">j_koloms</span><span class="p">])</span>
+
+  <span class="n">graf_results</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">graf</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># hasil_co_occurrence_df[:1]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># # Menetapkan treshold</span>
+<span class="c1"># treshold = 0</span>
+
+<span class="c1"># # Inisialisasi list untuk menyimpan hasil graf</span>
+<span class="c1"># graf_results = []</span>
+
+<span class="c1"># # Iterasi melalui setiap DataFrame dalam list</span>
+<span class="c1"># for i in range(len(hasil_co_occurrence_df)):</span>
+<span class="c1">#   # Iterasi melalui setiap kolom DataFrame</span>
+<span class="c1">#   for j in range(len(hasil_co_occurrence_df[i].columns)):</span>
+<span class="c1">#       # Membuat graf hanya untuk nilai di atas treshold</span>
+<span class="c1">#       edges_above_threshold = hasil_co_occurrence_df[i][hasil_co_occurrence_df[i][hasil_co_occurrence_df[i].columns[j]] &gt; treshold].index.tolist()</span>
+<span class="c1">#       G = nx.from_pandas_adjacency(hasil_co_occurrence_df[i].loc[edges_above_threshold, edges_above_threshold])</span>
+
+<span class="c1">#       # Menambahkan graf ke list hasil</span>
+<span class="c1">#       graf_results.append(G)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">graf_results</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># menampilkan graf</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">graf_results</span><span class="p">[:</span><span class="mi">3</span><span class="p">])):</span>
+  <span class="n">pos</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">spring_layout</span><span class="p">(</span><span class="n">graf_results</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>  <span class="c1">## Menentukan posisi/koordinat simpul</span>
+  <span class="n">labels</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">get_edge_attributes</span><span class="p">(</span><span class="n">graf_results</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="s1">&#39;weight&#39;</span><span class="p">)</span> <span class="c1">##mendapatkan atribut berbobot (&#39;weight&#39;) dari setiap sisi dalam graf.</span>
+
+  <span class="c1"># Menentukan ukuran canvas</span>
+  <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">50</span><span class="p">,</span> <span class="mi">30</span><span class="p">))</span>
+
+  <span class="c1"># Menggambar graf dengan ukuran canvas yang diperbesar</span>
+  <span class="n">nx</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">graf_results</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">pos</span><span class="p">,</span> <span class="n">with_labels</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">node_size</span><span class="o">=</span><span class="mi">2000</span><span class="p">,</span> <span class="n">node_color</span><span class="o">=</span><span class="s1">&#39;skyblue&#39;</span><span class="p">)</span>
+  <span class="n">nx</span><span class="o">.</span><span class="n">draw_networkx_edge_labels</span><span class="p">(</span><span class="n">graf_results</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">pos</span><span class="p">,</span> <span class="n">edge_labels</span><span class="o">=</span><span class="n">labels</span><span class="p">,</span> <span class="n">font_color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">)</span>
+  <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;====== Dokumen ke - </span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2"> ===========&quot;</span><span class="p">)</span>
+  <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="hitung-centrality">
+<h2>Hitung Centrality<a class="headerlink" href="#hitung-centrality" title="Permalink to this heading">#</a></h2>
+<section id="pagerank">
+<h3>Pagerank<a class="headerlink" href="#pagerank" title="Permalink to this heading">#</a></h3>
+<blockquote>
+<div><p>Perhitungan manual<br />
+Algoritma (Rumus)<br />
+Perbandingan hasil manual dan library</p>
+</div></blockquote>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">centrality_result</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">graf_results</span><span class="p">)):</span>
+
+  <span class="n">centrality</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">pagerank</span><span class="p">(</span><span class="n">graf_results</span><span class="p">[</span><span class="n">i</span><span class="p">])</span> <span class="c1">#menjadikan graf setiap index list diclosness</span>
+
+  <span class="n">centrality_result</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">centrality</span><span class="p">)</span> <span class="c1">#menyimpan hasil centrality</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># menampilkan centrality</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">centrality_result</span><span class="p">[:</span><span class="mi">5</span><span class="p">])):</span>
+  <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;================== Dokumen ke - </span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2"> ==================&quot;</span><span class="p">)</span>
+  <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Text rank score : </span><span class="si">{</span><span class="n">centrality_result</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="ranking-kata-kunci">
+<h3>Ranking kata kunci<a class="headerlink" href="#ranking-kata-kunci" title="Permalink to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sorted_closeness_all</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">centrality_result</span><span class="p">)):</span>
+  <span class="n">sorted_closeness</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="nb">sorted</span><span class="p">(</span><span class="n">centrality_result</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">items</span><span class="p">(),</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">item</span><span class="p">:</span> <span class="n">item</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">reverse</span><span class="o">=</span><span class="kc">True</span><span class="p">))</span>
+  <span class="n">sorted_closeness_all</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">sorted_closeness</span><span class="p">)</span>
+
+<span class="n">sorted_closeness_all</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#kalimat tertinggi</span>
+
+<span class="n">kalimat_tertinggi_all</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">sorted_closeness_all</span><span class="p">)):</span>
+    <span class="n">kalimat_tertinggi</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
+        <span class="n">max_key</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="n">max_value</span> <span class="o">=</span> <span class="kc">None</span>
+
+        <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">sorted_closeness_all</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="k">if</span> <span class="n">key</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">kalimat_tertinggi</span> <span class="ow">and</span> <span class="p">(</span><span class="n">max_value</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span> <span class="n">value</span> <span class="o">&gt;</span> <span class="n">max_value</span><span class="p">):</span>
+                <span class="n">max_key</span> <span class="o">=</span> <span class="n">key</span>
+                <span class="n">max_value</span> <span class="o">=</span> <span class="n">value</span>
+
+        <span class="k">if</span> <span class="n">max_key</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">kalimat_tertinggi</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">max_key</span><span class="p">)</span>
+
+    <span class="n">kalimat_tertinggi_all</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">kalimat_tertinggi</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">kalimat_tertinggi_all</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">kalimat_tertinggi_all</span><span class="p">[:</span><span class="mi">10</span><span class="p">])):</span>
+  <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;====== Dokumen ke-</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2"> =====&quot;</span><span class="p">)</span>
+  <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Kata kunci : </span><span class="si">{</span><span class="n">kalimat_tertinggi_all</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+  <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># hc = nx.pagerank(graf_results[0])</span>
+<span class="c1"># hc = dict(sorted(hc.items(), key=lambda item: item[1], reverse=True))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># hc = nx.pagerank(graf_results[0])</span>
+<span class="c1"># hc</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># wordss = []</span>
+<span class="c1"># for i in data[&#39;tokenizing&#39;][0]:</span>
+<span class="c1">#   wordss.append(i.split())</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># # Inisialisasi kamus untuk menyimpan skor</span>
+<span class="c1"># skor_wordss = {}</span>
+
+<span class="c1"># # Loop untuk setiap kata di wordss[0]</span>
+<span class="c1"># for kata in wordss[2]:</span>
+<span class="c1">#     # print(&#39;word : &#39;,kata)</span>
+<span class="c1">#     # Jika kata ada di var1, ambil skornya; jika tidak, set skor menjadi 0</span>
+<span class="c1">#     if kata in hc:</span>
+<span class="c1">#         skor_wordss[kata] = hc[kata]</span>
+<span class="c1">#         print(&#39;hc:&#39;,hc[kata])</span>
+<span class="c1">#     else:</span>
+<span class="c1">#         skor_wordss[kata] = 0</span>
+
+<span class="c1"># # print(skor_wordss)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">centrality_result</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;tokenizing&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="meranking-kata-sesuai-kalimat-artikel">
+<h2>Meranking kata sesuai kalimat artikel<a class="headerlink" href="#meranking-kata-sesuai-kalimat-artikel" title="Permalink to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">result_skor</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="k">for</span> <span class="n">i_c</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">centrality_result</span><span class="p">)):</span> <span class="c1">#perulangan setiap hasil centrality</span>
+  <span class="n">current_skor</span> <span class="o">=</span> <span class="p">[]</span> <span class="c1">#untuk menyimpan skor sementara</span>
+
+  <span class="k">for</span> <span class="n">sentences</span> <span class="ow">in</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;tokenizing&#39;</span><span class="p">][</span><span class="n">i_c</span><span class="p">]:</span> <span class="c1">#perulangan kalimat pada data dalam kolom tokenize</span>
+    <span class="n">skor_kata</span> <span class="o">=</span> <span class="p">{}</span> <span class="c1">#untuk menyimpan skor kata sementara</span>
+
+    <span class="n">words</span> <span class="o">=</span> <span class="n">sentences</span><span class="o">.</span><span class="n">split</span><span class="p">()</span> <span class="c1">#menjadikan kalimat berupa kata</span>
+    <span class="n">pin_centrality</span> <span class="o">=</span> <span class="n">centrality_result</span><span class="p">[</span><span class="n">i_c</span><span class="p">]</span> <span class="c1">#assign centrality indeks sekarang 1,2,3,4...</span>
+    <span class="n">panjang_words</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">words</span><span class="p">)</span> <span class="c1">#panjang kata</span>
+
+    <span class="k">for</span> <span class="n">hasil_word</span> <span class="ow">in</span> <span class="n">words</span><span class="p">:</span>
+
+      <span class="k">if</span> <span class="n">hasil_word</span> <span class="ow">in</span> <span class="n">pin_centrality</span><span class="p">:</span>
+        <span class="n">skor_kata</span><span class="p">[</span><span class="n">hasil_word</span><span class="p">]</span> <span class="o">=</span> <span class="n">pin_centrality</span><span class="p">[</span><span class="n">hasil_word</span><span class="p">]</span>
+
+      <span class="k">else</span><span class="p">:</span>
+        <span class="n">skor_kata</span><span class="p">[</span><span class="n">hasil_word</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">current_skor</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">skor_kata</span><span class="p">)</span>
+  <span class="n">result_skor</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">current_skor</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">result_skor</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">result_skor</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">result_bobot_kalimat</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">result_skor</span><span class="p">)):</span> <span class="c1">#perulangan result skor</span>
+  <span class="n">current_bobot</span> <span class="o">=</span> <span class="p">{}</span> <span class="c1">#untuk menyimpan hasil kalimat dan bobotnya</span>
+
+  <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">result_skor</span><span class="p">[</span><span class="n">i</span><span class="p">])):</span>
+    <span class="n">bobot_kalimat</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">result_skor</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
+    <span class="n">current_bobot</span><span class="p">[</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;tokenizing&#39;</span><span class="p">][</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]]</span> <span class="o">=</span> <span class="n">bobot_kalimat</span>
+
+  <span class="n">result_bobot_kalimat</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">current_bobot</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># result_bobot_kalimat</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">final_kalimat</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">result_bobot_kalimat</span><span class="p">)):</span>
+  <span class="c1"># Mengurutkan dictionary berdasarkan nilai (dari besar ke kecil)</span>
+  <span class="n">sorted_data</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="nb">sorted</span><span class="p">(</span><span class="n">result_bobot_kalimat</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">items</span><span class="p">(),</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">item</span><span class="p">:</span> <span class="n">item</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">reverse</span><span class="o">=</span><span class="kc">True</span><span class="p">))</span>
+
+  <span class="c1"># Mengambil 5 nilai teratas beserta key-nya</span>
+  <span class="n">top_5_keys</span> <span class="o">=</span> <span class="p">{</span><span class="n">k</span><span class="p">:</span> <span class="n">sorted_data</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">list</span><span class="p">(</span><span class="n">sorted_data</span><span class="p">)[:</span><span class="mi">5</span><span class="p">]}</span>
+
+  <span class="c1"># Menggabungkan key menjadi satu string</span>
+  <span class="n">result_string</span> <span class="o">=</span> <span class="s1">&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">top_5_keys</span><span class="p">)</span>
+
+  <span class="n">final_kalimat</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">result_string</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># tampilkan</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">final_kalimat</span><span class="p">)):</span>
+  <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;===== Dokumen </span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s1"> ======&#39;</span><span class="p">)</span>
+  <span class="nb">print</span><span class="p">(</span><span class="n">final_kalimat</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+  <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section id="save">
+<h3>Save<a class="headerlink" href="#save" title="Permalink to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">datas</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">final_kalimat</span><span class="p">)):</span>
+  <span class="n">datas</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
+      <span class="s1">&#39;Summary&#39;</span> <span class="p">:</span> <span class="n">final_kalimat</span><span class="p">[</span><span class="n">i</span><span class="p">],</span>
+      <span class="s1">&#39;Label&#39;</span> <span class="p">:</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;Label&#39;</span><span class="p">][</span><span class="n">i</span><span class="p">]</span>
+  <span class="p">})</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">csv</span>
+<span class="c1"># Menyimpan data dalam bentuk CSV</span>
+<span class="n">csv_filename</span> <span class="o">=</span> <span class="s1">&#39;data_textrank_antaranews.csv&#39;</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">csv_filename</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">,</span> <span class="n">newline</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">csv_file</span><span class="p">:</span>
+    <span class="n">fieldnames</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Summary&#39;</span><span class="p">,</span> <span class="s1">&#39;Label&#39;</span><span class="p">]</span>
+    <span class="n">csv_writer</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">DictWriter</span><span class="p">(</span><span class="n">csv_file</span><span class="p">,</span> <span class="n">fieldnames</span><span class="o">=</span><span class="n">fieldnames</span><span class="p">)</span>
+    <span class="n">csv_writer</span><span class="o">.</span><span class="n">writeheader</span><span class="p">()</span>
+
+    <span class="k">for</span> <span class="n">entry</span> <span class="ow">in</span> <span class="n">datas</span><span class="p">:</span>
+        <span class="n">csv_writer</span><span class="o">.</span><span class="n">writerow</span><span class="p">(</span><span class="n">entry</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Data telah disimpan dalam file </span><span class="si">{</span><span class="n">csv_filename</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">textrank</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;data_textrank_antaranews.csv&#39;</span><span class="p">)</span>
+<span class="n">textrank</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="ex-sentence-tfidf-coocurence-graf">
+<h2>Ex sentence tfidf, coocurence, graf<a class="headerlink" href="#ex-sentence-tfidf-coocurence-graf" title="Permalink to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.metrics.pairwise</span> <span class="kn">import</span> <span class="n">cosine_similarity</span>
+<span class="kn">from</span> <span class="nn">sklearn.feature_extraction.text</span> <span class="kn">import</span> <span class="n">TfidfVectorizer</span>
+<span class="kn">import</span> <span class="nn">networkx</span> <span class="k">as</span> <span class="nn">nx</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">from</span> <span class="nn">networkx.algorithms.shortest_paths</span> <span class="kn">import</span> <span class="n">weighted</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;saya pergi ke pasar&#39;</span><span class="p">,</span><span class="s1">&#39;saya makan nasi&#39;</span><span class="p">,</span><span class="s1">&#39;saya naik sepeda&#39;</span><span class="p">]</span>
+<span class="c1"># x = [[&#39;saya pergi ke pasar&#39;],[&#39;saya makan nasi&#39;],[&#39;saya naik sepeda&#39;]]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Inisialisasi CountVectorizer</span>
+<span class="n">vectorizer</span> <span class="o">=</span> <span class="n">CountVectorizer</span><span class="p">()</span>
+
+<span class="c1"># Melakukan transformasi TF pada kolom &#39;final_abstrak&#39;</span>
+<span class="n">ex_tf_matrix</span> <span class="o">=</span> <span class="n">vectorizer</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="n">terms</span> <span class="o">=</span> <span class="n">vectorizer</span><span class="o">.</span><span class="n">get_feature_names_out</span><span class="p">()</span>
+<span class="c1"># Membuat DataFrame dari hasil TF</span>
+<span class="n">ex_tf_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">ex_tf_matrix</span><span class="o">.</span><span class="n">toarray</span><span class="p">(),</span> <span class="n">columns</span><span class="o">=</span><span class="n">terms</span><span class="p">)</span>
+
+<span class="c1"># Cetak DataFrame TF</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ex_tf_df</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Membuat Co-occurrence Matrix</span>
+<span class="n">ex_co_occurrence_matrix</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">ex_tf_df</span><span class="o">.</span><span class="n">T</span><span class="p">,</span> <span class="n">ex_tf_df</span><span class="p">)</span>
+
+<span class="c1"># Konversi ke dense matrix</span>
+<span class="c1"># ex_co_occurrence_matrix = ex_co_occurrence_matrix.toarray()</span>
+
+<span class="c1"># Mengganti diagonal dengan nol (karena kita tidak ingin memperhitungkan kata dengan dirinya sendiri)</span>
+<span class="n">np</span><span class="o">.</span><span class="n">fill_diagonal</span><span class="p">(</span><span class="n">ex_co_occurrence_matrix</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+
+<span class="c1"># # Membuat DataFrame Co-occurrence</span>
+<span class="n">ex_co_occurrence_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">ex_co_occurrence_matrix</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="n">terms</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="n">terms</span><span class="p">)</span>
+
+<span class="c1"># # Tampilkan DataFrame Co-occurrence</span>
+<span class="c1"># print(&quot;Co-occurrence Matrix:&quot;)</span>
+<span class="n">ex_co_occurrence_df</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ex_co_occurrence_matrix</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">terms</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">u</span> <span class="o">=</span> <span class="n">hasil_df_tf</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">v</span> <span class="o">=</span> <span class="n">u</span><span class="o">.</span><span class="n">T</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">u</span><span class="p">)</span>
+<span class="n">v</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">v</span><span class="o">.</span><span class="n">values</span><span class="p">[(</span><span class="n">np</span><span class="o">.</span><span class="n">r_</span><span class="p">[:</span><span class="nb">len</span><span class="p">(</span><span class="n">v</span><span class="p">)],</span> <span class="p">)</span> <span class="o">*</span> <span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">v</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">networkx</span> <span class="k">as</span> <span class="nn">nx</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="c1"># Membuat graf dari matriks co-occurrence</span>
+<span class="n">graf_result_coba</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">from_pandas_adjacency</span><span class="p">(</span><span class="n">ex_co_occurrence_df</span><span class="p">)</span>
+
+<span class="c1"># # Menambahkan edge dan weight dari matriks co-occurrence</span>
+<span class="c1"># for i in range(len(terms)):</span>
+<span class="c1">#     for j in range(i + 1, len(terms)):</span>
+<span class="c1">#         if co_occurrence_matrix[i, j] &gt; 0:</span>
+<span class="c1">#             graf_result_coba.add_edge(terms[i], terms[j], weight=co_occurrence_matrix[i, j])</span>
+
+<span class="c1"># # Menyiapkan posisi node untuk tampilan yang baik</span>
+<span class="c1"># pos = nx.spring_layout(graf_result_coba)</span>
+
+<span class="c1"># Menggambar graf</span>
+<span class="n">nx</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">graf_result_coba</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span> <span class="n">with_labels</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">font_weight</span><span class="o">=</span><span class="s1">&#39;bold&#39;</span><span class="p">,</span> <span class="n">node_size</span><span class="o">=</span><span class="mi">700</span><span class="p">,</span> <span class="n">node_color</span><span class="o">=</span><span class="s1">&#39;skyblue&#39;</span><span class="p">,</span> <span class="n">font_size</span><span class="o">=</span><span class="mi">8</span><span class="p">)</span>
+
+<span class="c1"># Menambahkan label weight pada setiap edge</span>
+<span class="n">edge_labels</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">get_edge_attributes</span><span class="p">(</span><span class="n">graf_result_coba</span><span class="p">,</span> <span class="s1">&#39;weight&#39;</span><span class="p">)</span>
+<span class="n">nx</span><span class="o">.</span><span class="n">draw_networkx_edge_labels</span><span class="p">(</span><span class="n">graf_result_coba</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span> <span class="n">edge_labels</span><span class="o">=</span><span class="n">edge_labels</span><span class="p">)</span>
+
+<span class="c1"># Menampilkan graf</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Cuma cek Hitung closeness centrality pada index 0</span>
+<span class="n">closeness_centrality_coba</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">pagerank</span><span class="p">(</span><span class="n">graf_result_coba</span><span class="p">)</span>
+<span class="n">closeness_centrality_coba</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rankingcoba</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="nb">sorted</span><span class="p">(</span><span class="n">closeness_centrality_coba</span><span class="o">.</span><span class="n">items</span><span class="p">(),</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">item</span><span class="p">:</span> <span class="n">item</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">reverse</span><span class="o">=</span><span class="kc">True</span><span class="p">))</span>
+<span class="n">rankingcoba</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Cuma cek Hitung closeness centrality pada index 0</span>
+<span class="n">closeness_centrality_coba2</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">closeness_centrality</span><span class="p">(</span><span class="n">graf_result_coba</span><span class="p">)</span>
+<span class="n">closeness_centrality_coba2</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rankingcoba2</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="nb">sorted</span><span class="p">(</span><span class="n">closeness_centrality_coba</span><span class="o">.</span><span class="n">items</span><span class="p">(),</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">item</span><span class="p">:</span> <span class="n">item</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">reverse</span><span class="o">=</span><span class="kc">True</span><span class="p">))</span>
+<span class="n">rankingcoba2</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="modeling">
+<h1>Modeling<a class="headerlink" href="#modeling" title="Permalink to this heading">#</a></h1>
+<section id="id1">
+<h2>EDA (Explorasi Data Analysis)<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h2>
+<blockquote>
+<div><p>proses analisis awal yang dilakukan pada dataset untuk memahami karakteristik, pola, dan struktur data sebelum melakukan analisis lebih lanjut atau membangun model.</p>
+</div></blockquote>
+<section id="id2">
+<h3>1.Download dataset<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">gdown</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">## download data</span>
+<span class="n">nama_data</span> <span class="o">=</span> <span class="s1">&#39;datatextrank.csv&#39;</span>
+<span class="n">gdown</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;https://drive.google.com/uc?id=1eSvQ-SREetN-UkUblym3tYshrOjSvCAM&#39;</span><span class="p">,</span> <span class="n">nama_data</span><span class="p">,</span> <span class="n">quiet</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="id3">
+<h3>2.Baca dataset<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">datatextrank</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;datatextrank.csv&quot;</span><span class="p">)</span>
+<span class="n">datatextrank</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section id="id4">
+<h4>Banyak dataset<a class="headerlink" href="#id4" title="Permalink to this heading">#</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">count_ekonomi</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">count_olahraga</span><span class="o">=</span> <span class="mi">0</span>
+<span class="n">count_politik</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="k">for</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">datatextrank</span><span class="p">[</span><span class="s1">&#39;Label&#39;</span><span class="p">]:</span>
+  <span class="k">if</span> <span class="n">value</span> <span class="o">==</span> <span class="s1">&#39;ekonomi&#39;</span><span class="p">:</span>
+    <span class="n">count_ekonomi</span><span class="o">+=</span><span class="mi">1</span>
+  <span class="k">elif</span> <span class="n">value</span> <span class="o">==</span> <span class="s1">&#39;olahraga&#39;</span><span class="p">:</span>
+    <span class="n">count_olahraga</span><span class="o">+=</span><span class="mi">1</span>
+  <span class="k">else</span><span class="p">:</span>
+    <span class="n">count_politik</span> <span class="o">+=</span> <span class="mi">1</span>
+
+<span class="nb">print</span><span class="p">(</span>
+<span class="sa">f</span><span class="s1">&#39;&#39;&#39;</span>
+<span class="s1">Banyak data ekonomi = </span><span class="si">{</span><span class="n">count_ekonomi</span><span class="si">}</span><span class="s1"> data</span>
+<span class="s1">Banyak data olahraga= </span><span class="si">{</span><span class="n">count_olahraga</span><span class="si">}</span><span class="s1"> data</span>
+<span class="s1">Banyak data politik = </span><span class="si">{</span><span class="n">count_politik</span><span class="si">}</span><span class="s1"> data</span>
+
+<span class="s1">Total Data          = </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">datatextrank</span><span class="p">)</span><span class="si">}</span><span class="s1"> data</span>
+<span class="s1">&#39;&#39;&#39;</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+</section>
+<section id="id5">
+<h2>Preprocessing<a class="headerlink" href="#id5" title="Permalink to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">### 1.Missing value</span>
+<span class="n">datatextrank</span><span class="o">.</span><span class="n">isna</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section id="cleaning">
+<h3>Cleaning<a class="headerlink" href="#cleaning" title="Permalink to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># recruitments punctuation</span>
+<span class="kn">import</span> <span class="nn">string</span>
+
+<span class="c1"># membuat kolom baru dengan nama new_abstrak untuk data baru yang dipunctuation</span>
+<span class="n">datatextrank</span><span class="p">[</span><span class="s1">&#39;summary_punct&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">datatextrank</span><span class="p">[</span><span class="s1">&#39;Summary&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;[</span><span class="si">{}</span><span class="s1">]&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">string</span><span class="o">.</span><span class="n">punctuation</span><span class="p">),</span> <span class="s1">&#39;&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+
+<span class="c1"># Menghilangkan angka dari kolom &#39;new_abstrak&#39;</span>
+<span class="n">datatextrank</span><span class="p">[</span><span class="s1">&#39;summary_punct&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">datatextrank</span><span class="p">[</span><span class="s1">&#39;summary_punct&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;\d+&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">regex</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">datatextrank</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section id="id6">
+<h4><strong>Stopword</strong><a class="headerlink" href="#id6" title="Permalink to this heading">#</a></h4>
+<blockquote>
+<div><p>Stopwords digunakan untuk menghilangkan kata umum yang sering muncul dalam teks seperti: di, dan, atau, dari, ke, saya.</p>
+</div></blockquote>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">nltk</span>
+<span class="kn">from</span> <span class="nn">nltk.corpus</span> <span class="kn">import</span> <span class="n">stopwords</span>
+<span class="kn">from</span> <span class="nn">nltk.tokenize</span> <span class="kn">import</span> <span class="n">sent_tokenize</span><span class="p">,</span> <span class="n">word_tokenize</span>
+<span class="kn">from</span> <span class="nn">nltk.corpus</span> <span class="kn">import</span> <span class="n">stopwords</span>
+<span class="kn">import</span> <span class="nn">nltk</span>
+<span class="n">nltk</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="s1">&#39;punkt&#39;</span><span class="p">)</span>
+
+<span class="c1"># Download kamus stop words</span>
+<span class="n">nltk</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="s1">&#39;stopwords&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Inisialisasi kamus stop words dari NLTK</span>
+<span class="n">stop_words</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">stopwords</span><span class="o">.</span><span class="n">words</span><span class="p">(</span><span class="s1">&#39;indonesian&#39;</span><span class="p">))</span>  <span class="c1"># Inisialisasi kamus stop words</span>
+
+<span class="c1"># Menghapus stop words dari kolom &#39;Abstrak&#39;</span>
+<span class="k">for</span> <span class="n">stop_word</span> <span class="ow">in</span> <span class="n">stop_words</span><span class="p">:</span>
+  <span class="n">datatextrank</span><span class="p">[</span><span class="s1">&#39;summary_stopwords&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">datatextrank</span><span class="p">[</span><span class="s1">&#39;summary_punct&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="sa">rf</span><span class="s1">&#39;\b</span><span class="si">{</span><span class="n">stop_word</span><span class="si">}</span><span class="s1">\b&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">regex</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="c1">#rf untuk formating string</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">datatextrank</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="tfidf">
+<h4>TFIDF<a class="headerlink" href="#tfidf" title="Permalink to this heading">#</a></h4>
+<blockquote>
+<div><p>metode yang digunakan dalam pemrosesan bahasa alami (Natural Language Processing - NLP) dan pengambilan informasi (Information Retrieval) untuk mengukur seberapa penting suatu kata dalam suatu dokumen atau kumpulan dokumen. Tujuannya adalah untuk memberikan bobot yang lebih tinggi kepada kata-kata yang penting dalam representasi teks.</p>
+</div></blockquote>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.feature_extraction.text</span> <span class="kn">import</span> <span class="n">TfidfVectorizer</span>
+<span class="c1"># Inisialisasi TfidfVectorizer</span>
+<span class="n">summ_tfidf_vectorizer</span> <span class="o">=</span> <span class="n">TfidfVectorizer</span><span class="p">()</span>
+
+<span class="c1"># Melakukan transformasi TF-IDF pada kolom &#39;final_abstrak&#39;</span>
+<span class="n">summ_tfidf_matrix</span> <span class="o">=</span> <span class="n">summ_tfidf_vectorizer</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">datatextrank</span><span class="p">[</span><span class="s1">&#39;summary_stopwords&#39;</span><span class="p">])</span>
+
+<span class="c1"># Membuat DataFrame dari hasil TF-IDF</span>
+<span class="n">summ_tfidf_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">summ_tfidf_matrix</span><span class="o">.</span><span class="n">toarray</span><span class="p">(),</span><span class="n">columns</span><span class="o">=</span><span class="n">summ_tfidf_vectorizer</span><span class="o">.</span><span class="n">get_feature_names_out</span><span class="p">())</span>
+
+<span class="n">summ_tfidf_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">datatextrank</span><span class="p">[</span><span class="s1">&#39;Summary&#39;</span><span class="p">],</span><span class="n">summ_tfidf_df</span><span class="p">,</span><span class="n">datatextrank</span><span class="p">[</span><span class="s1">&#39;Label&#39;</span><span class="p">]],</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="c1"># Cetak DataFrame TF-IDF</span>
+<span class="n">summ_tfidf_df</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># pd.DataFrame(summ_tfidf_df[&#39;Summary&#39;])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># summ_tfidf_df.iloc[:,1:-1]</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="model">
+<h3>Model<a class="headerlink" href="#model" title="Permalink to this heading">#</a></h3>
+<section id="split-dataset">
+<h4>Split dataset<a class="headerlink" href="#split-dataset" title="Permalink to this heading">#</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># import library</span>
+<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Bagi data menjadi pelatihan (80%) dan pengujian (20%)</span>
+<span class="n">X_tfidf</span> <span class="o">=</span> <span class="n">summ_tfidf_matrix</span>
+<span class="c1"># X_tfidf</span>
+<span class="n">y_tfidf</span> <span class="o">=</span> <span class="n">summ_tfidf_df</span><span class="p">[</span><span class="s2">&quot;Label&quot;</span><span class="p">]</span>
+<span class="c1"># y_tfidf</span>
+<span class="n">X_tfidf_train</span><span class="p">,</span> <span class="n">X_tfidf_test</span><span class="p">,</span> <span class="n">y_tfidf_train</span><span class="p">,</span> <span class="n">y_tfidf_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X_tfidf</span><span class="p">,</span> <span class="n">y_tfidf</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">X_tfidf_train</span><span class="o">.</span><span class="n">toarray</span><span class="p">())</span>
+<span class="nb">len</span><span class="p">(</span><span class="n">y_tfidf_train</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># print(len(y_tfidf_test),len(X_tfidf_test))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">y_tfidf_train</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="naive-bayes">
+<h4>Naive Bayes<a class="headerlink" href="#naive-bayes" title="Permalink to this heading">#</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Metrics</span>
+<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">make_scorer</span><span class="p">,</span> <span class="n">accuracy_score</span><span class="p">,</span><span class="n">precision_score</span>
+<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">classification_report</span>
+<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">confusion_matrix</span>
+<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">accuracy_score</span> <span class="p">,</span><span class="n">precision_score</span><span class="p">,</span><span class="n">recall_score</span><span class="p">,</span><span class="n">f1_score</span>
+<span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="kn">import</span> <span class="n">LabelEncoder</span>
+
+<span class="kn">from</span> <span class="nn">sklearn.naive_bayes</span> <span class="kn">import</span> <span class="n">GaussianNB</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.naive_bayes</span> <span class="kn">import</span> <span class="n">GaussianNB</span>
+
+<span class="c1"># Contoh penggunaan</span>
+<span class="n">naive_bayes</span> <span class="o">=</span> <span class="n">GaussianNB</span><span class="p">()</span>
+
+<span class="c1"># Konversi matriks sejumput ke matriks padat untuk data pelatihan</span>
+<span class="n">X_dense_train</span> <span class="o">=</span> <span class="n">X_tfidf_train</span><span class="o">.</span><span class="n">toarray</span><span class="p">()</span>
+<span class="n">naive_bayes</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_dense_train</span><span class="p">,</span> <span class="n">y_tfidf_train</span><span class="p">)</span>
+
+<span class="c1"># Konversi matriks sejumput ke matriks padat untuk data pengujian</span>
+<span class="n">X_dense_test</span> <span class="o">=</span> <span class="n">X_tfidf_test</span><span class="o">.</span><span class="n">toarray</span><span class="p">()</span>
+<span class="n">y_pred</span> <span class="o">=</span> <span class="n">naive_bayes</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_dense_test</span><span class="p">)</span>
+
+<span class="n">accuracy_naiveBayes</span> <span class="o">=</span> <span class="n">accuracy_score</span><span class="p">(</span><span class="n">y_tfidf_test</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Akurasi model Naive Bayes: </span><span class="si">{</span><span class="n">accuracy_naiveBayes</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="knn">
+<h4>KNN<a class="headerlink" href="#knn" title="Permalink to this heading">#</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.neighbors</span> <span class="kn">import</span> <span class="n">KNeighborsClassifier</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">knn</span> <span class="o">=</span> <span class="n">KNeighborsClassifier</span><span class="p">()</span>
+
+<span class="n">X_dense_train</span> <span class="o">=</span> <span class="n">X_tfidf_train</span><span class="o">.</span><span class="n">toarray</span><span class="p">()</span>
+
+<span class="c1"># Latih model pada kolom topik tertentu</span>
+<span class="n">knn</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_dense_train</span><span class="p">,</span> <span class="n">y_tfidf_train</span><span class="p">)</span>
+
+<span class="c1"># Lakukan prediksi</span>
+<span class="n">y_pred</span> <span class="o">=</span> <span class="n">knn</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_tfidf_test</span><span class="p">)</span>
+
+<span class="n">accuracy_knn</span> <span class="o">=</span> <span class="n">accuracy_score</span><span class="p">(</span><span class="n">y_tfidf_test</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Akurasi model KNN: </span><span class="si">{</span><span class="n">accuracy_knn</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="random-forest">
+<h4>Random Forest<a class="headerlink" href="#random-forest" title="Permalink to this heading">#</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.ensemble</span> <span class="kn">import</span> <span class="n">RandomForestClassifier</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Inisialisasi model Naive Bayes</span>
+<span class="n">rf</span> <span class="o">=</span> <span class="n">RandomForestClassifier</span><span class="p">()</span>
+
+<span class="n">X_dense_train</span> <span class="o">=</span> <span class="n">X_tfidf_train</span><span class="o">.</span><span class="n">toarray</span><span class="p">()</span>
+
+<span class="c1"># Latih model pada kolom topik tertentu</span>
+<span class="n">rf</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_dense_train</span><span class="p">,</span> <span class="n">y_tfidf_train</span><span class="p">)</span>
+
+<span class="c1"># Lakukan prediksi</span>
+<span class="n">y_pred</span> <span class="o">=</span> <span class="n">rf</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_tfidf_test</span><span class="p">)</span>
+
+<span class="n">accuracy_rf</span> <span class="o">=</span> <span class="n">accuracy_score</span><span class="p">(</span><span class="n">y_tfidf_test</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Akurasi model Random Forest: </span><span class="si">{</span><span class="n">accuracy_rf</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="evaluasi">
+<h3>Evaluasi<a class="headerlink" href="#evaluasi" title="Permalink to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="n">models</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Naive Bayes&#39;</span><span class="p">,</span> <span class="s1">&#39;KNN&#39;</span><span class="p">,</span> <span class="s1">&#39;Random Forest&#39;</span><span class="p">]</span>
+<span class="n">accuracies</span> <span class="o">=</span> <span class="p">[</span><span class="n">accuracy_naiveBayes</span><span class="p">,</span> <span class="n">accuracy_knn</span><span class="p">,</span> <span class="n">accuracy_rf</span><span class="p">]</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">models</span><span class="p">,</span> <span class="n">accuracies</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="p">[</span> <span class="s1">&#39;green&#39;</span><span class="p">,</span> <span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="s1">&#39;red&#39;</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Akurasi Model&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Akurasi Model Machine Learning&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>  <span class="c1"># Sesuaikan dengan rentang akurasi (0-1)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="implementasi">
+<h3>Implementasi<a class="headerlink" href="#implementasi" title="Permalink to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># teks = [&#39;Jakarta - Makna motif adalah alasan atau penyebab seseorang melakukan sesuatu.&#39;,</span>
+<span class="c1">#         &#39;Ketika kita melakukan suatu tindakan pasti ada sesuatu hal yang mendorongnya.&#39;,</span>
+<span class="c1">#         &#39;Contohnya kita makan karena kita lapar.&#39;,</span>
+<span class="c1">#         &#39;Hal tersebut juga terjadi pada kegiatan ekonomi.&#39;,</span>
+<span class="c1">#         &#39;Semua kegiatan ekonomi tidak dapat terjadi begitu saja, namun terdapat suatu alasan atau penyebab yang mendorongnya.&#39;,</span>
+<span class="c1">#         &#39;Faktor pendorong inilah yang disebut motif ekonomi.&#39;,</span>
+<span class="c1">#         &#39;Baca artikel detikfinance, &quot;Pengertian Motif Ekonomi serta Tujuan, Sifat, Macam, dan Contohnya&quot; selengkapnya https://finance.detik.com/berita-ekonomi-bisnis/d-7048370/pengertian-motif-ekonomi-serta-tujuan-sifat-macam-dan-contohnya.&#39;,</span>
+<span class="c1">#         &#39;Download Apps Detikcom Sekarang https://apps.detik.com/detik/&#39;]</span>
+
+<span class="c1"># teks_lower = [kalimat.lower() for kalimat in teks]</span>
+
+<span class="c1"># print(teks_lower)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># ========== data inputan ==========</span>
+<span class="n">new_data</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;masukkan data: &quot;</span><span class="p">))</span>
+
+<span class="c1"># ========== tokenizing kalimat ==========</span>
+<span class="n">new_data</span> <span class="o">=</span> <span class="n">sent_tokenize</span><span class="p">(</span><span class="n">new_data</span><span class="p">)</span>
+<span class="n">new_data</span> <span class="o">=</span> <span class="p">[</span><span class="n">kalimat</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="k">for</span> <span class="n">kalimat</span> <span class="ow">in</span> <span class="n">new_data</span><span class="p">]</span> <span class="c1">#menjadikan lower</span>
+
+<span class="c1"># ========== vectorize ==========</span>
+<span class="n">inp_hasil_df_tf</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="n">inp_termFreq_vectorizer</span> <span class="o">=</span> <span class="n">CountVectorizer</span><span class="p">()</span>  <span class="c1">#inisialisasi tfidf</span>
+<span class="n">inp_termFreq_matrix</span> <span class="o">=</span> <span class="n">inp_termFreq_vectorizer</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">new_data</span><span class="p">)</span> <span class="c1">#menjadikan tfidf setiap dokumen</span>
+
+<span class="n">inp_terms</span> <span class="o">=</span> <span class="n">inp_termFreq_vectorizer</span><span class="o">.</span><span class="n">get_feature_names_out</span><span class="p">()</span>
+<span class="n">inp_tf_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">inp_termFreq_matrix</span><span class="o">.</span><span class="n">toarray</span><span class="p">(),</span> <span class="n">columns</span><span class="o">=</span><span class="n">inp_terms</span><span class="p">)</span>
+
+<span class="n">inp_hasil_df_tf</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">inp_tf_df</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Jakarta - Makna motif adalah alasan atau penyebab seseorang melakukan sesuatu. Ketika kita melakukan suatu tindakan pasti ada sesuatu hal yang mendorongnya. Contohnya kita makan karena kita lapar. Hal tersebut juga terjadi pada kegiatan ekonomi. Semua kegiatan ekonomi tidak dapat terjadi begitu saja, namun terdapat suatu alasan atau penyebab yang mendorongnya. Faktor pendorong inilah yang disebut motif ekonomi.  Baca artikel detikfinance, “Pengertian Motif Ekonomi serta Tujuan, Sifat, Macam, dan Contohnya” selengkapnya <a class="reference external" href="https://finance.detik.com/berita-ekonomi-bisnis/d-7048370/pengertian-motif-ekonomi-serta-tujuan-sifat-macam-dan-contohnya">https://finance.detik.com/berita-ekonomi-bisnis/d-7048370/pengertian-motif-ekonomi-serta-tujuan-sifat-macam-dan-contohnya</a>.  Download Apps Detikcom Sekarang <a class="reference external" href="https://apps.detik.com/detik/">https://apps.detik.com/detik/</a></p>
+<p>JAKARTA, <a class="reference external" href="http://Indotimes.co.id">Indotimes.co.id</a> – Putri Zulkifli Hasan, anak dari Ketua Umum Partai Amanat Nasional (PAN) Zulkifli Hasan, tak punya itikad baik untuk menyelesaikan sengketa lahan yang menyeret namanya dengan cara mediasi.</p>
+<p>Dengan demikian, masalah sengketa tanah itu berlanjut dalam persidangan yang harus mendatangkan pihak-pihak beperkara.</p>
+<p>Sidang yang melibatkan Putri Zulkifli Hasan ini kembali digelar di Pengadilan Negeri Jakarta Timur (PN Jaktim), Kamis (9/11).</p>
+<p>Para pihak yang hadir, antara lain penggugat I Aziz Anugerah Yudha Prawira yang diwakili kuasa hukumnya dari Firma Hukum DR. Yayan Riyanto, SH, MH.</p>
+<p>Adapun tergugat yang hadir, yaitu Tergugat I Lie Andry Setyadarma yang diwakili pengacaranya dan Tergugat III Putri Zulkifli Hasan yang juga diwakili kuasa hukumnya, Andreas Tambunan.</p>
+<p>DR. Yayan Riyanto menyampaikan, gugatan yang diajukannya sudah dibacakan majelis hakim untuk kemudian dijawab para pihak tergugat.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># inp_hasil_df_tf</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># ========== co ocurence =======</span>
+<span class="n">inp_hasil_co_occurrence_df</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">inp_hasil_co_occurrence_matrix</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">inp_hasil_df_tf</span><span class="p">)):</span>
+
+  <span class="c1"># Membuat Co-occurrence Matrix</span>
+  <span class="n">inp_co_occurrence_matrix</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">inp_hasil_df_tf</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">T</span><span class="p">,</span><span class="n">inp_hasil_df_tf</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+
+  <span class="c1"># Mengganti diagonal dengan nol (karena kita tidak ingin memperhitungkan kata dengan dirinya sendiri)</span>
+  <span class="n">np</span><span class="o">.</span><span class="n">fill_diagonal</span><span class="p">(</span><span class="n">inp_co_occurrence_matrix</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+
+  <span class="c1"># mengambil columns</span>
+  <span class="n">inp_kolom</span> <span class="o">=</span> <span class="n">inp_hasil_df_tf</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">columns</span>
+
+  <span class="c1"># # Membuat DataFrame Co-occurrence</span>
+  <span class="n">inp_co_occurrence_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">inp_co_occurrence_matrix</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="n">inp_kolom</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="n">inp_kolom</span><span class="p">)</span>
+
+  <span class="n">inp_hasil_co_occurrence_df</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">inp_co_occurrence_df</span><span class="p">)</span>
+  <span class="n">inp_hasil_co_occurrence_matrix</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">inp_co_occurrence_matrix</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">inp_hasil_co_occurrence_df</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># ========== tambah graf dan atur treshold =======</span>
+<span class="n">inp_graf_results</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">treshold</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">inp_hasil_co_occurrence_df</span><span class="p">)):</span>
+
+  <span class="n">inp_graf</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">Graph</span><span class="p">()</span>  <span class="c1"># Instantiate as a Graph object</span>
+
+  <span class="n">inp_co_occurrence</span> <span class="o">=</span> <span class="n">inp_hasil_co_occurrence_df</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="c1">#mengambil hasil coocurence per indeks yang disimpan array</span>
+  <span class="n">inp_koloms</span> <span class="o">=</span> <span class="n">inp_co_occurrence</span><span class="o">.</span><span class="n">columns</span> <span class="c1">#mengambil nama kolom saja dari coocurence array indeks</span>
+  <span class="n">inp_matrix_coocurrence</span> <span class="o">=</span> <span class="n">inp_hasil_co_occurrence_matrix</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="c1">#mengambil matrix coocurencenya</span>
+
+  <span class="k">for</span> <span class="n">i_koloms</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">inp_koloms</span><span class="p">)):</span> <span class="c1">#perulangan setiap dari panjang kolom dari coocurence</span>
+      <span class="k">for</span> <span class="n">j_koloms</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">i_koloms</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">inp_koloms</span><span class="p">)):</span> <span class="c1">#perulangan dari setiap panjang kolom + 1, maksudna kolom indeks ke dua</span>
+
+        <span class="n">inp_bobot</span> <span class="o">=</span> <span class="n">inp_matrix_coocurrence</span><span class="p">[</span><span class="n">i_koloms</span><span class="p">,</span><span class="n">j_koloms</span><span class="p">]</span> <span class="c1">#mencari bobot dengan setiap kolom</span>
+
+        <span class="k">if</span> <span class="n">inp_bobot</span> <span class="o">&gt;</span> <span class="n">treshold</span><span class="p">:</span> <span class="c1">#cek bobot</span>
+          <span class="n">inp_graf</span><span class="o">.</span><span class="n">add_edge</span><span class="p">(</span><span class="n">inp_koloms</span><span class="p">[</span><span class="n">i_koloms</span><span class="p">],</span> <span class="n">inp_koloms</span><span class="p">[</span><span class="n">j_koloms</span><span class="p">],</span> <span class="n">weight</span><span class="o">=</span><span class="n">inp_matrix_coocurrence</span><span class="p">[</span><span class="n">i_koloms</span><span class="p">,</span> <span class="n">j_koloms</span><span class="p">])</span>
+
+  <span class="n">inp_graf_results</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">inp_graf</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># ==== centrality ===</span>
+<span class="n">inp_centrality_result</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">inp_graf_results</span><span class="p">)):</span>
+  <span class="n">inp_centrality</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">pagerank</span><span class="p">(</span><span class="n">inp_graf_results</span><span class="p">[</span><span class="n">i</span><span class="p">])</span> <span class="c1">#menjadikan graf setiap index list diclosness</span>
+
+  <span class="n">inp_centrality_result</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">inp_centrality</span><span class="p">)</span>
+  <span class="c1"># print(i)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">inp_centrality_result</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># ========= ranking ==========</span>
+<span class="n">inp_result_skor</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="k">for</span> <span class="n">sentences</span> <span class="ow">in</span> <span class="n">new_data</span><span class="p">:</span>
+
+  <span class="n">words</span> <span class="o">=</span> <span class="n">sentences</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+  <span class="n">skor_kata</span> <span class="o">=</span> <span class="p">{}</span>
+
+  <span class="k">for</span> <span class="n">cek</span> <span class="ow">in</span> <span class="n">words</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">cek</span> <span class="ow">in</span> <span class="n">inp_centrality_result</span><span class="p">[</span><span class="mi">0</span><span class="p">]:</span>
+      <span class="n">skor_kata</span><span class="p">[</span><span class="n">cek</span><span class="p">]</span> <span class="o">=</span> <span class="n">inp_centrality_result</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="n">cek</span><span class="p">]</span>
+  <span class="n">inp_result_skor</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">skor_kata</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">inp_result_skor</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># inp_result_skor</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">inp_result_bobot_kalimat</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">inp_result_skor</span><span class="p">)):</span>
+    <span class="n">current_bobot</span> <span class="o">=</span> <span class="p">{}</span>
+
+    <span class="n">bobot_kalimat</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">inp_result_skor</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
+    <span class="n">current_bobot</span><span class="p">[</span><span class="n">new_data</span><span class="p">[</span><span class="n">i</span><span class="p">]]</span> <span class="o">=</span> <span class="n">bobot_kalimat</span>
+
+    <span class="n">inp_result_bobot_kalimat</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">current_bobot</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">inp_result_bobot_kalimat</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">current_inp</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">inp_sorted_data</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">inp_result_bobot_kalimat</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="nb">list</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">values</span><span class="p">())[</span><span class="mi">0</span><span class="p">],</span> <span class="n">reverse</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="c1"># ambil 5 data teratas</span>
+<span class="n">inp_sorted_data</span> <span class="o">=</span> <span class="n">inp_sorted_data</span><span class="p">[:</span><span class="mi">5</span><span class="p">]</span>
+
+<span class="n">final_inp</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">hasil</span> <span class="ow">in</span> <span class="n">inp_sorted_data</span><span class="p">:</span>
+  <span class="k">for</span> <span class="n">key</span><span class="p">,</span><span class="n">values</span> <span class="ow">in</span> <span class="n">hasil</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="n">final_inp</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># final_inp</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">final_inp</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">final_inp</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># === tfidf ===</span>
+
+<span class="c1"># Membuat final_inp menjadi list jika belum</span>
+<span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">final_inp</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>
+    <span class="n">final_inp</span> <span class="o">=</span> <span class="p">[</span><span class="n">final_inp</span><span class="p">]</span>
+
+<span class="c1"># Melakukan transformasi TF-IDF pada final_inp</span>
+<span class="n">rank_inp</span> <span class="o">=</span> <span class="n">summ_tfidf_vectorizer</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">final_inp</span><span class="p">)</span>
+<span class="c1"># rank_inp.toarray()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">z</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;masukkan kata : &#39;</span><span class="p">))</span>
+
+<span class="c1"># === tfidf ===</span>
+
+<span class="c1"># Membuat z menjadi list jika belum</span>
+<span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">z</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>
+    <span class="n">z</span> <span class="o">=</span> <span class="p">[</span><span class="n">z</span><span class="p">]</span>
+
+<span class="c1"># Melakukan transformasi TF-IDF pada z</span>
+<span class="n">rank_z</span> <span class="o">=</span> <span class="n">summ_tfidf_vectorizer</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">z</span><span class="p">)</span>
+<span class="c1"># rank_inp.toarray()</span>
+
+
+<span class="n">predict_inp</span> <span class="o">=</span> <span class="n">knn</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">rank_inp</span><span class="o">.</span><span class="n">toarray</span><span class="p">())</span>
+<span class="n">predict_inp</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># test</span>
+
+<span class="n">predict_inp</span> <span class="o">=</span> <span class="n">knn</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">rank_inp</span><span class="o">.</span><span class="n">toarray</span><span class="p">())</span>
+<span class="n">predict_inp</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  <!-- Previous / next buttons -->
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Data</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#eda-explorasi-data-analysis">EDA (Explorasi Data Analysis)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#download-dataset">Download dataset</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#baca-dataset">Baca dataset</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#banyak-dataset">Banyak dataset</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#banyak-dataset-setiap-kelas">Banyak dataset setiap kelas</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#preprocessing">Preprocessing</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#missing-value">Missing Value</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#duplicate">Duplicate</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#punctuation-process"><strong>Punctuation process</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#stopword"><strong>Stopword</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tokenizing">Tokenizing</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vsm">VSM</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#term-freq">Term Freq</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#co-occurrence-metrics">Co-occurrence metrics</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tambahkan-ke-graf-dan-beri-treshold">Tambahkan ke graf dan beri treshold</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hitung-centrality">Hitung Centrality</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pagerank">Pagerank</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ranking-kata-kunci">Ranking kata kunci</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#meranking-kata-sesuai-kalimat-artikel">Meranking kata sesuai kalimat artikel</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#save">Save</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ex-sentence-tfidf-coocurence-graf">Ex sentence tfidf, coocurence, graf</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#modeling">Modeling</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">EDA (Explorasi Data Analysis)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">1.Download dataset</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">2.Baca dataset</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Banyak dataset</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Preprocessing</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cleaning">Cleaning</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id6"><strong>Stopword</strong></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tfidf">TFIDF</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#model">Model</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#split-dataset">Split dataset</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#naive-bayes">Naive Bayes</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#knn">KNN</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#random-forest">Random Forest</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#evaluasi">Evaluasi</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#implementasi">Implementasi</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Fiqry Wahyu Diky W
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
