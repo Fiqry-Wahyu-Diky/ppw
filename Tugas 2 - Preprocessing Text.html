@@ -443,15 +443,6 @@ document.write(`
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/content
 </pre></div>
 </div>
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">FileExistsError</span><span class="g g-Whitespace">                           </span>Traceback (most recent call last)
-<span class="nn">&lt;ipython-input-2-472a271d9065&gt;</span> in <span class="ni">&lt;cell line: 2&gt;</span><span class="nt">()</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="n">get_ipython</span><span class="p">()</span><span class="o">.</span><span class="n">run_line_magic</span><span class="p">(</span><span class="s1">&#39;cd&#39;</span><span class="p">,</span> <span class="s1">&#39;/content/&#39;</span><span class="p">)</span>
-<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">os</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="s1">&#39;Data&#39;</span><span class="p">)</span>
-
-<span class="ne">FileExistsError</span>: [Errno 17] File exists: &#39;Data&#39;
-</pre></div>
-</div>
 </div>
 </div>
 </section>
@@ -478,6 +469,25 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading...
+From: https://drive.google.com/uc?id=1-IdWAIZ16LN3AqRyoKhrv3Iojggt7hDf
+To: /content/Data/data.csv
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  0%|          | 0.00/1.25M [00:00&lt;?, ?B/s]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>100%|██████████| 1.25M/1.25M [00:00&lt;00:00, 37.3MB/s]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;/content/Data/data.csv&#39;
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -486,6 +496,221 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+  <div id="df-610d8747-795a-49a2-8837-e3cfc69b24c2" class="colab-df-container">
+    <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Judul</th>
+      <th>Penulis</th>
+      <th>Dosen Pembimbing I</th>
+      <th>Dosen Pembimbing II</th>
+      <th>Abstrak</th>
+      <th>Label</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>PERANCANGAN DAN IMPLEMENTASI SISTEM DATABASE  ...</td>
+      <td>A.Ubaidillah S.Kom</td>
+      <td>Budi Setyono M.T</td>
+      <td>Hermawan S.T</td>
+      <td>Sistem  informasi  akademik  (SIAKAD) merupaka...</td>
+      <td>RPL</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>APLIKASI KONTROL DAN MONITORING JARINGAN KOMPU...</td>
+      <td>M. Basith Ardianto,</td>
+      <td>Drs. Budi Soesilo, MT</td>
+      <td>Koko Joni, ST</td>
+      <td>Berjalannya koneksi jaringan komputer dengan l...</td>
+      <td>RPL</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>RANCANG BANGUN APLIKASI PROXY SERVER UNTUK ENK...</td>
+      <td>Akhmad Suyandi, S.Kom</td>
+      <td>Drs. Budi Soesilo, M.T</td>
+      <td>Hermawan, ST, MT</td>
+      <td>Web server adalah sebuah perangkat lunak serve...</td>
+      <td>RPL</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>SISTEM PENDUKUNG KEPUTUSAN OPTIMASI PENJADWALA...</td>
+      <td>Heri Supriyanto</td>
+      <td>Mulaab, S.Si., M.Kom</td>
+      <td>Firli Irhamni, ST., M.Kom</td>
+      <td>Penjadwalan  kuliah  di  Perguruan  Tinggi  me...</td>
+      <td>KK</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>SISTEM AUGMENTED REALITY ANIMASI BENDA BERGERA...</td>
+      <td>Septian Rahman Hakim</td>
+      <td>Arik Kurniawati, S.Kom., M.T.</td>
+      <td>Haryanto, S.T., M.T.</td>
+      <td>Seiring perkembangan teknologi yang ada diduni...</td>
+      <td>KK</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>853</th>
+      <td>PENERAPAN ALGORITMA LONG-SHORT TERM MEMORY UNT...</td>
+      <td>Rachmad Agung Pambudi</td>
+      <td>Eka Mala Sari Rochman, S.Kom., M.Kom</td>
+      <td>Sri Herawati, S.Kom., M.Kom</td>
+      <td>Investasi saham selama ini memiliki resiko ker...</td>
+      <td>KK</td>
+    </tr>
+    <tr>
+      <th>854</th>
+      <td>SISTEM PENCARIAN TEKS AL-QURAN TERJEMAHAN BERB...</td>
+      <td>Nadila Hidayanti</td>
+      <td>Achmad Jauhari, S.T., M.Kom</td>
+      <td>Ika Oktavia Suzanti, S.Kom., M.Cs</td>
+      <td>Information Retrieval (IR) merupakan pengambil...</td>
+      <td>KK</td>
+    </tr>
+    <tr>
+      <th>855</th>
+      <td>KLASIFIKASI KOMPLEKSITAS VISUAL CITRA SAMPAH M...</td>
+      <td>Afni Sakinah</td>
+      <td>Dr. Indah Agustien Siradjuddin, S.Kom., M.Kom.</td>
+      <td>Moch. Kautsar Sophan, S.Kom., M.MT.</td>
+      <td>Klasifikasi citra merupakan proses pengelompok...</td>
+      <td>KK</td>
+    </tr>
+    <tr>
+      <th>856</th>
+      <td>IDENTIFIKASI BINER ATRIBUT PEJALAN KAKI MENGGU...</td>
+      <td>Friska Fatmawatiningrum</td>
+      <td>Dr. Indah Agustien Siradjuddin, S.Kom., M.Kom.</td>
+      <td>Prof. Dr. Arief Muntasa, S.Si., M.MT.</td>
+      <td>Identifikasi atribut pejalan kaki merupakan sa...</td>
+      <td>KK</td>
+    </tr>
+    <tr>
+      <th>857</th>
+      <td>DETEKSI OBJEK MANUSIA BERBASIS ONE STAGE DETEC...</td>
+      <td>Dian Wibowo</td>
+      <td>Dr. Indah Agustien Siradjuddin, S.Kom., M.Kom.</td>
+      <td>Moch. Kautsar Sophan, S.Kom., M.MT.</td>
+      <td>Topik deteksi objek telah menarik perhatian ya...</td>
+      <td>KK</td>
+    </tr>
+  </tbody>
+</table>
+<p>858 rows × 6 columns</p>
+</div>
+    <div class="colab-df-buttons">
+      
+  <div class="colab-df-container">
+    <button class="colab-df-convert" onclick="convertToInteractive('df-610d8747-795a-49a2-8837-e3cfc69b24c2')"
+            title="Convert this dataframe to an interactive table."
+            style="display:none;">
+      
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960">
+    <path d="M120-120v-720h720v720H120Zm60-500h600v-160H180v160Zm220 220h160v-160H400v160Zm0 220h160v-160H400v160ZM180-400h160v-160H180v160Zm440 0h160v-160H620v160ZM180-180h160v-160H180v160Zm440 0h160v-160H620v160Z"/>
+  </svg>
+    </button>
+    
+  <style>
+    .colab-df-container {
+      display:flex;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    .colab-df-buttons div {
+      margin-bottom: 4px;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+    <script>
+      const buttonEl =
+        document.querySelector('#df-610d8747-795a-49a2-8837-e3cfc69b24c2 button.colab-df-convert');
+      buttonEl.style.display =
+        google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+      async function convertToInteractive(key) {
+        const element = document.querySelector('#df-610d8747-795a-49a2-8837-e3cfc69b24c2');
+        const dataTable =
+          await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                    [key], {});
+        if (!dataTable) return;
+
+        const docLinkHtml = 'Like what you see? Visit the ' +
+          '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+          + ' to learn more about interactive tables.';
+        element.innerHTML = '';
+        dataTable['output_type'] = 'display_data';
+        await google.colab.output.renderOutput(dataTable, element);
+        const docLink = document.createElement('div');
+        docLink.innerHTML = docLinkHtml;
+        element.appendChild(docLink);
+      }
+    </script>
+  </div>
+  
+    </div>
+  </div>
+  </div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -494,11 +719,38 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0      Sistem  informasi  akademik  (SIAKAD) merupaka...
+1      Berjalannya koneksi jaringan komputer dengan l...
+2      Web server adalah sebuah perangkat lunak serve...
+3      Penjadwalan  kuliah  di  Perguruan  Tinggi  me...
+4      Seiring perkembangan teknologi yang ada diduni...
+                             ...                        
+853    Investasi saham selama ini memiliki resiko ker...
+854    Information Retrieval (IR) merupakan pengambil...
+855    Klasifikasi citra merupakan proses pengelompok...
+856    Identifikasi atribut pejalan kaki merupakan sa...
+857    Topik deteksi objek telah menarik perhatian ya...
+Name: Abstrak, Length: 858, dtype: object
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># cek data kosong atau null</span>
 <span class="n">data</span><span class="o">.</span><span class="n">isna</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Judul                   6
+Penulis                10
+Dosen Pembimbing I     10
+Dosen Pembimbing II    11
+Abstrak                29
+Label                   0
+dtype: int64
 </pre></div>
 </div>
 </div>
@@ -518,10 +770,31 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;Abstrak&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0      Sistem  informasi  akademik  (SIAKAD) merupaka...
+1      Berjalannya koneksi jaringan komputer dengan l...
+2      Web server adalah sebuah perangkat lunak serve...
+3      Penjadwalan  kuliah  di  Perguruan  Tinggi  me...
+4      Seiring perkembangan teknologi yang ada diduni...
+                             ...                        
+853    Investasi saham selama ini memiliki resiko ker...
+854    Information Retrieval (IR) merupakan pengambil...
+855    Klasifikasi citra merupakan proses pengelompok...
+856    Identifikasi atribut pejalan kaki merupakan sa...
+857    Topik deteksi objek telah menarik perhatian ya...
+Name: Abstrak, Length: 828, dtype: object
 </pre></div>
 </div>
 </div>
@@ -557,6 +830,11 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;!&quot;#$%&amp;\&#39;()*+,-./:;&lt;=&gt;?@[\\]^_`{|}~&#39;
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -580,10 +858,253 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+  <div id="df-642065c2-b82c-42d7-8629-0a4a1edcfc9b" class="colab-df-container">
+    <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Judul</th>
+      <th>Penulis</th>
+      <th>Dosen Pembimbing I</th>
+      <th>Dosen Pembimbing II</th>
+      <th>Abstrak</th>
+      <th>Label</th>
+      <th>clean_abstrak</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>PERANCANGAN DAN IMPLEMENTASI SISTEM DATABASE  ...</td>
+      <td>A.Ubaidillah S.Kom</td>
+      <td>Budi Setyono M.T</td>
+      <td>Hermawan S.T</td>
+      <td>Sistem  informasi  akademik  (SIAKAD) merupaka...</td>
+      <td>RPL</td>
+      <td>sistem  informasi  akademik   merupakan  siste...</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>APLIKASI KONTROL DAN MONITORING JARINGAN KOMPU...</td>
+      <td>M. Basith Ardianto,</td>
+      <td>Drs. Budi Soesilo, MT</td>
+      <td>Koko Joni, ST</td>
+      <td>Berjalannya koneksi jaringan komputer dengan l...</td>
+      <td>RPL</td>
+      <td>berjalannya koneksi jaringan komputer dengan l...</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>RANCANG BANGUN APLIKASI PROXY SERVER UNTUK ENK...</td>
+      <td>Akhmad Suyandi, S.Kom</td>
+      <td>Drs. Budi Soesilo, M.T</td>
+      <td>Hermawan, ST, MT</td>
+      <td>Web server adalah sebuah perangkat lunak serve...</td>
+      <td>RPL</td>
+      <td>web server adalah sebuah perangkat lunak serve...</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>SISTEM PENDUKUNG KEPUTUSAN OPTIMASI PENJADWALA...</td>
+      <td>Heri Supriyanto</td>
+      <td>Mulaab, S.Si., M.Kom</td>
+      <td>Firli Irhamni, ST., M.Kom</td>
+      <td>Penjadwalan  kuliah  di  Perguruan  Tinggi  me...</td>
+      <td>KK</td>
+      <td>penjadwalan  kuliah  di  perguruan  tinggi  me...</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>SISTEM AUGMENTED REALITY ANIMASI BENDA BERGERA...</td>
+      <td>Septian Rahman Hakim</td>
+      <td>Arik Kurniawati, S.Kom., M.T.</td>
+      <td>Haryanto, S.T., M.T.</td>
+      <td>Seiring perkembangan teknologi yang ada diduni...</td>
+      <td>KK</td>
+      <td>seiring perkembangan teknologi yang ada diduni...</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>853</th>
+      <td>PENERAPAN ALGORITMA LONG-SHORT TERM MEMORY UNT...</td>
+      <td>Rachmad Agung Pambudi</td>
+      <td>Eka Mala Sari Rochman, S.Kom., M.Kom</td>
+      <td>Sri Herawati, S.Kom., M.Kom</td>
+      <td>Investasi saham selama ini memiliki resiko ker...</td>
+      <td>KK</td>
+      <td>investasi saham selama ini memiliki resiko ker...</td>
+    </tr>
+    <tr>
+      <th>854</th>
+      <td>SISTEM PENCARIAN TEKS AL-QURAN TERJEMAHAN BERB...</td>
+      <td>Nadila Hidayanti</td>
+      <td>Achmad Jauhari, S.T., M.Kom</td>
+      <td>Ika Oktavia Suzanti, S.Kom., M.Cs</td>
+      <td>Information Retrieval (IR) merupakan pengambil...</td>
+      <td>KK</td>
+      <td>information retrieval  merupakan pengambilan i...</td>
+    </tr>
+    <tr>
+      <th>855</th>
+      <td>KLASIFIKASI KOMPLEKSITAS VISUAL CITRA SAMPAH M...</td>
+      <td>Afni Sakinah</td>
+      <td>Dr. Indah Agustien Siradjuddin, S.Kom., M.Kom.</td>
+      <td>Moch. Kautsar Sophan, S.Kom., M.MT.</td>
+      <td>Klasifikasi citra merupakan proses pengelompok...</td>
+      <td>KK</td>
+      <td>klasifikasi citra merupakan proses pengelompok...</td>
+    </tr>
+    <tr>
+      <th>856</th>
+      <td>IDENTIFIKASI BINER ATRIBUT PEJALAN KAKI MENGGU...</td>
+      <td>Friska Fatmawatiningrum</td>
+      <td>Dr. Indah Agustien Siradjuddin, S.Kom., M.Kom.</td>
+      <td>Prof. Dr. Arief Muntasa, S.Si., M.MT.</td>
+      <td>Identifikasi atribut pejalan kaki merupakan sa...</td>
+      <td>KK</td>
+      <td>identifikasi atribut pejalan kaki merupakan sa...</td>
+    </tr>
+    <tr>
+      <th>857</th>
+      <td>DETEKSI OBJEK MANUSIA BERBASIS ONE STAGE DETEC...</td>
+      <td>Dian Wibowo</td>
+      <td>Dr. Indah Agustien Siradjuddin, S.Kom., M.Kom.</td>
+      <td>Moch. Kautsar Sophan, S.Kom., M.MT.</td>
+      <td>Topik deteksi objek telah menarik perhatian ya...</td>
+      <td>KK</td>
+      <td>topik deteksi objek telah menarik perhatian ya...</td>
+    </tr>
+  </tbody>
+</table>
+<p>828 rows × 7 columns</p>
+</div>
+    <div class="colab-df-buttons">
+      
+  <div class="colab-df-container">
+    <button class="colab-df-convert" onclick="convertToInteractive('df-642065c2-b82c-42d7-8629-0a4a1edcfc9b')"
+            title="Convert this dataframe to an interactive table."
+            style="display:none;">
+      
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960">
+    <path d="M120-120v-720h720v720H120Zm60-500h600v-160H180v160Zm220 220h160v-160H400v160Zm0 220h160v-160H400v160ZM180-400h160v-160H180v160Zm440 0h160v-160H620v160ZM180-180h160v-160H180v160Zm440 0h160v-160H620v160Z"/>
+  </svg>
+    </button>
+    
+  <style>
+    .colab-df-container {
+      display:flex;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    .colab-df-buttons div {
+      margin-bottom: 4px;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+    <script>
+      const buttonEl =
+        document.querySelector('#df-642065c2-b82c-42d7-8629-0a4a1edcfc9b button.colab-df-convert');
+      buttonEl.style.display =
+        google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+      async function convertToInteractive(key) {
+        const element = document.querySelector('#df-642065c2-b82c-42d7-8629-0a4a1edcfc9b');
+        const dataTable =
+          await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                    [key], {});
+        if (!dataTable) return;
+
+        const docLinkHtml = 'Like what you see? Visit the ' +
+          '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+          + ' to learn more about interactive tables.';
+        element.innerHTML = '';
+        dataTable['output_type'] = 'display_data';
+        await google.colab.output.renderOutput(dataTable, element);
+        const docLink = document.createElement('div');
+        docLink.innerHTML = docLinkHtml;
+        element.appendChild(docLink);
+      }
+    </script>
+  </div>
+  
+    </div>
+  </div>
+  </div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;clean_abstrak&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0      sistem  informasi  akademik   merupakan  siste...
+1      berjalannya koneksi jaringan komputer dengan l...
+2      web server adalah sebuah perangkat lunak serve...
+3      penjadwalan  kuliah  di  perguruan  tinggi  me...
+4      seiring perkembangan teknologi yang ada diduni...
+                             ...                        
+853    investasi saham selama ini memiliki resiko ker...
+854    information retrieval  merupakan pengambilan i...
+855    klasifikasi citra merupakan proses pengelompok...
+856    identifikasi atribut pejalan kaki merupakan sa...
+857    topik deteksi objek telah menarik perhatian ya...
+Name: clean_abstrak, Length: 828, dtype: object
 </pre></div>
 </div>
 </div>
@@ -608,6 +1129,19 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[nltk_data] Downloading package punkt to /root/nltk_data...
+[nltk_data]   Unzipping tokenizers/punkt.zip.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[nltk_data] Downloading package stopwords to /root/nltk_data...
+[nltk_data]   Unzipping corpora/stopwords.zip.
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -627,6 +1161,245 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+  <div id="df-0197f860-d1e6-42d0-8557-988e0e5333c0" class="colab-df-container">
+    <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Judul</th>
+      <th>Penulis</th>
+      <th>Dosen Pembimbing I</th>
+      <th>Dosen Pembimbing II</th>
+      <th>Abstrak</th>
+      <th>Label</th>
+      <th>clean_abstrak</th>
+      <th>abstrak_stopword</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>PERANCANGAN DAN IMPLEMENTASI SISTEM DATABASE  ...</td>
+      <td>A.Ubaidillah S.Kom</td>
+      <td>Budi Setyono M.T</td>
+      <td>Hermawan S.T</td>
+      <td>Sistem  informasi  akademik  (SIAKAD) merupaka...</td>
+      <td>RPL</td>
+      <td>sistem  informasi  akademik   merupakan  siste...</td>
+      <td>sistem  informasi  akademik   merupakan  siste...</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>APLIKASI KONTROL DAN MONITORING JARINGAN KOMPU...</td>
+      <td>M. Basith Ardianto,</td>
+      <td>Drs. Budi Soesilo, MT</td>
+      <td>Koko Joni, ST</td>
+      <td>Berjalannya koneksi jaringan komputer dengan l...</td>
+      <td>RPL</td>
+      <td>berjalannya koneksi jaringan komputer dengan l...</td>
+      <td>berjalannya koneksi jaringan komputer dengan l...</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>RANCANG BANGUN APLIKASI PROXY SERVER UNTUK ENK...</td>
+      <td>Akhmad Suyandi, S.Kom</td>
+      <td>Drs. Budi Soesilo, M.T</td>
+      <td>Hermawan, ST, MT</td>
+      <td>Web server adalah sebuah perangkat lunak serve...</td>
+      <td>RPL</td>
+      <td>web server adalah sebuah perangkat lunak serve...</td>
+      <td>web server adalah sebuah perangkat lunak serve...</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>SISTEM PENDUKUNG KEPUTUSAN OPTIMASI PENJADWALA...</td>
+      <td>Heri Supriyanto</td>
+      <td>Mulaab, S.Si., M.Kom</td>
+      <td>Firli Irhamni, ST., M.Kom</td>
+      <td>Penjadwalan  kuliah  di  Perguruan  Tinggi  me...</td>
+      <td>KK</td>
+      <td>penjadwalan  kuliah  di  perguruan  tinggi  me...</td>
+      <td>penjadwalan  kuliah  di  perguruan  tinggi  me...</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>SISTEM AUGMENTED REALITY ANIMASI BENDA BERGERA...</td>
+      <td>Septian Rahman Hakim</td>
+      <td>Arik Kurniawati, S.Kom., M.T.</td>
+      <td>Haryanto, S.T., M.T.</td>
+      <td>Seiring perkembangan teknologi yang ada diduni...</td>
+      <td>KK</td>
+      <td>seiring perkembangan teknologi yang ada diduni...</td>
+      <td>seiring perkembangan teknologi yang ada diduni...</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>853</th>
+      <td>PENERAPAN ALGORITMA LONG-SHORT TERM MEMORY UNT...</td>
+      <td>Rachmad Agung Pambudi</td>
+      <td>Eka Mala Sari Rochman, S.Kom., M.Kom</td>
+      <td>Sri Herawati, S.Kom., M.Kom</td>
+      <td>Investasi saham selama ini memiliki resiko ker...</td>
+      <td>KK</td>
+      <td>investasi saham selama ini memiliki resiko ker...</td>
+      <td>investasi saham selama ini memiliki resiko ker...</td>
+    </tr>
+    <tr>
+      <th>854</th>
+      <td>SISTEM PENCARIAN TEKS AL-QURAN TERJEMAHAN BERB...</td>
+      <td>Nadila Hidayanti</td>
+      <td>Achmad Jauhari, S.T., M.Kom</td>
+      <td>Ika Oktavia Suzanti, S.Kom., M.Cs</td>
+      <td>Information Retrieval (IR) merupakan pengambil...</td>
+      <td>KK</td>
+      <td>information retrieval  merupakan pengambilan i...</td>
+      <td>information retrieval  merupakan pengambilan i...</td>
+    </tr>
+    <tr>
+      <th>855</th>
+      <td>KLASIFIKASI KOMPLEKSITAS VISUAL CITRA SAMPAH M...</td>
+      <td>Afni Sakinah</td>
+      <td>Dr. Indah Agustien Siradjuddin, S.Kom., M.Kom.</td>
+      <td>Moch. Kautsar Sophan, S.Kom., M.MT.</td>
+      <td>Klasifikasi citra merupakan proses pengelompok...</td>
+      <td>KK</td>
+      <td>klasifikasi citra merupakan proses pengelompok...</td>
+      <td>klasifikasi citra merupakan proses pengelompok...</td>
+    </tr>
+    <tr>
+      <th>856</th>
+      <td>IDENTIFIKASI BINER ATRIBUT PEJALAN KAKI MENGGU...</td>
+      <td>Friska Fatmawatiningrum</td>
+      <td>Dr. Indah Agustien Siradjuddin, S.Kom., M.Kom.</td>
+      <td>Prof. Dr. Arief Muntasa, S.Si., M.MT.</td>
+      <td>Identifikasi atribut pejalan kaki merupakan sa...</td>
+      <td>KK</td>
+      <td>identifikasi atribut pejalan kaki merupakan sa...</td>
+      <td>identifikasi atribut pejalan kaki merupakan sa...</td>
+    </tr>
+    <tr>
+      <th>857</th>
+      <td>DETEKSI OBJEK MANUSIA BERBASIS ONE STAGE DETEC...</td>
+      <td>Dian Wibowo</td>
+      <td>Dr. Indah Agustien Siradjuddin, S.Kom., M.Kom.</td>
+      <td>Moch. Kautsar Sophan, S.Kom., M.MT.</td>
+      <td>Topik deteksi objek telah menarik perhatian ya...</td>
+      <td>KK</td>
+      <td>topik deteksi objek telah menarik perhatian ya...</td>
+      <td>topik deteksi objek telah menarik perhatian ya...</td>
+    </tr>
+  </tbody>
+</table>
+<p>828 rows × 8 columns</p>
+</div>
+    <div class="colab-df-buttons">
+      
+  <div class="colab-df-container">
+    <button class="colab-df-convert" onclick="convertToInteractive('df-0197f860-d1e6-42d0-8557-988e0e5333c0')"
+            title="Convert this dataframe to an interactive table."
+            style="display:none;">
+      
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960">
+    <path d="M120-120v-720h720v720H120Zm60-500h600v-160H180v160Zm220 220h160v-160H400v160Zm0 220h160v-160H400v160ZM180-400h160v-160H180v160Zm440 0h160v-160H620v160ZM180-180h160v-160H180v160Zm440 0h160v-160H620v160Z"/>
+  </svg>
+    </button>
+    
+  <style>
+    .colab-df-container {
+      display:flex;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    .colab-df-buttons div {
+      margin-bottom: 4px;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+    <script>
+      const buttonEl =
+        document.querySelector('#df-0197f860-d1e6-42d0-8557-988e0e5333c0 button.colab-df-convert');
+      buttonEl.style.display =
+        google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+      async function convertToInteractive(key) {
+        const element = document.querySelector('#df-0197f860-d1e6-42d0-8557-988e0e5333c0');
+        const dataTable =
+          await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                    [key], {});
+        if (!dataTable) return;
+
+        const docLinkHtml = 'Like what you see? Visit the ' +
+          '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+          + ' to learn more about interactive tables.';
+        element.innerHTML = '';
+        dataTable['output_type'] = 'display_data';
+        await google.colab.output.renderOutput(dataTable, element);
+        const docLink = document.createElement('div');
+        docLink.innerHTML = docLinkHtml;
+        element.appendChild(docLink);
+      }
+    </script>
+  </div>
+  
+    </div>
+  </div>
+  </div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -664,6 +1437,257 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+  <div id="df-b45b73de-2bbc-4203-b90f-e0c1d1da4db6" class="colab-df-container">
+    <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Judul</th>
+      <th>Penulis</th>
+      <th>Dosen Pembimbing I</th>
+      <th>Dosen Pembimbing II</th>
+      <th>Abstrak</th>
+      <th>Label</th>
+      <th>clean_abstrak</th>
+      <th>abstrak_stopword</th>
+      <th>tokens</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>PERANCANGAN DAN IMPLEMENTASI SISTEM DATABASE  ...</td>
+      <td>A.Ubaidillah S.Kom</td>
+      <td>Budi Setyono M.T</td>
+      <td>Hermawan S.T</td>
+      <td>Sistem  informasi  akademik  (SIAKAD) merupaka...</td>
+      <td>RPL</td>
+      <td>sistem  informasi  akademik   merupakan  siste...</td>
+      <td>sistem  informasi  akademik   merupakan  siste...</td>
+      <td>[sistem, informasi, akademik, merupakan, siste...</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>APLIKASI KONTROL DAN MONITORING JARINGAN KOMPU...</td>
+      <td>M. Basith Ardianto,</td>
+      <td>Drs. Budi Soesilo, MT</td>
+      <td>Koko Joni, ST</td>
+      <td>Berjalannya koneksi jaringan komputer dengan l...</td>
+      <td>RPL</td>
+      <td>berjalannya koneksi jaringan komputer dengan l...</td>
+      <td>berjalannya koneksi jaringan komputer dengan l...</td>
+      <td>[berjalannya, koneksi, jaringan, komputer, den...</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>RANCANG BANGUN APLIKASI PROXY SERVER UNTUK ENK...</td>
+      <td>Akhmad Suyandi, S.Kom</td>
+      <td>Drs. Budi Soesilo, M.T</td>
+      <td>Hermawan, ST, MT</td>
+      <td>Web server adalah sebuah perangkat lunak serve...</td>
+      <td>RPL</td>
+      <td>web server adalah sebuah perangkat lunak serve...</td>
+      <td>web server adalah sebuah perangkat lunak serve...</td>
+      <td>[web, server, adalah, sebuah, perangkat, lunak...</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>SISTEM PENDUKUNG KEPUTUSAN OPTIMASI PENJADWALA...</td>
+      <td>Heri Supriyanto</td>
+      <td>Mulaab, S.Si., M.Kom</td>
+      <td>Firli Irhamni, ST., M.Kom</td>
+      <td>Penjadwalan  kuliah  di  Perguruan  Tinggi  me...</td>
+      <td>KK</td>
+      <td>penjadwalan  kuliah  di  perguruan  tinggi  me...</td>
+      <td>penjadwalan  kuliah  di  perguruan  tinggi  me...</td>
+      <td>[penjadwalan, kuliah, di, perguruan, tinggi, m...</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>SISTEM AUGMENTED REALITY ANIMASI BENDA BERGERA...</td>
+      <td>Septian Rahman Hakim</td>
+      <td>Arik Kurniawati, S.Kom., M.T.</td>
+      <td>Haryanto, S.T., M.T.</td>
+      <td>Seiring perkembangan teknologi yang ada diduni...</td>
+      <td>KK</td>
+      <td>seiring perkembangan teknologi yang ada diduni...</td>
+      <td>seiring perkembangan teknologi yang ada diduni...</td>
+      <td>[seiring, perkembangan, teknologi, yang, ada, ...</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>853</th>
+      <td>PENERAPAN ALGORITMA LONG-SHORT TERM MEMORY UNT...</td>
+      <td>Rachmad Agung Pambudi</td>
+      <td>Eka Mala Sari Rochman, S.Kom., M.Kom</td>
+      <td>Sri Herawati, S.Kom., M.Kom</td>
+      <td>Investasi saham selama ini memiliki resiko ker...</td>
+      <td>KK</td>
+      <td>investasi saham selama ini memiliki resiko ker...</td>
+      <td>investasi saham selama ini memiliki resiko ker...</td>
+      <td>[investasi, saham, selama, ini, memiliki, resi...</td>
+    </tr>
+    <tr>
+      <th>854</th>
+      <td>SISTEM PENCARIAN TEKS AL-QURAN TERJEMAHAN BERB...</td>
+      <td>Nadila Hidayanti</td>
+      <td>Achmad Jauhari, S.T., M.Kom</td>
+      <td>Ika Oktavia Suzanti, S.Kom., M.Cs</td>
+      <td>Information Retrieval (IR) merupakan pengambil...</td>
+      <td>KK</td>
+      <td>information retrieval  merupakan pengambilan i...</td>
+      <td>information retrieval  merupakan pengambilan i...</td>
+      <td>[information, retrieval, merupakan, pengambila...</td>
+    </tr>
+    <tr>
+      <th>855</th>
+      <td>KLASIFIKASI KOMPLEKSITAS VISUAL CITRA SAMPAH M...</td>
+      <td>Afni Sakinah</td>
+      <td>Dr. Indah Agustien Siradjuddin, S.Kom., M.Kom.</td>
+      <td>Moch. Kautsar Sophan, S.Kom., M.MT.</td>
+      <td>Klasifikasi citra merupakan proses pengelompok...</td>
+      <td>KK</td>
+      <td>klasifikasi citra merupakan proses pengelompok...</td>
+      <td>klasifikasi citra merupakan proses pengelompok...</td>
+      <td>[klasifikasi, citra, merupakan, proses, pengel...</td>
+    </tr>
+    <tr>
+      <th>856</th>
+      <td>IDENTIFIKASI BINER ATRIBUT PEJALAN KAKI MENGGU...</td>
+      <td>Friska Fatmawatiningrum</td>
+      <td>Dr. Indah Agustien Siradjuddin, S.Kom., M.Kom.</td>
+      <td>Prof. Dr. Arief Muntasa, S.Si., M.MT.</td>
+      <td>Identifikasi atribut pejalan kaki merupakan sa...</td>
+      <td>KK</td>
+      <td>identifikasi atribut pejalan kaki merupakan sa...</td>
+      <td>identifikasi atribut pejalan kaki merupakan sa...</td>
+      <td>[identifikasi, atribut, pejalan, kaki, merupak...</td>
+    </tr>
+    <tr>
+      <th>857</th>
+      <td>DETEKSI OBJEK MANUSIA BERBASIS ONE STAGE DETEC...</td>
+      <td>Dian Wibowo</td>
+      <td>Dr. Indah Agustien Siradjuddin, S.Kom., M.Kom.</td>
+      <td>Moch. Kautsar Sophan, S.Kom., M.MT.</td>
+      <td>Topik deteksi objek telah menarik perhatian ya...</td>
+      <td>KK</td>
+      <td>topik deteksi objek telah menarik perhatian ya...</td>
+      <td>topik deteksi objek telah menarik perhatian ya...</td>
+      <td>[topik, deteksi, objek, telah, menarik, perhat...</td>
+    </tr>
+  </tbody>
+</table>
+<p>828 rows × 9 columns</p>
+</div>
+    <div class="colab-df-buttons">
+      
+  <div class="colab-df-container">
+    <button class="colab-df-convert" onclick="convertToInteractive('df-b45b73de-2bbc-4203-b90f-e0c1d1da4db6')"
+            title="Convert this dataframe to an interactive table."
+            style="display:none;">
+      
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960">
+    <path d="M120-120v-720h720v720H120Zm60-500h600v-160H180v160Zm220 220h160v-160H400v160Zm0 220h160v-160H400v160ZM180-400h160v-160H180v160Zm440 0h160v-160H620v160ZM180-180h160v-160H180v160Zm440 0h160v-160H620v160Z"/>
+  </svg>
+    </button>
+    
+  <style>
+    .colab-df-container {
+      display:flex;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    .colab-df-buttons div {
+      margin-bottom: 4px;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+    <script>
+      const buttonEl =
+        document.querySelector('#df-b45b73de-2bbc-4203-b90f-e0c1d1da4db6 button.colab-df-convert');
+      buttonEl.style.display =
+        google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+      async function convertToInteractive(key) {
+        const element = document.querySelector('#df-b45b73de-2bbc-4203-b90f-e0c1d1da4db6');
+        const dataTable =
+          await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                    [key], {});
+        if (!dataTable) return;
+
+        const docLinkHtml = 'Like what you see? Visit the ' +
+          '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+          + ' to learn more about interactive tables.';
+        element.innerHTML = '';
+        dataTable['output_type'] = 'display_data';
+        await google.colab.output.renderOutput(dataTable, element);
+        const docLink = document.createElement('div');
+        docLink.innerHTML = docLinkHtml;
+        element.appendChild(docLink);
+      }
+    </script>
+  </div>
+  
+    </div>
+  </div>
+  </div></div>
 </div>
 </section>
 <section id="merge">
@@ -685,10 +1709,289 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+  <div id="df-ab4786d5-121c-4c68-978b-8eadde968180" class="colab-df-container">
+    <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Judul</th>
+      <th>Penulis</th>
+      <th>Dosen Pembimbing I</th>
+      <th>Dosen Pembimbing II</th>
+      <th>Abstrak</th>
+      <th>Label</th>
+      <th>clean_abstrak</th>
+      <th>abstrak_stopword</th>
+      <th>tokens</th>
+      <th>final_abstrak</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>PERANCANGAN DAN IMPLEMENTASI SISTEM DATABASE  ...</td>
+      <td>A.Ubaidillah S.Kom</td>
+      <td>Budi Setyono M.T</td>
+      <td>Hermawan S.T</td>
+      <td>Sistem  informasi  akademik  (SIAKAD) merupaka...</td>
+      <td>RPL</td>
+      <td>sistem  informasi  akademik   merupakan  siste...</td>
+      <td>sistem  informasi  akademik   merupakan  siste...</td>
+      <td>[sistem, informasi, akademik, merupakan, siste...</td>
+      <td>sistem informasi akademik merupakan sistem inf...</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>APLIKASI KONTROL DAN MONITORING JARINGAN KOMPU...</td>
+      <td>M. Basith Ardianto,</td>
+      <td>Drs. Budi Soesilo, MT</td>
+      <td>Koko Joni, ST</td>
+      <td>Berjalannya koneksi jaringan komputer dengan l...</td>
+      <td>RPL</td>
+      <td>berjalannya koneksi jaringan komputer dengan l...</td>
+      <td>berjalannya koneksi jaringan komputer dengan l...</td>
+      <td>[berjalannya, koneksi, jaringan, komputer, den...</td>
+      <td>berjalannya koneksi jaringan komputer dengan l...</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>RANCANG BANGUN APLIKASI PROXY SERVER UNTUK ENK...</td>
+      <td>Akhmad Suyandi, S.Kom</td>
+      <td>Drs. Budi Soesilo, M.T</td>
+      <td>Hermawan, ST, MT</td>
+      <td>Web server adalah sebuah perangkat lunak serve...</td>
+      <td>RPL</td>
+      <td>web server adalah sebuah perangkat lunak serve...</td>
+      <td>web server adalah sebuah perangkat lunak serve...</td>
+      <td>[web, server, adalah, sebuah, perangkat, lunak...</td>
+      <td>web server adalah sebuah perangkat lunak serve...</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>SISTEM PENDUKUNG KEPUTUSAN OPTIMASI PENJADWALA...</td>
+      <td>Heri Supriyanto</td>
+      <td>Mulaab, S.Si., M.Kom</td>
+      <td>Firli Irhamni, ST., M.Kom</td>
+      <td>Penjadwalan  kuliah  di  Perguruan  Tinggi  me...</td>
+      <td>KK</td>
+      <td>penjadwalan  kuliah  di  perguruan  tinggi  me...</td>
+      <td>penjadwalan  kuliah  di  perguruan  tinggi  me...</td>
+      <td>[penjadwalan, kuliah, di, perguruan, tinggi, m...</td>
+      <td>penjadwalan kuliah di perguruan tinggi merupak...</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>SISTEM AUGMENTED REALITY ANIMASI BENDA BERGERA...</td>
+      <td>Septian Rahman Hakim</td>
+      <td>Arik Kurniawati, S.Kom., M.T.</td>
+      <td>Haryanto, S.T., M.T.</td>
+      <td>Seiring perkembangan teknologi yang ada diduni...</td>
+      <td>KK</td>
+      <td>seiring perkembangan teknologi yang ada diduni...</td>
+      <td>seiring perkembangan teknologi yang ada diduni...</td>
+      <td>[seiring, perkembangan, teknologi, yang, ada, ...</td>
+      <td>seiring perkembangan teknologi yang ada diduni...</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>853</th>
+      <td>PENERAPAN ALGORITMA LONG-SHORT TERM MEMORY UNT...</td>
+      <td>Rachmad Agung Pambudi</td>
+      <td>Eka Mala Sari Rochman, S.Kom., M.Kom</td>
+      <td>Sri Herawati, S.Kom., M.Kom</td>
+      <td>Investasi saham selama ini memiliki resiko ker...</td>
+      <td>KK</td>
+      <td>investasi saham selama ini memiliki resiko ker...</td>
+      <td>investasi saham selama ini memiliki resiko ker...</td>
+      <td>[investasi, saham, selama, ini, memiliki, resi...</td>
+      <td>investasi saham selama ini memiliki resiko ker...</td>
+    </tr>
+    <tr>
+      <th>854</th>
+      <td>SISTEM PENCARIAN TEKS AL-QURAN TERJEMAHAN BERB...</td>
+      <td>Nadila Hidayanti</td>
+      <td>Achmad Jauhari, S.T., M.Kom</td>
+      <td>Ika Oktavia Suzanti, S.Kom., M.Cs</td>
+      <td>Information Retrieval (IR) merupakan pengambil...</td>
+      <td>KK</td>
+      <td>information retrieval  merupakan pengambilan i...</td>
+      <td>information retrieval  merupakan pengambilan i...</td>
+      <td>[information, retrieval, merupakan, pengambila...</td>
+      <td>information retrieval merupakan pengambilan in...</td>
+    </tr>
+    <tr>
+      <th>855</th>
+      <td>KLASIFIKASI KOMPLEKSITAS VISUAL CITRA SAMPAH M...</td>
+      <td>Afni Sakinah</td>
+      <td>Dr. Indah Agustien Siradjuddin, S.Kom., M.Kom.</td>
+      <td>Moch. Kautsar Sophan, S.Kom., M.MT.</td>
+      <td>Klasifikasi citra merupakan proses pengelompok...</td>
+      <td>KK</td>
+      <td>klasifikasi citra merupakan proses pengelompok...</td>
+      <td>klasifikasi citra merupakan proses pengelompok...</td>
+      <td>[klasifikasi, citra, merupakan, proses, pengel...</td>
+      <td>klasifikasi citra merupakan proses pengelompok...</td>
+    </tr>
+    <tr>
+      <th>856</th>
+      <td>IDENTIFIKASI BINER ATRIBUT PEJALAN KAKI MENGGU...</td>
+      <td>Friska Fatmawatiningrum</td>
+      <td>Dr. Indah Agustien Siradjuddin, S.Kom., M.Kom.</td>
+      <td>Prof. Dr. Arief Muntasa, S.Si., M.MT.</td>
+      <td>Identifikasi atribut pejalan kaki merupakan sa...</td>
+      <td>KK</td>
+      <td>identifikasi atribut pejalan kaki merupakan sa...</td>
+      <td>identifikasi atribut pejalan kaki merupakan sa...</td>
+      <td>[identifikasi, atribut, pejalan, kaki, merupak...</td>
+      <td>identifikasi atribut pejalan kaki merupakan sa...</td>
+    </tr>
+    <tr>
+      <th>857</th>
+      <td>DETEKSI OBJEK MANUSIA BERBASIS ONE STAGE DETEC...</td>
+      <td>Dian Wibowo</td>
+      <td>Dr. Indah Agustien Siradjuddin, S.Kom., M.Kom.</td>
+      <td>Moch. Kautsar Sophan, S.Kom., M.MT.</td>
+      <td>Topik deteksi objek telah menarik perhatian ya...</td>
+      <td>KK</td>
+      <td>topik deteksi objek telah menarik perhatian ya...</td>
+      <td>topik deteksi objek telah menarik perhatian ya...</td>
+      <td>[topik, deteksi, objek, telah, menarik, perhat...</td>
+      <td>topik deteksi objek telah menarik perhatian ya...</td>
+    </tr>
+  </tbody>
+</table>
+<p>828 rows × 10 columns</p>
+</div>
+    <div class="colab-df-buttons">
+      
+  <div class="colab-df-container">
+    <button class="colab-df-convert" onclick="convertToInteractive('df-ab4786d5-121c-4c68-978b-8eadde968180')"
+            title="Convert this dataframe to an interactive table."
+            style="display:none;">
+      
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960">
+    <path d="M120-120v-720h720v720H120Zm60-500h600v-160H180v160Zm220 220h160v-160H400v160Zm0 220h160v-160H400v160ZM180-400h160v-160H180v160Zm440 0h160v-160H620v160ZM180-180h160v-160H180v160Zm440 0h160v-160H620v160Z"/>
+  </svg>
+    </button>
+    
+  <style>
+    .colab-df-container {
+      display:flex;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    .colab-df-buttons div {
+      margin-bottom: 4px;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+    <script>
+      const buttonEl =
+        document.querySelector('#df-ab4786d5-121c-4c68-978b-8eadde968180 button.colab-df-convert');
+      buttonEl.style.display =
+        google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+      async function convertToInteractive(key) {
+        const element = document.querySelector('#df-ab4786d5-121c-4c68-978b-8eadde968180');
+        const dataTable =
+          await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                    [key], {});
+        if (!dataTable) return;
+
+        const docLinkHtml = 'Like what you see? Visit the ' +
+          '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+          + ' to learn more about interactive tables.';
+        element.innerHTML = '';
+        dataTable['output_type'] = 'display_data';
+        await google.colab.output.renderOutput(dataTable, element);
+        const docLink = document.createElement('div');
+        docLink.innerHTML = docLinkHtml;
+        element.appendChild(docLink);
+      }
+    </script>
+  </div>
+  
+    </div>
+  </div>
+  </div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;final_abstrak&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0      sistem informasi akademik merupakan sistem inf...
+1      berjalannya koneksi jaringan komputer dengan l...
+2      web server adalah sebuah perangkat lunak serve...
+3      penjadwalan kuliah di perguruan tinggi merupak...
+4      seiring perkembangan teknologi yang ada diduni...
+                             ...                        
+853    investasi saham selama ini memiliki resiko ker...
+854    information retrieval merupakan pengambilan in...
+855    klasifikasi citra merupakan proses pengelompok...
+856    identifikasi atribut pejalan kaki merupakan sa...
+857    topik deteksi objek telah menarik perhatian ya...
+Name: final_abstrak, Length: 828, dtype: object
 </pre></div>
 </div>
 </div>
@@ -750,6 +2053,401 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+  <div id="df-9762e15c-1d46-47e9-bda1-7a1d9457ac78" class="colab-df-container">
+    <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>sistem_2</th>
+      <th>informasi_1</th>
+      <th>akademik_2</th>
+      <th>merupakan_1</th>
+      <th>yang_0</th>
+      <th>yang_1</th>
+      <th>yang_2</th>
+      <th>berfungsi_0</th>
+      <th>berfungsi_1</th>
+      <th>berfungsi_3</th>
+      <th>...</th>
+      <th>ransel_0</th>
+      <th>ransel_1</th>
+      <th>ransel_2</th>
+      <th>diseimbangkan_8</th>
+      <th>detector_4</th>
+      <th>you_1</th>
+      <th>look_1</th>
+      <th>once_1</th>
+      <th>anchor_3</th>
+      <th>pretrained_1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>823</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>824</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>825</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>826</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>827</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+  </tbody>
+</table>
+<p>828 rows × 16593 columns</p>
+</div>
+    <div class="colab-df-buttons">
+      
+  <div class="colab-df-container">
+    <button class="colab-df-convert" onclick="convertToInteractive('df-9762e15c-1d46-47e9-bda1-7a1d9457ac78')"
+            title="Convert this dataframe to an interactive table."
+            style="display:none;">
+      
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960">
+    <path d="M120-120v-720h720v720H120Zm60-500h600v-160H180v160Zm220 220h160v-160H400v160Zm0 220h160v-160H400v160ZM180-400h160v-160H180v160Zm440 0h160v-160H620v160ZM180-180h160v-160H180v160Zm440 0h160v-160H620v160Z"/>
+  </svg>
+    </button>
+    
+  <style>
+    .colab-df-container {
+      display:flex;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    .colab-df-buttons div {
+      margin-bottom: 4px;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+    <script>
+      const buttonEl =
+        document.querySelector('#df-9762e15c-1d46-47e9-bda1-7a1d9457ac78 button.colab-df-convert');
+      buttonEl.style.display =
+        google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+      async function convertToInteractive(key) {
+        const element = document.querySelector('#df-9762e15c-1d46-47e9-bda1-7a1d9457ac78');
+        const dataTable =
+          await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                    [key], {});
+        if (!dataTable) return;
+
+        const docLinkHtml = 'Like what you see? Visit the ' +
+          '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+          + ' to learn more about interactive tables.';
+        element.innerHTML = '';
+        dataTable['output_type'] = 'display_data';
+        await google.colab.output.renderOutput(dataTable, element);
+        const docLink = document.createElement('div');
+        docLink.innerHTML = docLinkHtml;
+        element.appendChild(docLink);
+      }
+    </script>
+  </div>
+  
+    </div>
+  </div>
+  </div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -799,6 +2497,401 @@ tf(t,d) = n(t,d)
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+  <div id="df-5d83a45d-d902-40f3-b586-1492a2d2cbe0" class="colab-df-container">
+    <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>aam</th>
+      <th>abad</th>
+      <th>abadi</th>
+      <th>ability</th>
+      <th>abjad</th>
+      <th>absensi</th>
+      <th>absolut</th>
+      <th>absolute</th>
+      <th>abstract</th>
+      <th>abstrak</th>
+      <th>...</th>
+      <th>zat</th>
+      <th>zcz</th>
+      <th>zf</th>
+      <th>zona</th>
+      <th>zoning</th>
+      <th>zoom</th>
+      <th>zucara</th>
+      <th>zungu</th>
+      <th>âµ</th>
+      <th>â¼</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>823</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>824</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>825</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>826</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>827</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+  </tbody>
+</table>
+<p>828 rows × 8686 columns</p>
+</div>
+    <div class="colab-df-buttons">
+      
+  <div class="colab-df-container">
+    <button class="colab-df-convert" onclick="convertToInteractive('df-5d83a45d-d902-40f3-b586-1492a2d2cbe0')"
+            title="Convert this dataframe to an interactive table."
+            style="display:none;">
+      
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960">
+    <path d="M120-120v-720h720v720H120Zm60-500h600v-160H180v160Zm220 220h160v-160H400v160Zm0 220h160v-160H400v160ZM180-400h160v-160H180v160Zm440 0h160v-160H620v160ZM180-180h160v-160H180v160Zm440 0h160v-160H620v160Z"/>
+  </svg>
+    </button>
+    
+  <style>
+    .colab-df-container {
+      display:flex;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    .colab-df-buttons div {
+      margin-bottom: 4px;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+    <script>
+      const buttonEl =
+        document.querySelector('#df-5d83a45d-d902-40f3-b586-1492a2d2cbe0 button.colab-df-convert');
+      buttonEl.style.display =
+        google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+      async function convertToInteractive(key) {
+        const element = document.querySelector('#df-5d83a45d-d902-40f3-b586-1492a2d2cbe0');
+        const dataTable =
+          await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                    [key], {});
+        if (!dataTable) return;
+
+        const docLinkHtml = 'Like what you see? Visit the ' +
+          '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+          + ' to learn more about interactive tables.';
+        element.innerHTML = '';
+        dataTable['output_type'] = 'display_data';
+        await google.colab.output.renderOutput(dataTable, element);
+        const docLink = document.createElement('div');
+        docLink.innerHTML = docLinkHtml;
+        element.appendChild(docLink);
+      }
+    </script>
+  </div>
+  
+    </div>
+  </div>
+  </div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -849,6 +2942,401 @@ tf(t,d) = n(t,d)
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+  <div id="df-62ed8f19-582e-4c24-86c0-0ec51352f3ca" class="colab-df-container">
+    <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>aam</th>
+      <th>abad</th>
+      <th>abadi</th>
+      <th>ability</th>
+      <th>abjad</th>
+      <th>absensi</th>
+      <th>absolut</th>
+      <th>absolute</th>
+      <th>abstract</th>
+      <th>abstrak</th>
+      <th>...</th>
+      <th>zat</th>
+      <th>zcz</th>
+      <th>zf</th>
+      <th>zona</th>
+      <th>zoning</th>
+      <th>zoom</th>
+      <th>zucara</th>
+      <th>zungu</th>
+      <th>âµ</th>
+      <th>â¼</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>823</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>824</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>825</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>826</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>827</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+  </tbody>
+</table>
+<p>828 rows × 8686 columns</p>
+</div>
+    <div class="colab-df-buttons">
+      
+  <div class="colab-df-container">
+    <button class="colab-df-convert" onclick="convertToInteractive('df-62ed8f19-582e-4c24-86c0-0ec51352f3ca')"
+            title="Convert this dataframe to an interactive table."
+            style="display:none;">
+      
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960">
+    <path d="M120-120v-720h720v720H120Zm60-500h600v-160H180v160Zm220 220h160v-160H400v160Zm0 220h160v-160H400v160ZM180-400h160v-160H180v160Zm440 0h160v-160H620v160ZM180-180h160v-160H180v160Zm440 0h160v-160H620v160Z"/>
+  </svg>
+    </button>
+    
+  <style>
+    .colab-df-container {
+      display:flex;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    .colab-df-buttons div {
+      margin-bottom: 4px;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+    <script>
+      const buttonEl =
+        document.querySelector('#df-62ed8f19-582e-4c24-86c0-0ec51352f3ca button.colab-df-convert');
+      buttonEl.style.display =
+        google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+      async function convertToInteractive(key) {
+        const element = document.querySelector('#df-62ed8f19-582e-4c24-86c0-0ec51352f3ca');
+        const dataTable =
+          await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                    [key], {});
+        if (!dataTable) return;
+
+        const docLinkHtml = 'Like what you see? Visit the ' +
+          '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+          + ' to learn more about interactive tables.';
+        element.innerHTML = '';
+        dataTable['output_type'] = 'display_data';
+        await google.colab.output.renderOutput(dataTable, element);
+        const docLink = document.createElement('div');
+        docLink.innerHTML = docLinkHtml;
+        element.appendChild(docLink);
+      }
+    </script>
+  </div>
+  
+    </div>
+  </div>
+  </div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -880,6 +3368,11 @@ tfidf(t,d) = tf(t,d) \cdot idf(t)
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;/content&#39;
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -904,6 +3397,401 @@ tfidf(t,d) = tf(t,d) \cdot idf(t)
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+  <div id="df-70857d84-7c31-4a74-8554-568769fba991" class="colab-df-container">
+    <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>aam</th>
+      <th>abad</th>
+      <th>abadi</th>
+      <th>ability</th>
+      <th>abjad</th>
+      <th>absensi</th>
+      <th>absolut</th>
+      <th>absolute</th>
+      <th>abstract</th>
+      <th>abstrak</th>
+      <th>...</th>
+      <th>zat</th>
+      <th>zcz</th>
+      <th>zf</th>
+      <th>zona</th>
+      <th>zoning</th>
+      <th>zoom</th>
+      <th>zucara</th>
+      <th>zungu</th>
+      <th>âµ</th>
+      <th>â¼</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>823</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>824</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>825</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>826</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>827</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+  </tbody>
+</table>
+<p>828 rows × 8686 columns</p>
+</div>
+    <div class="colab-df-buttons">
+      
+  <div class="colab-df-container">
+    <button class="colab-df-convert" onclick="convertToInteractive('df-70857d84-7c31-4a74-8554-568769fba991')"
+            title="Convert this dataframe to an interactive table."
+            style="display:none;">
+      
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960">
+    <path d="M120-120v-720h720v720H120Zm60-500h600v-160H180v160Zm220 220h160v-160H400v160Zm0 220h160v-160H400v160ZM180-400h160v-160H180v160Zm440 0h160v-160H620v160ZM180-180h160v-160H180v160Zm440 0h160v-160H620v160Z"/>
+  </svg>
+    </button>
+    
+  <style>
+    .colab-df-container {
+      display:flex;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    .colab-df-buttons div {
+      margin-bottom: 4px;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+    <script>
+      const buttonEl =
+        document.querySelector('#df-70857d84-7c31-4a74-8554-568769fba991 button.colab-df-convert');
+      buttonEl.style.display =
+        google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+      async function convertToInteractive(key) {
+        const element = document.querySelector('#df-70857d84-7c31-4a74-8554-568769fba991');
+        const dataTable =
+          await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                    [key], {});
+        if (!dataTable) return;
+
+        const docLinkHtml = 'Like what you see? Visit the ' +
+          '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+          + ' to learn more about interactive tables.';
+        element.innerHTML = '';
+        dataTable['output_type'] = 'display_data';
+        await google.colab.output.renderOutput(dataTable, element);
+        const docLink = document.createElement('div');
+        docLink.innerHTML = docLinkHtml;
+        element.appendChild(docLink);
+      }
+    </script>
+  </div>
+  
+    </div>
+  </div>
+  </div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -919,6 +3807,14 @@ tfidf(t,d) = tf(t,d) \cdot idf(t)
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Index([&#39;Judul&#39;, &#39;Penulis&#39;, &#39;Dosen Pembimbing I&#39;, &#39;Dosen Pembimbing II&#39;,
+       &#39;Abstrak&#39;, &#39;Label&#39;, &#39;clean_abstrak&#39;, &#39;abstrak_stopword&#39;, &#39;tokens&#39;,
+       &#39;final_abstrak&#39;],
+      dtype=&#39;object&#39;)
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -928,6 +3824,269 @@ tfidf(t,d) = tf(t,d) \cdot idf(t)
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+  <div id="df-9ddc3b29-0882-40f2-8734-a40a09501948" class="colab-df-container">
+    <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Judul</th>
+      <th>Penulis</th>
+      <th>Dosen Pembimbing I</th>
+      <th>Dosen Pembimbing II</th>
+      <th>Abstrak</th>
+      <th>clean_abstrak</th>
+      <th>abstrak_stopword</th>
+      <th>tokens</th>
+      <th>final_abstrak</th>
+      <th>Label</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>PERANCANGAN DAN IMPLEMENTASI SISTEM DATABASE  ...</td>
+      <td>A.Ubaidillah S.Kom</td>
+      <td>Budi Setyono M.T</td>
+      <td>Hermawan S.T</td>
+      <td>Sistem  informasi  akademik  (SIAKAD) merupaka...</td>
+      <td>sistem  informasi  akademik   merupakan  siste...</td>
+      <td>sistem  informasi  akademik   merupakan  siste...</td>
+      <td>[sistem, informasi, akademik, merupakan, siste...</td>
+      <td>sistem informasi akademik merupakan sistem inf...</td>
+      <td>RPL</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>APLIKASI KONTROL DAN MONITORING JARINGAN KOMPU...</td>
+      <td>M. Basith Ardianto,</td>
+      <td>Drs. Budi Soesilo, MT</td>
+      <td>Koko Joni, ST</td>
+      <td>Berjalannya koneksi jaringan komputer dengan l...</td>
+      <td>berjalannya koneksi jaringan komputer dengan l...</td>
+      <td>berjalannya koneksi jaringan komputer dengan l...</td>
+      <td>[berjalannya, koneksi, jaringan, komputer, den...</td>
+      <td>berjalannya koneksi jaringan komputer dengan l...</td>
+      <td>RPL</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>RANCANG BANGUN APLIKASI PROXY SERVER UNTUK ENK...</td>
+      <td>Akhmad Suyandi, S.Kom</td>
+      <td>Drs. Budi Soesilo, M.T</td>
+      <td>Hermawan, ST, MT</td>
+      <td>Web server adalah sebuah perangkat lunak serve...</td>
+      <td>web server adalah sebuah perangkat lunak serve...</td>
+      <td>web server adalah sebuah perangkat lunak serve...</td>
+      <td>[web, server, adalah, sebuah, perangkat, lunak...</td>
+      <td>web server adalah sebuah perangkat lunak serve...</td>
+      <td>RPL</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>SISTEM PENDUKUNG KEPUTUSAN OPTIMASI PENJADWALA...</td>
+      <td>Heri Supriyanto</td>
+      <td>Mulaab, S.Si., M.Kom</td>
+      <td>Firli Irhamni, ST., M.Kom</td>
+      <td>Penjadwalan  kuliah  di  Perguruan  Tinggi  me...</td>
+      <td>penjadwalan  kuliah  di  perguruan  tinggi  me...</td>
+      <td>penjadwalan  kuliah  di  perguruan  tinggi  me...</td>
+      <td>[penjadwalan, kuliah, di, perguruan, tinggi, m...</td>
+      <td>penjadwalan kuliah di perguruan tinggi merupak...</td>
+      <td>KK</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>SISTEM AUGMENTED REALITY ANIMASI BENDA BERGERA...</td>
+      <td>Septian Rahman Hakim</td>
+      <td>Arik Kurniawati, S.Kom., M.T.</td>
+      <td>Haryanto, S.T., M.T.</td>
+      <td>Seiring perkembangan teknologi yang ada diduni...</td>
+      <td>seiring perkembangan teknologi yang ada diduni...</td>
+      <td>seiring perkembangan teknologi yang ada diduni...</td>
+      <td>[seiring, perkembangan, teknologi, yang, ada, ...</td>
+      <td>seiring perkembangan teknologi yang ada diduni...</td>
+      <td>KK</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>853</th>
+      <td>PENERAPAN ALGORITMA LONG-SHORT TERM MEMORY UNT...</td>
+      <td>Rachmad Agung Pambudi</td>
+      <td>Eka Mala Sari Rochman, S.Kom., M.Kom</td>
+      <td>Sri Herawati, S.Kom., M.Kom</td>
+      <td>Investasi saham selama ini memiliki resiko ker...</td>
+      <td>investasi saham selama ini memiliki resiko ker...</td>
+      <td>investasi saham selama ini memiliki resiko ker...</td>
+      <td>[investasi, saham, selama, ini, memiliki, resi...</td>
+      <td>investasi saham selama ini memiliki resiko ker...</td>
+      <td>KK</td>
+    </tr>
+    <tr>
+      <th>854</th>
+      <td>SISTEM PENCARIAN TEKS AL-QURAN TERJEMAHAN BERB...</td>
+      <td>Nadila Hidayanti</td>
+      <td>Achmad Jauhari, S.T., M.Kom</td>
+      <td>Ika Oktavia Suzanti, S.Kom., M.Cs</td>
+      <td>Information Retrieval (IR) merupakan pengambil...</td>
+      <td>information retrieval  merupakan pengambilan i...</td>
+      <td>information retrieval  merupakan pengambilan i...</td>
+      <td>[information, retrieval, merupakan, pengambila...</td>
+      <td>information retrieval merupakan pengambilan in...</td>
+      <td>KK</td>
+    </tr>
+    <tr>
+      <th>855</th>
+      <td>KLASIFIKASI KOMPLEKSITAS VISUAL CITRA SAMPAH M...</td>
+      <td>Afni Sakinah</td>
+      <td>Dr. Indah Agustien Siradjuddin, S.Kom., M.Kom.</td>
+      <td>Moch. Kautsar Sophan, S.Kom., M.MT.</td>
+      <td>Klasifikasi citra merupakan proses pengelompok...</td>
+      <td>klasifikasi citra merupakan proses pengelompok...</td>
+      <td>klasifikasi citra merupakan proses pengelompok...</td>
+      <td>[klasifikasi, citra, merupakan, proses, pengel...</td>
+      <td>klasifikasi citra merupakan proses pengelompok...</td>
+      <td>KK</td>
+    </tr>
+    <tr>
+      <th>856</th>
+      <td>IDENTIFIKASI BINER ATRIBUT PEJALAN KAKI MENGGU...</td>
+      <td>Friska Fatmawatiningrum</td>
+      <td>Dr. Indah Agustien Siradjuddin, S.Kom., M.Kom.</td>
+      <td>Prof. Dr. Arief Muntasa, S.Si., M.MT.</td>
+      <td>Identifikasi atribut pejalan kaki merupakan sa...</td>
+      <td>identifikasi atribut pejalan kaki merupakan sa...</td>
+      <td>identifikasi atribut pejalan kaki merupakan sa...</td>
+      <td>[identifikasi, atribut, pejalan, kaki, merupak...</td>
+      <td>identifikasi atribut pejalan kaki merupakan sa...</td>
+      <td>KK</td>
+    </tr>
+    <tr>
+      <th>857</th>
+      <td>DETEKSI OBJEK MANUSIA BERBASIS ONE STAGE DETEC...</td>
+      <td>Dian Wibowo</td>
+      <td>Dr. Indah Agustien Siradjuddin, S.Kom., M.Kom.</td>
+      <td>Moch. Kautsar Sophan, S.Kom., M.MT.</td>
+      <td>Topik deteksi objek telah menarik perhatian ya...</td>
+      <td>topik deteksi objek telah menarik perhatian ya...</td>
+      <td>topik deteksi objek telah menarik perhatian ya...</td>
+      <td>[topik, deteksi, objek, telah, menarik, perhat...</td>
+      <td>topik deteksi objek telah menarik perhatian ya...</td>
+      <td>KK</td>
+    </tr>
+  </tbody>
+</table>
+<p>828 rows × 10 columns</p>
+</div>
+    <div class="colab-df-buttons">
+      
+  <div class="colab-df-container">
+    <button class="colab-df-convert" onclick="convertToInteractive('df-9ddc3b29-0882-40f2-8734-a40a09501948')"
+            title="Convert this dataframe to an interactive table."
+            style="display:none;">
+      
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960">
+    <path d="M120-120v-720h720v720H120Zm60-500h600v-160H180v160Zm220 220h160v-160H400v160Zm0 220h160v-160H400v160ZM180-400h160v-160H180v160Zm440 0h160v-160H620v160ZM180-180h160v-160H180v160Zm440 0h160v-160H620v160Z"/>
+  </svg>
+    </button>
+    
+  <style>
+    .colab-df-container {
+      display:flex;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    .colab-df-buttons div {
+      margin-bottom: 4px;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+    <script>
+      const buttonEl =
+        document.querySelector('#df-9ddc3b29-0882-40f2-8734-a40a09501948 button.colab-df-convert');
+      buttonEl.style.display =
+        google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+      async function convertToInteractive(key) {
+        const element = document.querySelector('#df-9ddc3b29-0882-40f2-8734-a40a09501948');
+        const dataTable =
+          await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                    [key], {});
+        if (!dataTable) return;
+
+        const docLinkHtml = 'Like what you see? Visit the ' +
+          '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+          + ' to learn more about interactive tables.';
+        element.innerHTML = '';
+        dataTable['output_type'] = 'display_data';
+        await google.colab.output.renderOutput(dataTable, element);
+        const docLink = document.createElement('div');
+        docLink.innerHTML = docLinkHtml;
+        element.appendChild(docLink);
+      }
+    </script>
+  </div>
+  
+    </div>
+  </div>
+  </div></div>
 </div>
 </section>
 </section>
