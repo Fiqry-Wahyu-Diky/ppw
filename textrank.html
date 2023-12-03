@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 
 
-<html lang="en" >
+<html lang="en" data-content_root="" >
 
   <head>
     <meta charset="utf-8" />
@@ -19,12 +19,12 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
-<link href="_static/styles/bootstrap.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+  <link href="_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
 
   
-  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
   <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
@@ -38,9 +38,9 @@
     <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6" />
-  <script src="_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=365ca57ee442770a23c6"></script>
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
+  <script src="_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
 
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
@@ -137,6 +137,7 @@ const thebe_selector_output = ".output, .cell_output"
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
+
   
 
 <a class="navbar-brand logo" href="intro.html">
@@ -177,9 +178,10 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Prepare UAS</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="crawling-antaranews.html"><strong>Crawling berita</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="crawling-antaranews-cosine.html"><strong>Crawling berita</strong></a></li>
 
 
+<li class="toctree-l1"><a class="reference internal" href="crawling-antaranews-textrank.html">Data</a></li>
 </ul>
 
     </div>
@@ -333,6 +335,7 @@ const thebe_selector_output = ".output, .cell_output"
 </button>
 
 
+
 <script>
 document.write(`
   <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
@@ -342,6 +345,7 @@ document.write(`
   </button>
 `);
 </script>
+
 
 <script>
 document.write(`
@@ -485,7 +489,10 @@ To: /content/drive/MyDrive/KULIAH/SEMESTER 7/PPW/ppw/PAGES/data_crawling_berita_
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  0%|          | 0.00/1.88M [00:00&lt;?, ?B/s]
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>100%|██████████| 1.88M/1.88M [00:00&lt;00:00, 127MB/s]
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 56%|█████▌    | 1.05M/1.88M [00:00&lt;00:00, 9.19MB/s]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>100%|██████████| 1.88M/1.88M [00:00&lt;00:00, 14.1MB/s]
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
@@ -508,7 +515,7 @@ To: /content/drive/MyDrive/KULIAH/SEMESTER 7/PPW/ppw/PAGES/data_crawling_berita_
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-3cd6604e-39b3-433f-8f22-5d650b0afc04" class="colab-df-container">
+  <div id="df-cc233bef-4971-4b64-8676-2d47eeddac96" class="colab-df-container">
     <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -630,7 +637,7 @@ To: /content/drive/MyDrive/KULIAH/SEMESTER 7/PPW/ppw/PAGES/data_crawling_berita_
     <div class="colab-df-buttons">
       
   <div class="colab-df-container">
-    <button class="colab-df-convert" onclick="convertToInteractive('df-3cd6604e-39b3-433f-8f22-5d650b0afc04')"
+    <button class="colab-df-convert" onclick="convertToInteractive('df-cc233bef-4971-4b64-8676-2d47eeddac96')"
             title="Convert this dataframe to an interactive table."
             style="display:none;">
       
@@ -682,12 +689,12 @@ To: /content/drive/MyDrive/KULIAH/SEMESTER 7/PPW/ppw/PAGES/data_crawling_berita_
 
     <script>
       const buttonEl =
-        document.querySelector('#df-3cd6604e-39b3-433f-8f22-5d650b0afc04 button.colab-df-convert');
+        document.querySelector('#df-cc233bef-4971-4b64-8676-2d47eeddac96 button.colab-df-convert');
       buttonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
 
       async function convertToInteractive(key) {
-        const element = document.querySelector('#df-3cd6604e-39b3-433f-8f22-5d650b0afc04');
+        const element = document.querySelector('#df-cc233bef-4971-4b64-8676-2d47eeddac96');
         const dataTable =
           await google.colab.kernel.invokeFunction('convertToInteractive',
                                                     [key], {});
@@ -782,7 +789,7 @@ Total Data          = 720 data
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-3a24ef40-e5f3-4bf1-b7fe-77ebc000887f" class="colab-df-container">
+  <div id="df-0620ec1a-2389-4577-bda5-8804bdb45952" class="colab-df-container">
     <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -904,7 +911,7 @@ Total Data          = 720 data
     <div class="colab-df-buttons">
       
   <div class="colab-df-container">
-    <button class="colab-df-convert" onclick="convertToInteractive('df-3a24ef40-e5f3-4bf1-b7fe-77ebc000887f')"
+    <button class="colab-df-convert" onclick="convertToInteractive('df-0620ec1a-2389-4577-bda5-8804bdb45952')"
             title="Convert this dataframe to an interactive table."
             style="display:none;">
       
@@ -956,12 +963,12 @@ Total Data          = 720 data
 
     <script>
       const buttonEl =
-        document.querySelector('#df-3a24ef40-e5f3-4bf1-b7fe-77ebc000887f button.colab-df-convert');
+        document.querySelector('#df-0620ec1a-2389-4577-bda5-8804bdb45952 button.colab-df-convert');
       buttonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
 
       async function convertToInteractive(key) {
-        const element = document.querySelector('#df-3a24ef40-e5f3-4bf1-b7fe-77ebc000887f');
+        const element = document.querySelector('#df-0620ec1a-2389-4577-bda5-8804bdb45952');
         const dataTable =
           await google.colab.kernel.invokeFunction('convertToInteractive',
                                                     [key], {});
@@ -1008,7 +1015,7 @@ Total Data          = 720 data
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-ca1ccc68-b17c-4e6b-a7ca-ddfb4504e50a" class="colab-df-container">
+  <div id="df-0a3bb30d-0506-4c06-b4f9-508d1bf734c9" class="colab-df-container">
     <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -1130,7 +1137,7 @@ Total Data          = 720 data
     <div class="colab-df-buttons">
       
   <div class="colab-df-container">
-    <button class="colab-df-convert" onclick="convertToInteractive('df-ca1ccc68-b17c-4e6b-a7ca-ddfb4504e50a')"
+    <button class="colab-df-convert" onclick="convertToInteractive('df-0a3bb30d-0506-4c06-b4f9-508d1bf734c9')"
             title="Convert this dataframe to an interactive table."
             style="display:none;">
       
@@ -1182,12 +1189,12 @@ Total Data          = 720 data
 
     <script>
       const buttonEl =
-        document.querySelector('#df-ca1ccc68-b17c-4e6b-a7ca-ddfb4504e50a button.colab-df-convert');
+        document.querySelector('#df-0a3bb30d-0506-4c06-b4f9-508d1bf734c9 button.colab-df-convert');
       buttonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
 
       async function convertToInteractive(key) {
-        const element = document.querySelector('#df-ca1ccc68-b17c-4e6b-a7ca-ddfb4504e50a');
+        const element = document.querySelector('#df-0a3bb30d-0506-4c06-b4f9-508d1bf734c9');
         const dataTable =
           await google.colab.kernel.invokeFunction('convertToInteractive',
                                                     [key], {});
@@ -1240,9 +1247,7 @@ Try using .loc[row_indexer,col_indexer] = value instead
 
 See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
   data[&#39;clean_artikel&#39;] = data[&#39;Artikel&#39;].str.replace(r&#39;[^\w\s,.?!]&#39;, &#39;&#39;, regex=True).str.lower()
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ipython-input-10-1bb6b440ed41&gt;:5: SettingWithCopyWarning: 
+&lt;ipython-input-10-1bb6b440ed41&gt;:5: SettingWithCopyWarning: 
 A value is trying to be set on a copy of a slice from a DataFrame.
 Try using .loc[row_indexer,col_indexer] = value instead
 
@@ -1260,7 +1265,7 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-2c10a351-de3e-4695-b309-d529e904a2ea" class="colab-df-container">
+  <div id="df-d7ac3030-43fb-4ff0-a603-a9ae79cda51f" class="colab-df-container">
     <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -1394,7 +1399,7 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
     <div class="colab-df-buttons">
       
   <div class="colab-df-container">
-    <button class="colab-df-convert" onclick="convertToInteractive('df-2c10a351-de3e-4695-b309-d529e904a2ea')"
+    <button class="colab-df-convert" onclick="convertToInteractive('df-d7ac3030-43fb-4ff0-a603-a9ae79cda51f')"
             title="Convert this dataframe to an interactive table."
             style="display:none;">
       
@@ -1446,12 +1451,12 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 
     <script>
       const buttonEl =
-        document.querySelector('#df-2c10a351-de3e-4695-b309-d529e904a2ea button.colab-df-convert');
+        document.querySelector('#df-d7ac3030-43fb-4ff0-a603-a9ae79cda51f button.colab-df-convert');
       buttonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
 
       async function convertToInteractive(key) {
-        const element = document.querySelector('#df-2c10a351-de3e-4695-b309-d529e904a2ea');
+        const element = document.querySelector('#df-d7ac3030-43fb-4ff0-a603-a9ae79cda51f');
         const dataTable =
           await google.colab.kernel.invokeFunction('convertToInteractive',
                                                     [key], {});
@@ -1496,11 +1501,9 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 </div>
 <div class="cell_output docutils container">
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[nltk_data] Downloading package punkt to /root/nltk_data...
-[nltk_data]   Unzipping tokenizers/punkt.zip.
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[nltk_data] Downloading package stopwords to /root/nltk_data...
-[nltk_data]   Unzipping corpora/stopwords.zip.
+[nltk_data]   Package punkt is already up-to-date!
+[nltk_data] Downloading package stopwords to /root/nltk_data...
+[nltk_data]   Package stopwords is already up-to-date!
 </pre></div>
 </div>
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
@@ -2896,7 +2899,7 @@ Perbandingan hasil manual dan library</p>
               
               
                 <footer class="prev-next-footer">
-                  <!-- Previous / next buttons -->
+                  
 <div class="prev-next-area">
 </div>
                 </footer>
@@ -2999,6 +3002,7 @@ By Fiqry Wahyu Diky W
   
   <div class="footer-item">
     
+
   <p class="copyright">
     
       © Copyright 2022.
@@ -3025,8 +3029,8 @@ By Fiqry Wahyu Diky W
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6"></script>
-<script src="_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6"></script>
+  <script src="_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
 
   <footer class="bd-footer">
   </footer>

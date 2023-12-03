@@ -62,6 +62,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'Tugas 3 - Reduksi dimensi (LDA)';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -177,6 +179,13 @@ const thebe_selector_output = ".output, .cell_output"
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">UTS</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="UTS-PPW.html"><strong>UTS - Crawling Data Hingga Fit data</strong></a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Prepare UAS</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="crawling-antaranews-cosine.html"><strong>Crawling berita</strong></a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="crawling-antaranews-textrank.html">Data</a></li>
 </ul>
 
     </div>
@@ -410,9 +419,8 @@ document.write(`
 <h2><strong>Apa itu LDA?</strong><a class="headerlink" href="#apa-itu-lda" title="Permalink to this heading">#</a></h2>
 <p>LDA merupakan sebuah model probabilitas generatif dari koleksi data diskrit seperti korpus teks.</p>
 <blockquote>
-<div><p>\begin{equation}
-P(z_d = k, w_d = i) = \frac{\gamma_k \cdot p(w_i | z_k)}{\sum_{k’=1}^K \gamma_{k’} \cdot p(w_i | z_{k’})}
-\end{equation}</p>
+<div><div class="math notranslate nohighlight">
+\[P(z_d = k, w_d = i) = \frac{\gamma_k \cdot p(w_i | z_k)}{\sum_{k'=1}^K \gamma_{k'} \cdot p(w_i | z_{k'})} \]</div>
 </div></blockquote>
 <ul class="simple">
 <li><p>P(zd=k,w d =i) adalah probabilitas bahwa dokumen d memiliki label topik k dan kata i muncul di dokumen tersebut</p></li>
@@ -461,7 +469,13 @@ To: /content/termFreq_Data
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  0%|          | 0.00/11.8M [00:00&lt;?, ?B/s]
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>100%|██████████| 11.8M/11.8M [00:00&lt;00:00, 285MB/s]
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  4%|▍         | 524k/11.8M [00:00&lt;00:02, 5.06MB/s]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 40%|███▉      | 4.72M/11.8M [00:00&lt;00:00, 21.3MB/s]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>100%|██████████| 11.8M/11.8M [00:00&lt;00:00, 41.3MB/s]
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
@@ -491,7 +505,10 @@ To: /content/DataAsli
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  0%|          | 0.00/1.25M [00:00&lt;?, ?B/s]
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>100%|██████████| 1.25M/1.25M [00:00&lt;00:00, 152MB/s]
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 42%|████▏     | 524k/1.25M [00:00&lt;00:00, 5.21MB/s]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>100%|██████████| 1.25M/1.25M [00:00&lt;00:00, 9.54MB/s]
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
@@ -514,7 +531,7 @@ To: /content/DataAsli
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-a0710595-5672-4094-a94d-a0d54a18436c" class="colab-df-container">
+  <div id="df-464ee2ce-68d4-4cdb-8bfd-eebb88bcd509" class="colab-df-container">
     <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -828,7 +845,7 @@ To: /content/DataAsli
     <div class="colab-df-buttons">
       
   <div class="colab-df-container">
-    <button class="colab-df-convert" onclick="convertToInteractive('df-a0710595-5672-4094-a94d-a0d54a18436c')"
+    <button class="colab-df-convert" onclick="convertToInteractive('df-464ee2ce-68d4-4cdb-8bfd-eebb88bcd509')"
             title="Convert this dataframe to an interactive table."
             style="display:none;">
       
@@ -880,12 +897,12 @@ To: /content/DataAsli
 
     <script>
       const buttonEl =
-        document.querySelector('#df-a0710595-5672-4094-a94d-a0d54a18436c button.colab-df-convert');
+        document.querySelector('#df-464ee2ce-68d4-4cdb-8bfd-eebb88bcd509 button.colab-df-convert');
       buttonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
 
       async function convertToInteractive(key) {
-        const element = document.querySelector('#df-a0710595-5672-4094-a94d-a0d54a18436c');
+        const element = document.querySelector('#df-464ee2ce-68d4-4cdb-8bfd-eebb88bcd509');
         const dataTable =
           await google.colab.kernel.invokeFunction('convertToInteractive',
                                                     [key], {});
@@ -918,7 +935,7 @@ To: /content/DataAsli
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-cc48bd37-9ae8-42b3-9347-44f418e33647" class="colab-df-container">
+  <div id="df-1b597f4b-8b76-455f-9c29-0db1b7bd9115" class="colab-df-container">
     <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -1052,7 +1069,7 @@ To: /content/DataAsli
     <div class="colab-df-buttons">
       
   <div class="colab-df-container">
-    <button class="colab-df-convert" onclick="convertToInteractive('df-cc48bd37-9ae8-42b3-9347-44f418e33647')"
+    <button class="colab-df-convert" onclick="convertToInteractive('df-1b597f4b-8b76-455f-9c29-0db1b7bd9115')"
             title="Convert this dataframe to an interactive table."
             style="display:none;">
       
@@ -1104,12 +1121,12 @@ To: /content/DataAsli
 
     <script>
       const buttonEl =
-        document.querySelector('#df-cc48bd37-9ae8-42b3-9347-44f418e33647 button.colab-df-convert');
+        document.querySelector('#df-1b597f4b-8b76-455f-9c29-0db1b7bd9115 button.colab-df-convert');
       buttonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
 
       async function convertToInteractive(key) {
-        const element = document.querySelector('#df-cc48bd37-9ae8-42b3-9347-44f418e33647');
+        const element = document.querySelector('#df-1b597f4b-8b76-455f-9c29-0db1b7bd9115');
         const dataTable =
           await google.colab.kernel.invokeFunction('convertToInteractive',
                                                     [key], {});
@@ -1204,7 +1221,7 @@ Name: Label, Length: 858, dtype: object
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-6f2916b7-3fab-41f7-9d61-3834c58a4a7e" class="colab-df-container">
+  <div id="df-97a5854a-aac3-4f74-9bbc-aa736f67c015" class="colab-df-container">
     <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -1231,33 +1248,33 @@ Name: Label, Length: 858, dtype: object
   <tbody>
     <tr>
       <th>0</th>
-      <td>0.517130</td>
-      <td>0.482205</td>
-      <td>0.000665</td>
+      <td>0.275408</td>
+      <td>0.000666</td>
+      <td>0.723926</td>
     </tr>
     <tr>
       <th>1</th>
+      <td>0.000490</td>
+      <td>0.000490</td>
       <td>0.999021</td>
-      <td>0.000490</td>
-      <td>0.000490</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>0.850141</td>
       <td>0.000549</td>
-      <td>0.149310</td>
+      <td>0.000549</td>
+      <td>0.998903</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>0.762848</td>
-      <td>0.236407</td>
       <td>0.000745</td>
+      <td>0.000745</td>
+      <td>0.998510</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>0.754138</td>
-      <td>0.245133</td>
-      <td>0.000728</td>
+      <td>0.000729</td>
+      <td>0.998543</td>
+      <td>0.000729</td>
     </tr>
     <tr>
       <th>...</th>
@@ -1268,32 +1285,32 @@ Name: Label, Length: 858, dtype: object
     <tr>
       <th>824</th>
       <td>0.000577</td>
-      <td>0.915917</td>
-      <td>0.083506</td>
+      <td>0.100680</td>
+      <td>0.898742</td>
     </tr>
     <tr>
       <th>825</th>
-      <td>0.607451</td>
-      <td>0.391810</td>
       <td>0.000739</td>
+      <td>0.587846</td>
+      <td>0.411415</td>
     </tr>
     <tr>
       <th>826</th>
       <td>0.000392</td>
-      <td>0.000392</td>
       <td>0.999216</td>
+      <td>0.000392</td>
     </tr>
     <tr>
       <th>827</th>
       <td>0.000473</td>
-      <td>0.000473</td>
       <td>0.999053</td>
+      <td>0.000473</td>
     </tr>
     <tr>
       <th>828</th>
       <td>0.000661</td>
-      <td>0.628848</td>
-      <td>0.370490</td>
+      <td>0.489636</td>
+      <td>0.509703</td>
     </tr>
   </tbody>
 </table>
@@ -1302,7 +1319,7 @@ Name: Label, Length: 858, dtype: object
     <div class="colab-df-buttons">
       
   <div class="colab-df-container">
-    <button class="colab-df-convert" onclick="convertToInteractive('df-6f2916b7-3fab-41f7-9d61-3834c58a4a7e')"
+    <button class="colab-df-convert" onclick="convertToInteractive('df-97a5854a-aac3-4f74-9bbc-aa736f67c015')"
             title="Convert this dataframe to an interactive table."
             style="display:none;">
       
@@ -1354,12 +1371,12 @@ Name: Label, Length: 858, dtype: object
 
     <script>
       const buttonEl =
-        document.querySelector('#df-6f2916b7-3fab-41f7-9d61-3834c58a4a7e button.colab-df-convert');
+        document.querySelector('#df-97a5854a-aac3-4f74-9bbc-aa736f67c015 button.colab-df-convert');
       buttonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
 
       async function convertToInteractive(key) {
-        const element = document.querySelector('#df-6f2916b7-3fab-41f7-9d61-3834c58a4a7e');
+        const element = document.querySelector('#df-97a5854a-aac3-4f74-9bbc-aa736f67c015');
         const dataTable =
           await google.colab.kernel.invokeFunction('convertToInteractive',
                                                     [key], {});
@@ -1391,7 +1408,7 @@ Name: Label, Length: 858, dtype: object
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-b3976ae3-5cf9-4225-a44a-b63ef4d1fb79" class="colab-df-container">
+  <div id="df-e5930895-b0d1-461b-84dd-a6ed2bb741c8" class="colab-df-container">
     <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -1419,37 +1436,37 @@ Name: Label, Length: 858, dtype: object
   <tbody>
     <tr>
       <th>0</th>
-      <td>0.517130</td>
-      <td>0.482205</td>
-      <td>0.000665</td>
+      <td>0.275408</td>
+      <td>0.000666</td>
+      <td>0.723926</td>
       <td>RPL</td>
     </tr>
     <tr>
       <th>1</th>
+      <td>0.000490</td>
+      <td>0.000490</td>
       <td>0.999021</td>
-      <td>0.000490</td>
-      <td>0.000490</td>
       <td>RPL</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>0.850141</td>
       <td>0.000549</td>
-      <td>0.149310</td>
+      <td>0.000549</td>
+      <td>0.998903</td>
       <td>RPL</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>0.762848</td>
-      <td>0.236407</td>
       <td>0.000745</td>
+      <td>0.000745</td>
+      <td>0.998510</td>
       <td>KK</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>0.754138</td>
-      <td>0.245133</td>
-      <td>0.000728</td>
+      <td>0.000729</td>
+      <td>0.998543</td>
+      <td>0.000729</td>
       <td>KK</td>
     </tr>
     <tr>
@@ -1501,7 +1518,7 @@ Name: Label, Length: 858, dtype: object
     <div class="colab-df-buttons">
       
   <div class="colab-df-container">
-    <button class="colab-df-convert" onclick="convertToInteractive('df-b3976ae3-5cf9-4225-a44a-b63ef4d1fb79')"
+    <button class="colab-df-convert" onclick="convertToInteractive('df-e5930895-b0d1-461b-84dd-a6ed2bb741c8')"
             title="Convert this dataframe to an interactive table."
             style="display:none;">
       
@@ -1553,12 +1570,12 @@ Name: Label, Length: 858, dtype: object
 
     <script>
       const buttonEl =
-        document.querySelector('#df-b3976ae3-5cf9-4225-a44a-b63ef4d1fb79 button.colab-df-convert');
+        document.querySelector('#df-e5930895-b0d1-461b-84dd-a6ed2bb741c8 button.colab-df-convert');
       buttonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
 
       async function convertToInteractive(key) {
-        const element = document.querySelector('#df-b3976ae3-5cf9-4225-a44a-b63ef4d1fb79');
+        const element = document.querySelector('#df-e5930895-b0d1-461b-84dd-a6ed2bb741c8');
         const dataTable =
           await google.colab.kernel.invokeFunction('convertToInteractive',
                                                     [key], {});
@@ -1592,7 +1609,7 @@ Name: Label, Length: 858, dtype: object
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-2ec771c9-acf2-41ca-a427-2a901ee03d99" class="colab-df-container">
+  <div id="df-fb73b499-79d5-4924-99a5-2eeafc029602" class="colab-df-container">
     <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -1620,37 +1637,37 @@ Name: Label, Length: 858, dtype: object
   <tbody>
     <tr>
       <th>0</th>
-      <td>0.517130</td>
-      <td>0.482205</td>
-      <td>0.000665</td>
+      <td>0.275408</td>
+      <td>0.000666</td>
+      <td>0.723926</td>
       <td>RPL</td>
     </tr>
     <tr>
       <th>1</th>
+      <td>0.000490</td>
+      <td>0.000490</td>
       <td>0.999021</td>
-      <td>0.000490</td>
-      <td>0.000490</td>
       <td>RPL</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>0.850141</td>
       <td>0.000549</td>
-      <td>0.149310</td>
+      <td>0.000549</td>
+      <td>0.998903</td>
       <td>RPL</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>0.762848</td>
-      <td>0.236407</td>
       <td>0.000745</td>
+      <td>0.000745</td>
+      <td>0.998510</td>
       <td>KK</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>0.754138</td>
-      <td>0.245133</td>
-      <td>0.000728</td>
+      <td>0.000729</td>
+      <td>0.998543</td>
+      <td>0.000729</td>
       <td>KK</td>
     </tr>
     <tr>
@@ -1663,36 +1680,36 @@ Name: Label, Length: 858, dtype: object
     <tr>
       <th>824</th>
       <td>0.000577</td>
-      <td>0.915917</td>
-      <td>0.083506</td>
+      <td>0.100680</td>
+      <td>0.898742</td>
       <td>KK</td>
     </tr>
     <tr>
       <th>825</th>
-      <td>0.607451</td>
-      <td>0.391810</td>
       <td>0.000739</td>
+      <td>0.587846</td>
+      <td>0.411415</td>
       <td>KK</td>
     </tr>
     <tr>
       <th>826</th>
       <td>0.000392</td>
-      <td>0.000392</td>
       <td>0.999216</td>
+      <td>0.000392</td>
       <td>KK</td>
     </tr>
     <tr>
       <th>827</th>
       <td>0.000473</td>
-      <td>0.000473</td>
       <td>0.999053</td>
+      <td>0.000473</td>
       <td>KK</td>
     </tr>
     <tr>
       <th>828</th>
       <td>0.000661</td>
-      <td>0.628848</td>
-      <td>0.370490</td>
+      <td>0.489636</td>
+      <td>0.509703</td>
       <td>RPL</td>
     </tr>
   </tbody>
@@ -1702,7 +1719,7 @@ Name: Label, Length: 858, dtype: object
     <div class="colab-df-buttons">
       
   <div class="colab-df-container">
-    <button class="colab-df-convert" onclick="convertToInteractive('df-2ec771c9-acf2-41ca-a427-2a901ee03d99')"
+    <button class="colab-df-convert" onclick="convertToInteractive('df-fb73b499-79d5-4924-99a5-2eeafc029602')"
             title="Convert this dataframe to an interactive table."
             style="display:none;">
       
@@ -1754,12 +1771,12 @@ Name: Label, Length: 858, dtype: object
 
     <script>
       const buttonEl =
-        document.querySelector('#df-2ec771c9-acf2-41ca-a427-2a901ee03d99 button.colab-df-convert');
+        document.querySelector('#df-fb73b499-79d5-4924-99a5-2eeafc029602 button.colab-df-convert');
       buttonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
 
       async function convertToInteractive(key) {
-        const element = document.querySelector('#df-2ec771c9-acf2-41ca-a427-2a901ee03d99');
+        const element = document.querySelector('#df-fb73b499-79d5-4924-99a5-2eeafc029602');
         const dataTable =
           await google.colab.kernel.invokeFunction('convertToInteractive',
                                                     [key], {});
@@ -1795,7 +1812,7 @@ Name: Label, Length: 858, dtype: object
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-a3078dfe-b2d1-41cd-aae8-14911a36bc89" class="colab-df-container">
+  <div id="df-f99f6ae7-c806-4844-82c7-f73eb74b04de" class="colab-df-container">
     <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -1841,74 +1858,74 @@ Name: Label, Length: 858, dtype: object
     <tr>
       <th>0</th>
       <td>Topik 1</td>
-      <td>0.200000</td>
       <td>0.2</td>
-      <td>1.2</td>
-      <td>0.206621</td>
+      <td>0.225235</td>
       <td>0.2</td>
-      <td>0.200000</td>
-      <td>1.912966</td>
-      <td>0.206543</td>
+      <td>0.321368</td>
+      <td>0.209189</td>
+      <td>0.20215</td>
+      <td>2.118126</td>
+      <td>0.2</td>
       <td>0.2</td>
       <td>...</td>
+      <td>0.20000</td>
       <td>0.2</td>
-      <td>0.2</td>
-      <td>1.192975</td>
+      <td>0.200000</td>
       <td>16.2</td>
+      <td>8.2</td>
+      <td>0.200000</td>
+      <td>0.200000</td>
+      <td>0.200000</td>
       <td>0.2</td>
-      <td>3.194375</td>
-      <td>4.194533</td>
-      <td>3.2</td>
-      <td>0.209201</td>
-      <td>0.209201</td>
+      <td>0.2</td>
     </tr>
     <tr>
       <th>1</th>
       <td>Topik 2</td>
-      <td>1.161174</td>
-      <td>2.2</td>
       <td>0.2</td>
-      <td>2.193379</td>
-      <td>2.2</td>
-      <td>0.210989</td>
-      <td>1.487034</td>
-      <td>1.193457</td>
+      <td>2.174765</td>
       <td>0.2</td>
+      <td>2.075002</td>
+      <td>0.200000</td>
+      <td>0.20000</td>
+      <td>0.200000</td>
+      <td>0.2</td>
+      <td>3.2</td>
       <td>...</td>
-      <td>2.2</td>
+      <td>2.16873</td>
+      <td>1.2</td>
+      <td>0.208445</td>
       <td>0.2</td>
-      <td>0.200000</td>
       <td>0.2</td>
-      <td>8.2</td>
-      <td>0.200000</td>
-      <td>0.200000</td>
+      <td>0.206698</td>
+      <td>0.206503</td>
+      <td>3.198614</td>
       <td>0.2</td>
-      <td>1.190799</td>
-      <td>1.190799</td>
+      <td>0.2</td>
     </tr>
     <tr>
       <th>2</th>
       <td>Topik 3</td>
-      <td>0.238826</td>
-      <td>0.2</td>
-      <td>0.2</td>
-      <td>0.200000</td>
-      <td>0.2</td>
-      <td>1.189011</td>
-      <td>0.200000</td>
-      <td>0.200000</td>
-      <td>3.2</td>
-      <td>...</td>
-      <td>0.2</td>
       <td>1.2</td>
-      <td>0.207025</td>
-      <td>0.2</td>
-      <td>0.2</td>
-      <td>0.205625</td>
-      <td>0.205467</td>
-      <td>0.2</td>
       <td>0.200000</td>
-      <td>0.200000</td>
+      <td>1.2</td>
+      <td>0.203630</td>
+      <td>2.190811</td>
+      <td>1.19785</td>
+      <td>1.281874</td>
+      <td>1.2</td>
+      <td>0.2</td>
+      <td>...</td>
+      <td>0.23127</td>
+      <td>0.2</td>
+      <td>1.191555</td>
+      <td>0.2</td>
+      <td>0.2</td>
+      <td>3.193302</td>
+      <td>4.193497</td>
+      <td>0.201386</td>
+      <td>1.2</td>
+      <td>1.2</td>
     </tr>
   </tbody>
 </table>
@@ -1917,7 +1934,7 @@ Name: Label, Length: 858, dtype: object
     <div class="colab-df-buttons">
       
   <div class="colab-df-container">
-    <button class="colab-df-convert" onclick="convertToInteractive('df-a3078dfe-b2d1-41cd-aae8-14911a36bc89')"
+    <button class="colab-df-convert" onclick="convertToInteractive('df-f99f6ae7-c806-4844-82c7-f73eb74b04de')"
             title="Convert this dataframe to an interactive table."
             style="display:none;">
       
@@ -1969,12 +1986,12 @@ Name: Label, Length: 858, dtype: object
 
     <script>
       const buttonEl =
-        document.querySelector('#df-a3078dfe-b2d1-41cd-aae8-14911a36bc89 button.colab-df-convert');
+        document.querySelector('#df-f99f6ae7-c806-4844-82c7-f73eb74b04de button.colab-df-convert');
       buttonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
 
       async function convertToInteractive(key) {
-        const element = document.querySelector('#df-a3078dfe-b2d1-41cd-aae8-14911a36bc89');
+        const element = document.querySelector('#df-f99f6ae7-c806-4844-82c7-f73eb74b04de');
         const dataTable =
           await google.colab.kernel.invokeFunction('convertToInteractive',
                                                     [key], {});
@@ -2023,7 +2040,7 @@ Name: Label, Length: 858, dtype: object
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-a7c687c0-3efe-40d7-87c6-0cb02bf320a7" class="colab-df-container">
+  <div id="df-f7611d4a-8d46-47d8-9756-4d606f6a7bda" class="colab-df-container">
     <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -2050,33 +2067,33 @@ Name: Label, Length: 858, dtype: object
   <tbody>
     <tr>
       <th>0</th>
-      <td>0.517130</td>
-      <td>0.482205</td>
-      <td>0.000665</td>
+      <td>0.275408</td>
+      <td>0.000666</td>
+      <td>0.723926</td>
     </tr>
     <tr>
       <th>1</th>
+      <td>0.000490</td>
+      <td>0.000490</td>
       <td>0.999021</td>
-      <td>0.000490</td>
-      <td>0.000490</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>0.850141</td>
       <td>0.000549</td>
-      <td>0.149310</td>
+      <td>0.000549</td>
+      <td>0.998903</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>0.762848</td>
-      <td>0.236407</td>
       <td>0.000745</td>
+      <td>0.000745</td>
+      <td>0.998510</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>0.754138</td>
-      <td>0.245133</td>
-      <td>0.000728</td>
+      <td>0.000729</td>
+      <td>0.998543</td>
+      <td>0.000729</td>
     </tr>
     <tr>
       <th>...</th>
@@ -2087,32 +2104,32 @@ Name: Label, Length: 858, dtype: object
     <tr>
       <th>824</th>
       <td>0.000577</td>
-      <td>0.915917</td>
-      <td>0.083506</td>
+      <td>0.100680</td>
+      <td>0.898742</td>
     </tr>
     <tr>
       <th>825</th>
-      <td>0.607451</td>
-      <td>0.391810</td>
       <td>0.000739</td>
+      <td>0.587846</td>
+      <td>0.411415</td>
     </tr>
     <tr>
       <th>826</th>
       <td>0.000392</td>
-      <td>0.000392</td>
       <td>0.999216</td>
+      <td>0.000392</td>
     </tr>
     <tr>
       <th>827</th>
       <td>0.000473</td>
-      <td>0.000473</td>
       <td>0.999053</td>
+      <td>0.000473</td>
     </tr>
     <tr>
       <th>828</th>
       <td>0.000661</td>
-      <td>0.628848</td>
-      <td>0.370490</td>
+      <td>0.489636</td>
+      <td>0.509703</td>
     </tr>
   </tbody>
 </table>
@@ -2121,7 +2138,7 @@ Name: Label, Length: 858, dtype: object
     <div class="colab-df-buttons">
       
   <div class="colab-df-container">
-    <button class="colab-df-convert" onclick="convertToInteractive('df-a7c687c0-3efe-40d7-87c6-0cb02bf320a7')"
+    <button class="colab-df-convert" onclick="convertToInteractive('df-f7611d4a-8d46-47d8-9756-4d606f6a7bda')"
             title="Convert this dataframe to an interactive table."
             style="display:none;">
       
@@ -2173,12 +2190,12 @@ Name: Label, Length: 858, dtype: object
 
     <script>
       const buttonEl =
-        document.querySelector('#df-a7c687c0-3efe-40d7-87c6-0cb02bf320a7 button.colab-df-convert');
+        document.querySelector('#df-f7611d4a-8d46-47d8-9756-4d606f6a7bda button.colab-df-convert');
       buttonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
 
       async function convertToInteractive(key) {
-        const element = document.querySelector('#df-a7c687c0-3efe-40d7-87c6-0cb02bf320a7');
+        const element = document.querySelector('#df-f7611d4a-8d46-47d8-9756-4d606f6a7bda');
         const dataTable =
           await google.colab.kernel.invokeFunction('convertToInteractive',
                                                     [key], {});
@@ -2261,10 +2278,10 @@ Name: Label, Length: 858, dtype: object
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>61.38
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>58.79
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>61.45
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>55.82
 </pre></div>
 </div>
 </div>
@@ -2311,22 +2328,22 @@ Name: Label, Length: 858, dtype: object
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>      Topik 1   Topik 2   Topik 3   Topik 4   Topik 5   Topik 6
-0    0.104402  0.000664  0.892941  0.000664  0.000664  0.000664
-1    0.000489  0.000489  0.000489  0.997555  0.000489  0.000489
-2    0.000548  0.000548  0.732797  0.265012  0.000548  0.000548
-3    0.000743  0.000743  0.000743  0.996284  0.000743  0.000743
-4    0.000727  0.000727  0.000727  0.996366  0.000727  0.000727
+0    0.137988  0.000664  0.000664  0.000664  0.859355  0.000664
+1    0.000489  0.000489  0.000489  0.997556  0.000489  0.000489
+2    0.083575  0.150243  0.279510  0.000548  0.485577  0.000548
+3    0.000743  0.000743  0.000743  0.000743  0.996284  0.000743
+4    0.420171  0.000727  0.000727  0.576921  0.000727  0.000727
 ..        ...       ...       ...       ...       ...       ...
-824  0.000576  0.000576  0.000576  0.000576  0.000576  0.997119
-825  0.492757  0.059268  0.000738  0.000738  0.000738  0.445762
-826  0.000391  0.000391  0.000391  0.000391  0.000391  0.998043
-827  0.000473  0.000473  0.000473  0.000473  0.000473  0.997637
-828  0.000660  0.000660  0.000660  0.000660  0.000660  0.996701
+824  0.133797  0.000576  0.832008  0.032466  0.000576  0.000576
+825  0.996312  0.000738  0.000738  0.000738  0.000738  0.000738
+826  0.998043  0.000391  0.000391  0.000391  0.000391  0.000391
+827  0.997636  0.000473  0.000473  0.000473  0.000473  0.000473
+828  0.767830  0.000660  0.000660  0.180850  0.049341  0.000660
 
 [829 rows x 6 columns]
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>60.86
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>59.83
 </pre></div>
 </div>
 </div>
@@ -2343,7 +2360,7 @@ Name: Label, Length: 858, dtype: object
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>60.86
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>59.83
 </pre></div>
 </div>
 </div>
@@ -2368,7 +2385,19 @@ To: /content/tfidf_Data
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  0%|          | 0.00/24.8M [00:00&lt;?, ?B/s]
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>100%|██████████| 24.8M/24.8M [00:00&lt;00:00, 249MB/s]
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  2%|▏         | 524k/24.8M [00:00&lt;00:04, 5.18MB/s]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 19%|█▉        | 4.72M/24.8M [00:00&lt;00:00, 21.5MB/s]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 49%|████▊     | 12.1M/24.8M [00:00&lt;00:00, 26.9MB/s]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 70%|██████▉   | 17.3M/24.8M [00:00&lt;00:00, 24.3MB/s]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>100%|██████████| 24.8M/24.8M [00:00&lt;00:00, 32.1MB/s]
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
@@ -2388,7 +2417,7 @@ To: /content/tfidf_Data
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-a540febb-07b3-4897-8ffb-3b98f5fdb6be" class="colab-df-container">
+  <div id="df-ab88f9b2-59d3-4cc9-b8bc-bb8410b11ddd" class="colab-df-container">
     <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -2702,7 +2731,7 @@ To: /content/tfidf_Data
     <div class="colab-df-buttons">
       
   <div class="colab-df-container">
-    <button class="colab-df-convert" onclick="convertToInteractive('df-a540febb-07b3-4897-8ffb-3b98f5fdb6be')"
+    <button class="colab-df-convert" onclick="convertToInteractive('df-ab88f9b2-59d3-4cc9-b8bc-bb8410b11ddd')"
             title="Convert this dataframe to an interactive table."
             style="display:none;">
       
@@ -2754,12 +2783,12 @@ To: /content/tfidf_Data
 
     <script>
       const buttonEl =
-        document.querySelector('#df-a540febb-07b3-4897-8ffb-3b98f5fdb6be button.colab-df-convert');
+        document.querySelector('#df-ab88f9b2-59d3-4cc9-b8bc-bb8410b11ddd button.colab-df-convert');
       buttonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
 
       async function convertToInteractive(key) {
-        const element = document.querySelector('#df-a540febb-07b3-4897-8ffb-3b98f5fdb6be');
+        const element = document.querySelector('#df-ab88f9b2-59d3-4cc9-b8bc-bb8410b11ddd');
         const dataTable =
           await google.colab.kernel.invokeFunction('convertToInteractive',
                                                     [key], {});
@@ -2846,22 +2875,22 @@ To: /content/tfidf_Data
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>      Topik 1   Topik 2   Topik 3
-0    0.012571  0.974858  0.012571
-1    0.015636  0.968728  0.015636
-2    0.015731  0.968538  0.015731
-3    0.017966  0.964067  0.017966
-4    0.014555  0.970890  0.014555
+0    0.012571  0.012571  0.974858
+1    0.015636  0.015636  0.968728
+2    0.015731  0.015731  0.968538
+3    0.017966  0.017966  0.964067
+4    0.014555  0.014555  0.970890
 ..        ...       ...       ...
-824  0.296050  0.691574  0.012376
-825  0.013019  0.973963  0.013019
-826  0.011748  0.976504  0.011748
-827  0.014590  0.970820  0.014590
-828  0.011841  0.976319  0.011841
+824  0.296589  0.012375  0.691036
+825  0.013019  0.013019  0.973963
+826  0.011748  0.011748  0.976504
+827  0.014590  0.014590  0.970820
+828  0.011841  0.011841  0.976319
 
 [829 rows x 3 columns]
 
-tfidf menggunakan 3 topik dan Nb akurasi = 61.03
-tfidf menggunakan 3 topik dan KNN akurasi = 75.34
+tfidf menggunakan 3 topik dan Nb akurasi = 60.52
+tfidf menggunakan 3 topik dan KNN akurasi = 78.45
 </pre></div>
 </div>
 </div>
@@ -2946,21 +2975,21 @@ dtype: int64
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>      Topik 1   Topik 2   Topik 3   Topik 4
 0    0.012415  0.962755  0.012415  0.012415
-1    0.015396  0.953812  0.015396  0.015395
-2    0.015487  0.953539  0.015487  0.015487
+1    0.015395  0.953814  0.015395  0.015396
+2    0.015487  0.953538  0.015487  0.015487
 3    0.017649  0.947052  0.017649  0.017649
-4    0.014347  0.956960  0.014346  0.014346
+4    0.014346  0.956961  0.014346  0.014346
 ..        ...       ...       ...       ...
-824  0.012224  0.963329  0.012224  0.012224
-825  0.012851  0.961446  0.012851  0.012851
-826  0.011614  0.965163  0.011612  0.011612
-827  0.240334  0.730904  0.014382  0.014380
-828  0.011703  0.787817  0.188778  0.011702
+824  0.012224  0.676386  0.012224  0.299167
+825  0.012852  0.961432  0.012864  0.012852
+826  0.011612  0.965165  0.011612  0.011612
+827  0.014380  0.956860  0.014380  0.014380
+828  0.011702  0.964894  0.011702  0.011702
 
 [829 rows x 4 columns]
 
-TFIDF menggunakan 4 topik dan Nb akurasi = 62.41
-TFIDF menggunakan 4 topik dan KNN akurasi = 73.97
+TFIDF menggunakan 4 topik dan Nb akurasi = 62.07
+TFIDF menggunakan 4 topik dan KNN akurasi = 78.79
 </pre></div>
 </div>
 </div>
@@ -3028,22 +3057,22 @@ TFIDF menggunakan 4 topik dan KNN akurasi = 73.97
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>      Topik 1   Topik 2   Topik 3   Topik 4   Topik 5
-0    0.950946  0.012264  0.012264  0.012263  0.012263
-1    0.015169  0.015164  0.939343  0.015162  0.015162
-2    0.015261  0.015252  0.938985  0.015251  0.015251
-3    0.930622  0.017345  0.017347  0.017343  0.017343
-4    0.014147  0.014145  0.943421  0.014143  0.014144
+0    0.012263  0.012263  0.012263  0.012263  0.950949
+1    0.015162  0.015162  0.015162  0.015162  0.939352
+2    0.015251  0.015251  0.015251  0.015251  0.938996
+3    0.017343  0.017343  0.017343  0.017343  0.930627
+4    0.014144  0.014144  0.014144  0.014144  0.943426
 ..        ...       ...       ...       ...       ...
-824  0.951690  0.012077  0.012081  0.012076  0.012076
-825  0.012695  0.284454  0.677474  0.012688  0.012688
-826  0.245225  0.720338  0.011480  0.011478  0.011478
-827  0.014185  0.943280  0.014182  0.014176  0.014176
-828  0.011571  0.011584  0.953712  0.011567  0.011567
+824  0.012076  0.012076  0.012076  0.012076  0.951695
+825  0.012688  0.012688  0.012688  0.012688  0.949247
+826  0.011478  0.011478  0.011478  0.011478  0.954087
+827  0.014176  0.014176  0.014176  0.014176  0.943295
+828  0.011567  0.011567  0.011567  0.011567  0.953734
 
 [829 rows x 5 columns]
 
-TFIDF menggunakan 5 topik dan Nb akurasi = 62.41
-TFIDF menggunakan 5 topik dan KNN akurasi = 79.48
+TFIDF menggunakan 5 topik dan Nb akurasi = 62.07
+TFIDF menggunakan 5 topik dan KNN akurasi = 77.41
 </pre></div>
 </div>
 </div>
@@ -3111,22 +3140,22 @@ TFIDF menggunakan 5 topik dan KNN akurasi = 79.48
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>      Topik 1   Topik 2   Topik 3   Topik 4   Topik 5   Topik 6
-0    0.012114  0.012114  0.939429  0.012114  0.012115  0.012114
-1    0.014936  0.014936  0.925322  0.014936  0.014936  0.014936
-2    0.015022  0.015022  0.924890  0.015022  0.015022  0.015022
-3    0.017048  0.017048  0.914762  0.017048  0.017048  0.017048
-4    0.013946  0.013946  0.930269  0.013946  0.013946  0.013946
+0    0.012114  0.012114  0.012114  0.939426  0.012114  0.012117
+1    0.014936  0.014936  0.014936  0.925316  0.014936  0.014941
+2    0.015022  0.015022  0.015022  0.924890  0.015022  0.015023
+3    0.017047  0.017047  0.017047  0.914760  0.017047  0.017050
+4    0.013946  0.013946  0.013946  0.930267  0.013946  0.013949
 ..        ...       ...       ...       ...       ...       ...
-824  0.011932  0.011932  0.620502  0.011932  0.331769  0.011933
-825  0.012529  0.012529  0.937354  0.012529  0.012529  0.012529
-826  0.011348  0.011348  0.943260  0.011348  0.011348  0.011348
-827  0.013978  0.013978  0.930110  0.013978  0.013978  0.013978
-828  0.011435  0.011435  0.942816  0.011435  0.011435  0.011445
+824  0.011932  0.011932  0.011932  0.940326  0.011932  0.011946
+825  0.012529  0.012529  0.012529  0.833910  0.012529  0.115973
+826  0.011348  0.011348  0.011348  0.011351  0.011348  0.943257
+827  0.013978  0.013978  0.013978  0.013984  0.013978  0.930104
+828  0.011434  0.011434  0.011434  0.614200  0.011434  0.340062
 
 [829 rows x 6 columns]
 
-TFIDF menggunakan 6 topik dan Nb akurasi = 61.03
-TFIDF menggunakan 6 topik dan KNN akurasi = 76.72
+TFIDF menggunakan 6 topik dan Nb akurasi = 61.9
+TFIDF menggunakan 6 topik dan KNN akurasi = 76.55
 </pre></div>
 </div>
 </div>
@@ -3194,22 +3223,22 @@ TFIDF menggunakan 6 topik dan KNN akurasi = 76.72
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>      Topik 1   Topik 2   Topik 3   Topik 4   Topik 5   Topik 6   Topik 7
-0    0.928184  0.011969  0.011970  0.011969  0.011969  0.011969  0.011969
-1    0.911706  0.014716  0.014716  0.014716  0.014716  0.014716  0.014716
-2    0.911202  0.014800  0.014800  0.014800  0.014800  0.014800  0.014800
-3    0.899429  0.016762  0.016762  0.016762  0.016762  0.016762  0.016762
-4    0.917472  0.013754  0.013754  0.013755  0.013755  0.013754  0.013754
+0    0.011969  0.011969  0.011970  0.011976  0.011969  0.011969  0.928177
+1    0.014716  0.014716  0.014716  0.014716  0.014716  0.014716  0.911706
+2    0.014800  0.014800  0.014800  0.014800  0.014800  0.014800  0.911202
+3    0.016762  0.016762  0.016762  0.016762  0.016762  0.016762  0.899429
+4    0.013754  0.013754  0.013754  0.013755  0.013754  0.013754  0.917473
 ..        ...       ...       ...       ...       ...       ...       ...
-824  0.641043  0.011792  0.300000  0.011791  0.011791  0.011791  0.011791
-825  0.925742  0.012375  0.012375  0.012375  0.012383  0.012375  0.012377
-826  0.932676  0.011221  0.011221  0.011221  0.011221  0.011221  0.011221
-827  0.917288  0.013785  0.013785  0.013785  0.013785  0.013785  0.013785
-828  0.932154  0.011306  0.011316  0.011306  0.011306  0.011306  0.011307
+824  0.011791  0.011791  0.011791  0.011792  0.011791  0.011791  0.929251
+825  0.012374  0.012374  0.012374  0.012375  0.012374  0.012374  0.925755
+826  0.011221  0.011221  0.011221  0.326791  0.011221  0.011221  0.617105
+827  0.013785  0.013785  0.013785  0.516818  0.013785  0.013785  0.414256
+828  0.011305  0.011305  0.011305  0.283502  0.011305  0.011305  0.659973
 
 [829 rows x 7 columns]
 
-TFIDF menggunakan 7 topik dan Nb akurasi = 62.24
-TFIDF menggunakan 7 topik dan KNN akurasi = 76.55
+TFIDF menggunakan 7 topik dan Nb akurasi = 61.72
+TFIDF menggunakan 7 topik dan KNN akurasi = 75.34
 </pre></div>
 </div>
 </div>
@@ -3278,16 +3307,16 @@ TFIDF menggunakan 7 topik dan KNN akurasi = 76.55
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>      Topik 1   Topik 2   Topik 3   Topik 4   Topik 5   Topik 6   Topik 7  \
 0    0.917206  0.011828  0.011828  0.011828  0.011828  0.011828  0.011828   
-1    0.898484  0.014502  0.014502  0.014502  0.014502  0.014502  0.014502   
-2    0.897914  0.014584  0.014584  0.014584  0.014584  0.014584  0.014584   
-3    0.884602  0.016485  0.016485  0.016485  0.016485  0.016485  0.016485   
-4    0.905025  0.013568  0.013568  0.013568  0.013568  0.013568  0.013568   
+1    0.898483  0.014503  0.014502  0.014502  0.014502  0.014502  0.014502   
+2    0.897913  0.014584  0.014584  0.014584  0.014584  0.014584  0.014584   
+3    0.884602  0.016486  0.016485  0.016485  0.016485  0.016485  0.016486   
+4    0.650648  0.013568  0.013568  0.013568  0.013568  0.013568  0.267945   
 ..        ...       ...       ...       ...       ...       ...       ...   
-824  0.630676  0.299399  0.011655  0.011654  0.011654  0.011655  0.011654   
+824  0.493810  0.011654  0.011654  0.011654  0.011654  0.011654  0.436268   
 825  0.914439  0.012223  0.012223  0.012223  0.012223  0.012223  0.012223   
-826  0.922326  0.011096  0.011096  0.011096  0.011096  0.011096  0.011096   
-827  0.904813  0.013598  0.013598  0.013598  0.013598  0.013598  0.013599   
-828  0.786682  0.011179  0.146245  0.011179  0.011179  0.011179  0.011179   
+826  0.922300  0.011119  0.011097  0.011097  0.011097  0.011097  0.011097   
+827  0.904814  0.013598  0.013598  0.013598  0.013598  0.013598  0.013598   
+828  0.921747  0.011179  0.011179  0.011179  0.011179  0.011179  0.011180   
 
       Topik 8  
 0    0.011828  
@@ -3298,14 +3327,14 @@ TFIDF menggunakan 7 topik dan KNN akurasi = 76.55
 ..        ...  
 824  0.011654  
 825  0.012223  
-826  0.011096  
+826  0.011097  
 827  0.013598  
 828  0.011179  
 
 [829 rows x 8 columns]
 
-TFIDF menggunakan 8 topik dan Nb akurasi = 62.07
-TFIDF menggunakan 8 topik dan KNN akurasi = 75.34
+TFIDF menggunakan 8 topik dan Nb akurasi = 61.9
+TFIDF menggunakan 8 topik dan KNN akurasi = 75.52
 </pre></div>
 </div>
 </div>
@@ -3362,26 +3391,26 @@ TFIDF menggunakan 8 topik dan KNN akurasi = 75.34
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>      Topik 1   Topik 2   Topik 3   Topik 4   Topik 5   Topik 6   Topik 7  \
-0    0.011828  0.011828  0.011828  0.011828  0.011828  0.917207  0.011828   
-1    0.014502  0.014502  0.014502  0.014502  0.014502  0.898484  0.014502   
-2    0.014584  0.014584  0.014584  0.014584  0.014584  0.715693  0.196802   
-3    0.016485  0.016485  0.016485  0.016485  0.016485  0.884601  0.016486   
-4    0.013571  0.013569  0.013569  0.013574  0.013569  0.905011  0.013570   
+0    0.011828  0.917206  0.011828  0.011828  0.011828  0.011828  0.011828   
+1    0.014502  0.898484  0.014502  0.014502  0.014502  0.014502  0.014502   
+2    0.014584  0.897913  0.014584  0.014584  0.014584  0.014584  0.014584   
+3    0.016485  0.884602  0.016485  0.016485  0.016485  0.016485  0.016485   
+4    0.013568  0.905025  0.013568  0.013568  0.013568  0.013568  0.013568   
 ..        ...       ...       ...       ...       ...       ...       ...   
-824  0.011654  0.311058  0.011654  0.011654  0.011655  0.619017  0.011654   
-825  0.012223  0.012223  0.012223  0.012223  0.012223  0.914435  0.012227   
-826  0.011096  0.011096  0.011096  0.011096  0.011096  0.922326  0.011096   
-827  0.013598  0.013598  0.013598  0.013598  0.013598  0.904814  0.013598   
-828  0.011179  0.011179  0.011179  0.011179  0.011179  0.921748  0.011179   
+824  0.011655  0.622912  0.011654  0.011654  0.011654  0.011654  0.011655   
+825  0.012223  0.914439  0.012223  0.012223  0.012223  0.012223  0.012223   
+826  0.011096  0.922326  0.011096  0.011096  0.011096  0.011096  0.011096   
+827  0.013598  0.904815  0.013598  0.013598  0.013598  0.013598  0.013598   
+828  0.011179  0.921749  0.011179  0.011179  0.011179  0.011179  0.011179   
 
       Topik 8  
 0    0.011828  
 1    0.014502  
 2    0.014584  
 3    0.016485  
-4    0.013569  
+4    0.013568  
 ..        ...  
-824  0.011654  
+824  0.307163  
 825  0.012223  
 826  0.011096  
 827  0.013598  
@@ -3389,7 +3418,7 @@ TFIDF menggunakan 8 topik dan KNN akurasi = 75.34
 
 [829 rows x 8 columns]
 
-TFIDF menggunakan 6 topik dan Nb akurasi = 58.97
+TFIDF menggunakan 6 topik dan Nb akurasi = 59.14
 </pre></div>
 </div>
 </div>
@@ -3423,7 +3452,7 @@ TFIDF menggunakan 6 topik dan Nb akurasi = 58.97
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/1265ae349061f878bcedf5ff1fcf2afbb840289deb849df88bee435ffadf2b28.png" src="_images/1265ae349061f878bcedf5ff1fcf2afbb840289deb849df88bee435ffadf2b28.png" />
+<img alt="_images/e91a829809b5b2e9d76e9a28803775aa0c8f655d371883b47e0518c8656c30f2.png" src="_images/e91a829809b5b2e9d76e9a28803775aa0c8f655d371883b47e0518c8656c30f2.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -3470,7 +3499,7 @@ TFIDF menggunakan 6 topik dan Nb akurasi = 58.97
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/a183c78cc7b684c375f6a4096c3ecb2064e77cfba1cb8f665bcfe30fa872ad79.png" src="_images/a183c78cc7b684c375f6a4096c3ecb2064e77cfba1cb8f665bcfe30fa872ad79.png" />
+<img alt="_images/1a0928624b1d57dbf091800025822b891312631b2b6e551f8ab6f2474e3bcfea.png" src="_images/1a0928624b1d57dbf091800025822b891312631b2b6e551f8ab6f2474e3bcfea.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -3492,7 +3521,7 @@ TFIDF menggunakan 6 topik dan Nb akurasi = 58.97
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Model dengan akurasi tertinggi adalah K-Nearest Neighbors dengan akurasi 79.48
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Model dengan akurasi tertinggi adalah K-Nearest Neighbors dengan akurasi 78.79
 </pre></div>
 </div>
 </div>
