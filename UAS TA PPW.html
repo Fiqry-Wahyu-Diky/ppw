@@ -2406,8 +2406,8 @@ Banyak dataset : 1065
 <blockquote>
 <div><p>TFIDF merupakan metode yang digunakan dalam pemrosesan bahasa alami (Natural Language Processing - NLP) dan pengambilan informasi (Information Retrieval) untuk mengukur seberapa penting suatu kata dalam suatu dokumen atau kumpulan dokumen. Tujuannya adalah untuk memberikan bobot yang lebih tinggi kepada kata-kata yang penting dalam representasi teks.</p>
 </div></blockquote>
-<p>Rumus:
-$<span class="math notranslate nohighlight">\(\text{TF-IDF}(t, d) = \text{TF}(t, d) \cdot \text{IDF}(t)\)</span>$</p>
+<p>Rumus:<br />
+<span class="math notranslate nohighlight">\(\text{TF-IDF}(t, d) = \text{TF}(t, d) \cdot \text{IDF}(t)\)</span></p>
 <section id="import-library">
 <h3>Import Library<a class="headerlink" href="#import-library" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
@@ -3008,13 +3008,11 @@ $<span class="math notranslate nohighlight">\(\text{TF-IDF}(t, d) = \text{TF}(t,
 <h2>LDA<a class="headerlink" href="#lda" title="Permalink to this heading">#</a></h2>
 <p>LDA (Latent Dirichlet Allocation) adalah sebuah model generatif probabilistik yang digunakan untuk mengidentifikasi topik-topik utama yang muncul dalam suatu koleksi dokumen. LDA bekerja dengan asumsi bahwa setiap dokumen dalam koleksi dapat direpresentasikan sebagai campuran dari beberapa topik, dan setiap kata dalam dokumen diberikan oleh salah satu topik tersebut. LDA membantu mengungkap struktur topikal yang tersembunyi dalam korpus teks.</p>
 <p>Rumus:<br />
-$<span class="math notranslate nohighlight">\(p(Wj|t_k,d_i) = p(t_k|d_i) × p(W_j|t_k)\)</span>$
-Dimana:<br />
+<span class="math notranslate nohighlight">\(p(Wj|t_k,d_i) = p(t_k|d_i) × p(W_j|t_k)\)</span></p>
+<p>Dimana:<br />
 ptk|di = proporsi topik pada dokumen<br />
 pwj|tk = proporsi kata pada topik</p>
-<hr class="docutils" />
-<p>Untuk rumus pjk|di:
-$<span class="math notranslate nohighlight">\(p(t_k|d_i) = \frac{n_ik + \alpha}{Ni + K \alpha} \)</span>$</p>
+<p>Untuk rumus pjk|di:  <span class="math notranslate nohighlight">\(p(t_k|d_i) = \frac{n_ik + \alpha}{Ni + K \alpha} \)</span></p>
 <p>Dimana:
 nik = banyak kata pada dokumen i yang memiliki topik ke-k
 Ni = banyak kata dalam dokumen i<br />
@@ -3022,7 +3020,7 @@ a = parameter Dirichlet untuk distribusi topik dokumen.<br />
 b = parameter Dirichlet untuk distribusi kata topik.</p>
 <hr class="docutils" />
 <p>Untuk rumus pWj|tk:
-$<span class="math notranslate nohighlight">\(p(W_j|t_k) = \frac{mj,k + \beta}{\sum_j \mathbf{E} V m_j,k + V \beta} \)</span>$</p>
+<span class="math notranslate nohighlight">\(p(W_j|t_k) = \frac{mj,k + \beta}{\sum_j \mathbf{E} V m_j,k + V \beta} \)</span></p>
 <p>Dimana:<br />
 Mjk = kata-kata yang ada dibag of word yang ditandai
 V = banyak kata atau vocabolary
