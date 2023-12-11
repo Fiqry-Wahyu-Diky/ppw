@@ -194,6 +194,7 @@ const thebe_selector_output = ".output, .cell_output"
 
 
 
+
 </ul>
 
     </div>
@@ -390,6 +391,7 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#"><strong>Klasifikasi Berita AntaraNews Menggunakan Representasi Fitur LDA (Latenth Dirichlet Allocation)</strong></a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#aplikasi-implementasi-klasifikasi-berita">Aplikasi Implementasi Klasifikasi Berita</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#crawling-berita">Crawling Berita</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#import-library-dan-packages">Import Library dan Packages</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#setting-url-yang-akan-digunakan">Setting URL yang akan digunakan</a></li>
@@ -414,9 +416,12 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lda">LDA</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#inisial-x-dan-y">Inisial X dan y</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#splitting-data">Splitting data</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pencarian-best-model-lda-dan-model">Pencarian best model LDA dan Model</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#perhitungan-manual-lda">Perhitungan Manual LDA</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#inisial-x-dan-y">Inisial X dan y</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#splitting-data">Splitting data</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pencarian-best-model-lda-dan-model">Pencarian best model LDA dan Model</a></li>
+</ul>
+</li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#grafik">Grafik</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#dataframe-history">Dataframe history</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#best-akurasi">Best Akurasi</a></li>
@@ -451,6 +456,10 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="klasifikasi-berita-antaranews-menggunakan-representasi-fitur-lda-latenth-dirichlet-allocation">
 <h1><strong>Klasifikasi Berita AntaraNews Menggunakan Representasi Fitur LDA (Latenth Dirichlet Allocation)</strong><a class="headerlink" href="#klasifikasi-berita-antaranews-menggunakan-representasi-fitur-lda-latenth-dirichlet-allocation" title="Permalink to this heading">#</a></h1>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="aplikasi-implementasi-klasifikasi-berita">
+<h1>Aplikasi Implementasi Klasifikasi Berita<a class="headerlink" href="#aplikasi-implementasi-klasifikasi-berita" title="Permalink to this heading">#</a></h1>
+<p><a class="reference external" href="https://klasifikasiberita.streamlit.app/">https://klasifikasiberita.streamlit.app/</a></p>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="crawling-berita">
 <h1>Crawling Berita<a class="headerlink" href="#crawling-berita" title="Permalink to this heading">#</a></h1>
@@ -650,118 +659,80 @@ Dilakukan perulangan sebanyak 25 Pages dan setiap pagesnya akan mendalami setiap
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>... Mengambil data berita kategori - politik, Pages ke-1
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>... Mengambil data berita kategori - ekonomi, Pages ke-1
-</pre></div>
-</div>
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">KeyboardInterrupt</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
 <span class="nn">&lt;ipython-input-5-2ea4643298e9&gt;</span> in <span class="ni">&lt;cell line: 1&gt;</span><span class="nt">()</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">crawlingResult</span> <span class="o">=</span> <span class="n">crawling</span><span class="p">(</span><span class="n">categori_search</span><span class="p">)</span>
 
 <span class="nn">&lt;ipython-input-4-93504859e992&gt;</span> in <span class="ni">crawling</span><span class="nt">(urlberita)</span>
-<span class="g g-Whitespace">     </span><span class="mi">27</span> 
 <span class="g g-Whitespace">     </span><span class="mi">28</span>         <span class="c1"># ======== masuk ke link pages ==========</span>
-<span class="ne">---&gt; </span><span class="mi">29</span>         <span class="n">response_artikel</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">get_link_in</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">30</span>         <span class="n">soup_artikel</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">response_artikel</span><span class="o">.</span><span class="n">text</span><span class="p">,</span> <span class="s1">&#39;html.parser&#39;</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">29</span>         <span class="n">response_artikel</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">get_link_in</span><span class="p">)</span>
+<span class="ne">---&gt; </span><span class="mi">30</span>         <span class="n">soup_artikel</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">response_artikel</span><span class="o">.</span><span class="n">text</span><span class="p">,</span> <span class="s1">&#39;html.parser&#39;</span><span class="p">)</span>
 <span class="g g-Whitespace">     </span><span class="mi">31</span> 
+<span class="g g-Whitespace">     </span><span class="mi">32</span>         <span class="c1"># # print(soup_artikel)</span>
 
-<span class="nn">/usr/local/lib/python3.10/dist-packages/requests/api.py</span> in <span class="ni">get</span><span class="nt">(url, params, **kwargs)</span>
-<span class="g g-Whitespace">     </span><span class="mi">71</span>     <span class="s2">&quot;&quot;&quot;</span>
-<span class="g g-Whitespace">     </span><span class="mi">72</span><span class="s2"> </span>
-<span class="ne">---&gt; </span><span class="mi">73</span><span class="s2">     return request(&quot;get&quot;, url, params=params, **kwargs)</span>
-<span class="g g-Whitespace">     </span><span class="mi">74</span><span class="s2"> </span>
-<span class="g g-Whitespace">     </span><span class="mi">75</span><span class="s2"> </span>
+<span class="nn">/usr/local/lib/python3.10/dist-packages/bs4/__init__.py</span> in <span class="ni">__init__</span><span class="nt">(self, markup, features, builder, parse_only, from_encoding, exclude_encodings, element_classes, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">331</span>             <span class="bp">self</span><span class="o">.</span><span class="n">builder</span><span class="o">.</span><span class="n">initialize_soup</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">332</span>             <span class="k">try</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">333</span>                 <span class="bp">self</span><span class="o">.</span><span class="n">_feed</span><span class="p">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">334</span>                 <span class="n">success</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="g g-Whitespace">    </span><span class="mi">335</span>                 <span class="k">break</span>
 
-<span class="nn">/usr/local/lib/python3.10/dist-packages/requests/api.py</span> in <span class="ni">request</span><span class="nt">(method, url, **kwargs)</span>
-<span class="g g-Whitespace">     </span><span class="mi">57</span><span class="s2">     # cases, and look like a memory leak in others.</span>
-<span class="g g-Whitespace">     </span><span class="mi">58</span><span class="s2">     with sessions.Session() as session:</span>
-<span class="ne">---&gt; </span><span class="mi">59</span><span class="s2">         return session.request(method=method, url=url, **kwargs)</span>
-<span class="g g-Whitespace">     </span><span class="mi">60</span><span class="s2"> </span>
-<span class="g g-Whitespace">     </span><span class="mi">61</span><span class="s2"> </span>
+<span class="nn">/usr/local/lib/python3.10/dist-packages/bs4/__init__.py</span> in <span class="ni">_feed</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">    </span><span class="mi">450</span>         <span class="bp">self</span><span class="o">.</span><span class="n">builder</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">451</span> 
+<span class="ne">--&gt; </span><span class="mi">452</span>         <span class="bp">self</span><span class="o">.</span><span class="n">builder</span><span class="o">.</span><span class="n">feed</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">markup</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">453</span>         <span class="c1"># Close out any unfinished strings and close all the open tags.</span>
+<span class="g g-Whitespace">    </span><span class="mi">454</span>         <span class="bp">self</span><span class="o">.</span><span class="n">endData</span><span class="p">()</span>
 
-<span class="nn">/usr/local/lib/python3.10/dist-packages/requests/sessions.py</span> in <span class="ni">request</span><span class="nt">(self, method, url, params, data, headers, cookies, files, auth, timeout, allow_redirects, proxies, hooks, stream, verify, cert, json)</span>
-<span class="g g-Whitespace">    </span><span class="mi">587</span><span class="s2">         }</span>
-<span class="g g-Whitespace">    </span><span class="mi">588</span><span class="s2">         send_kwargs.update(settings)</span>
-<span class="ne">--&gt; </span><span class="mi">589</span><span class="s2">         resp = self.send(prep, **send_kwargs)</span>
-<span class="g g-Whitespace">    </span><span class="mi">590</span><span class="s2"> </span>
-<span class="g g-Whitespace">    </span><span class="mi">591</span><span class="s2">         return resp</span>
+<span class="nn">/usr/local/lib/python3.10/dist-packages/bs4/builder/_htmlparser.py</span> in <span class="ni">feed</span><span class="nt">(self, markup)</span>
+<span class="g g-Whitespace">    </span><span class="mi">360</span>         <span class="n">parser</span> <span class="o">=</span> <span class="n">BeautifulSoupHTMLParser</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">361</span>         <span class="n">parser</span><span class="o">.</span><span class="n">soup</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">soup</span>
+<span class="ne">--&gt; </span><span class="mi">362</span>         <span class="n">parser</span><span class="o">.</span><span class="n">feed</span><span class="p">(</span><span class="n">markup</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">363</span>         <span class="n">parser</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">364</span>         <span class="n">parser</span><span class="o">.</span><span class="n">already_closed_empty_element</span> <span class="o">=</span> <span class="p">[]</span>
 
-<span class="nn">/usr/local/lib/python3.10/dist-packages/requests/sessions.py</span> in <span class="ni">send</span><span class="nt">(self, request, **kwargs)</span>
-<span class="g g-Whitespace">    </span><span class="mi">701</span><span class="s2"> </span>
-<span class="g g-Whitespace">    </span><span class="mi">702</span><span class="s2">         # Send the request</span>
-<span class="ne">--&gt; </span><span class="mi">703</span><span class="s2">         r = adapter.send(request, **kwargs)</span>
-<span class="g g-Whitespace">    </span><span class="mi">704</span><span class="s2"> </span>
-<span class="g g-Whitespace">    </span><span class="mi">705</span><span class="s2">         # Total elapsed time of the request (approximately)</span>
+<span class="nn">/usr/lib/python3.10/html/parser.py</span> in <span class="ni">feed</span><span class="nt">(self, data)</span>
+<span class="g g-Whitespace">    </span><span class="mi">108</span><span class="w">         </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="g g-Whitespace">    </span><span class="mi">109</span><span class="sd">         self.rawdata = self.rawdata + data</span>
+<span class="ne">--&gt; </span><span class="mi">110</span><span class="sd">         self.goahead(0)</span>
+<span class="g g-Whitespace">    </span><span class="mi">111</span><span class="sd"> </span>
+<span class="g g-Whitespace">    </span><span class="mi">112</span><span class="sd">     def close(self):</span>
 
-<span class="nn">/usr/local/lib/python3.10/dist-packages/requests/adapters.py</span> in <span class="ni">send</span><span class="nt">(self, request, stream, timeout, verify, cert, proxies)</span>
-<span class="g g-Whitespace">    </span><span class="mi">484</span><span class="s2"> </span>
-<span class="g g-Whitespace">    </span><span class="mi">485</span><span class="s2">         try:</span>
-<span class="ne">--&gt; </span><span class="mi">486</span><span class="s2">             resp = conn.urlopen(</span>
-<span class="g g-Whitespace">    </span><span class="mi">487</span><span class="s2">                 method=request.method,</span>
-<span class="g g-Whitespace">    </span><span class="mi">488</span><span class="s2">                 url=url,</span>
+<span class="nn">/usr/lib/python3.10/html/parser.py</span> in <span class="ni">goahead</span><span class="nt">(self, end)</span>
+<span class="g g-Whitespace">    </span><span class="mi">168</span><span class="sd">             if startswith(&#39;&lt;&#39;, i):</span>
+<span class="g g-Whitespace">    </span><span class="mi">169</span><span class="sd">                 if starttagopen.match(rawdata, i): # &lt; + letter</span>
+<span class="ne">--&gt; </span><span class="mi">170</span><span class="sd">                     k = self.parse_starttag(i)</span>
+<span class="g g-Whitespace">    </span><span class="mi">171</span><span class="sd">                 elif startswith(&quot;&lt;/&quot;, i):</span>
+<span class="g g-Whitespace">    </span><span class="mi">172</span><span class="sd">                     k = self.parse_endtag(i)</span>
 
-<span class="nn">/usr/local/lib/python3.10/dist-packages/urllib3/connectionpool.py</span> in <span class="ni">urlopen</span><span class="nt">(self, method, url, body, headers, retries, redirect, assert_same_host, timeout, pool_timeout, release_conn, chunked, body_pos, preload_content, decode_content, **response_kw)</span>
-<span class="g g-Whitespace">    </span><span class="mi">789</span><span class="s2"> </span>
-<span class="g g-Whitespace">    </span><span class="mi">790</span><span class="s2">             # Make the request on the HTTPConnection object</span>
-<span class="ne">--&gt; </span><span class="mi">791</span><span class="s2">             response = self._make_request(</span>
-<span class="g g-Whitespace">    </span><span class="mi">792</span><span class="s2">                 conn,</span>
-<span class="g g-Whitespace">    </span><span class="mi">793</span><span class="s2">                 method,</span>
+<span class="nn">/usr/lib/python3.10/html/parser.py</span> in <span class="ni">parse_starttag</span><span class="nt">(self, i)</span>
+<span class="g g-Whitespace">    </span><span class="mi">342</span><span class="sd">             self.handle_startendtag(tag, attrs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">343</span><span class="sd">         else:</span>
+<span class="ne">--&gt; </span><span class="mi">344</span><span class="sd">             self.handle_starttag(tag, attrs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">345</span><span class="sd">             if tag in self.CDATA_CONTENT_ELEMENTS:</span>
+<span class="g g-Whitespace">    </span><span class="mi">346</span><span class="sd">                 self.set_cdata_mode(tag)</span>
 
-<span class="nn">/usr/local/lib/python3.10/dist-packages/urllib3/connectionpool.py</span> in <span class="ni">_make_request</span><span class="nt">(self, conn, method, url, body, headers, retries, timeout, chunked, response_conn, preload_content, decode_content, enforce_content_length)</span>
-<span class="g g-Whitespace">    </span><span class="mi">535</span><span class="s2">         # Receive the response from the server</span>
-<span class="g g-Whitespace">    </span><span class="mi">536</span><span class="s2">         try:</span>
-<span class="ne">--&gt; </span><span class="mi">537</span><span class="s2">             response = conn.getresponse()</span>
-<span class="g g-Whitespace">    </span><span class="mi">538</span><span class="s2">         except (BaseSSLError, OSError) as e:</span>
-<span class="g g-Whitespace">    </span><span class="mi">539</span><span class="s2">             self._raise_timeout(err=e, url=url, timeout_value=read_timeout)</span>
+<span class="nn">/usr/local/lib/python3.10/dist-packages/bs4/builder/_htmlparser.py</span> in <span class="ni">handle_starttag</span><span class="nt">(self, name, attrs, handle_empty_element)</span>
+<span class="g g-Whitespace">    </span><span class="mi">118</span><span class="sd">         #print(&quot;START&quot;, name)</span>
+<span class="g g-Whitespace">    </span><span class="mi">119</span><span class="sd">         sourceline, sourcepos = self.getpos()</span>
+<span class="ne">--&gt; </span><span class="mi">120</span><span class="sd">         tag = self.soup.handle_starttag(</span>
+<span class="g g-Whitespace">    </span><span class="mi">121</span><span class="sd">             name, None, None, attr_dict, sourceline=sourceline,</span>
+<span class="g g-Whitespace">    </span><span class="mi">122</span><span class="sd">             sourcepos=sourcepos</span>
 
-<span class="nn">/usr/local/lib/python3.10/dist-packages/urllib3/connection.py</span> in <span class="ni">getresponse</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">    </span><span class="mi">459</span><span class="s2"> </span>
-<span class="g g-Whitespace">    </span><span class="mi">460</span><span class="s2">         # Get the response from http.client.HTTPConnection</span>
-<span class="ne">--&gt; </span><span class="mi">461</span><span class="s2">         httplib_response = super().getresponse()</span>
-<span class="g g-Whitespace">    </span><span class="mi">462</span><span class="s2"> </span>
-<span class="g g-Whitespace">    </span><span class="mi">463</span><span class="s2">         try:</span>
+<span class="nn">/usr/local/lib/python3.10/dist-packages/bs4/__init__.py</span> in <span class="ni">handle_starttag</span><span class="nt">(self, name, namespace, nsprefix, attrs, sourceline, sourcepos, namespaces)</span>
+<span class="g g-Whitespace">    </span><span class="mi">713</span><span class="sd">         &quot;&quot;&quot;</span>
+<span class="g g-Whitespace">    </span><span class="mi">714</span>         <span class="c1"># print(&quot;Start tag %s: %s&quot; % (name, attrs))</span>
+<span class="ne">--&gt; </span><span class="mi">715</span>         <span class="bp">self</span><span class="o">.</span><span class="n">endData</span><span class="p">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">716</span> 
+<span class="g g-Whitespace">    </span><span class="mi">717</span>         <span class="k">if</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">parse_only</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">tagStack</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="mi">1</span>
 
-<span class="nn">/usr/lib/python3.10/http/client.py</span> in <span class="ni">getresponse</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1373</span><span class="s2">         try:</span>
-<span class="g g-Whitespace">   </span><span class="mi">1374</span><span class="s2">             try:</span>
-<span class="ne">-&gt; </span><span class="mi">1375</span><span class="s2">                 response.begin()</span>
-<span class="g g-Whitespace">   </span><span class="mi">1376</span><span class="s2">             except ConnectionError:</span>
-<span class="g g-Whitespace">   </span><span class="mi">1377</span><span class="s2">                 self.close()</span>
-
-<span class="nn">/usr/lib/python3.10/http/client.py</span> in <span class="ni">begin</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">    </span><span class="mi">316</span><span class="s2">         # read until we get a non-100 response</span>
-<span class="g g-Whitespace">    </span><span class="mi">317</span><span class="s2">         while True:</span>
-<span class="ne">--&gt; </span><span class="mi">318</span><span class="s2">             version, status, reason = self._read_status()</span>
-<span class="g g-Whitespace">    </span><span class="mi">319</span><span class="s2">             if status != CONTINUE:</span>
-<span class="g g-Whitespace">    </span><span class="mi">320</span><span class="s2">                 break</span>
-
-<span class="nn">/usr/lib/python3.10/http/client.py</span> in <span class="ni">_read_status</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">    </span><span class="mi">277</span><span class="s2"> </span>
-<span class="g g-Whitespace">    </span><span class="mi">278</span><span class="s2">     def _read_status(self):</span>
-<span class="ne">--&gt; </span><span class="mi">279</span><span class="s2">         line = str(self.fp.readline(_MAXLINE + 1), &quot;iso-8859-1&quot;)</span>
-<span class="g g-Whitespace">    </span><span class="mi">280</span><span class="s2">         if len(line) &gt; _MAXLINE:</span>
-<span class="g g-Whitespace">    </span><span class="mi">281</span><span class="s2">             raise LineTooLong(&quot;status line&quot;)</span>
-
-<span class="nn">/usr/lib/python3.10/socket.py</span> in <span class="ni">readinto</span><span class="nt">(self, b)</span>
-<span class="g g-Whitespace">    </span><span class="mi">703</span><span class="s2">         while True:</span>
-<span class="g g-Whitespace">    </span><span class="mi">704</span><span class="s2">             try:</span>
-<span class="ne">--&gt; </span><span class="mi">705</span><span class="s2">                 return self._sock.recv_into(b)</span>
-<span class="g g-Whitespace">    </span><span class="mi">706</span><span class="s2">             except timeout:</span>
-<span class="g g-Whitespace">    </span><span class="mi">707</span><span class="s2">                 self._timeout_occurred = True</span>
-
-<span class="nn">/usr/lib/python3.10/ssl.py</span> in <span class="ni">recv_into</span><span class="nt">(self, buffer, nbytes, flags)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1301</span><span class="s2">                   &quot;non-zero flags not allowed in calls to recv_into() on </span><span class="si">%s</span><span class="s2">&quot; %</span>
-<span class="g g-Whitespace">   </span><span class="mi">1302</span><span class="s2">                   self.__class__)</span>
-<span class="ne">-&gt; </span><span class="mi">1303</span><span class="s2">             return self.read(nbytes, buffer)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1304</span><span class="s2">         else:</span>
-<span class="g g-Whitespace">   </span><span class="mi">1305</span><span class="s2">             return super().recv_into(buffer, nbytes, flags)</span>
-
-<span class="nn">/usr/lib/python3.10/ssl.py</span> in <span class="ni">read</span><span class="nt">(self, len, buffer)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1157</span><span class="s2">         try:</span>
-<span class="g g-Whitespace">   </span><span class="mi">1158</span><span class="s2">             if buffer is not None:</span>
-<span class="ne">-&gt; </span><span class="mi">1159</span><span class="s2">                 return self._sslobj.read(len, buffer)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1160</span><span class="s2">             else:</span>
-<span class="g g-Whitespace">   </span><span class="mi">1161</span><span class="s2">                 return self._sslobj.read(len)</span>
+<span class="nn">/usr/local/lib/python3.10/dist-packages/bs4/__init__.py</span> in <span class="ni">endData</span><span class="nt">(self, containerClass)</span>
+<span class="g g-Whitespace">    </span><span class="mi">569</span>                 <span class="n">strippable</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="g g-Whitespace">    </span><span class="mi">570</span>                 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">current_data</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">571</span>                     <span class="k">if</span> <span class="n">i</span> <span class="ow">not</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">ASCII_SPACES</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">572</span>                         <span class="n">strippable</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="g g-Whitespace">    </span><span class="mi">573</span>                         <span class="k">break</span>
 
 <span class="ne">KeyboardInterrupt</span>: 
 </pre></div>
@@ -3016,6 +2987,10 @@ Banyak dataset : 1065
 <section id="lda">
 <h2>LDA<a class="headerlink" href="#lda" title="Permalink to this heading">#</a></h2>
 <p>LDA (Latent Dirichlet Allocation) adalah sebuah model generatif probabilistik yang digunakan untuk mengidentifikasi topik-topik utama yang muncul dalam suatu koleksi dokumen. LDA bekerja dengan asumsi bahwa setiap dokumen dalam koleksi dapat direpresentasikan sebagai campuran dari beberapa topik, dan setiap kata dalam dokumen diberikan oleh salah satu topik tersebut. LDA membantu mengungkap struktur topikal yang tersembunyi dalam korpus teks.</p>
+<section id="perhitungan-manual-lda">
+<h3>Perhitungan Manual LDA<a class="headerlink" href="#perhitungan-manual-lda" title="Permalink to this heading">#</a></h3>
+<p>Berikut merupakan Link Perhitungan manual:<br />
+<a class="reference external" href="https://docs.google.com/spreadsheets/d/1atPUOx-81Ru8F2GOEbriV2owdXUBeG4vcmiFjUh26kQ/edit?usp=sharing">https://docs.google.com/spreadsheets/d/1atPUOx-81Ru8F2GOEbriV2owdXUBeG4vcmiFjUh26kQ/edit?usp=sharing</a></p>
 <p>Rumus:</p>
 <blockquote>
 <div><p><span class="math notranslate nohighlight">\(p(Wj|t_k,d_i) = p(t_k|d_i) × p(W_j|t_k)\)</span></p>
@@ -3038,7 +3013,7 @@ V = banyak kata atau vocabolary
 a = parameter Dirichlet untuk distribusi topik dokumen.<br />
 b = parameter Dirichlet untuk distribusi kata topik.</p>
 <section id="inisial-x-dan-y">
-<h3>Inisial X dan y<a class="headerlink" href="#inisial-x-dan-y" title="Permalink to this heading">#</a></h3>
+<h4>Inisial X dan y<a class="headerlink" href="#inisial-x-dan-y" title="Permalink to this heading">#</a></h4>
 <p>var X digunakan untuk LDA dan sebelumnya akan dilakukan splitting dahulu yang dibutuhkan hanyalah hasil vectorizer saja</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -3596,7 +3571,7 @@ Name: Kategori, Length: 1065, dtype: object
 </div>
 </section>
 <section id="splitting-data">
-<h3>Splitting data<a class="headerlink" href="#splitting-data" title="Permalink to this heading">#</a></h3>
+<h4>Splitting data<a class="headerlink" href="#splitting-data" title="Permalink to this heading">#</a></h4>
 <p>Splitting data adalah proses membagi dataset menjadi dua subset yang berbeda: satu subset untuk melatih model (training set) dan yang lainnya untuk menguji model (test set). Tujuan dari splitting data adalah untuk mengukur sejauh mana model yang dilatih di atas data pelatihan dapat diharapkan berperforma ketika diberikan data yang belum pernah dilihat sebelumnya.</p>
 <p>Pada umumnya, dataset dibagi menjadi dua bagian: training set dan test set. Ada juga pendekatan lain, seperti menggunakan validation set selain dari training set dan test set untuk melakukan penyetelan parameter model. dalam proses ini akan menggunakan modul <code class="docutils literal notranslate"><span class="pre">train_test_split</span></code> dari Scikit-Learn untuk membagi dataset menjadi subset pelatihan (training) dan pengujian (testing).</p>
 <ul class="simple">
@@ -3639,7 +3614,7 @@ Name: Kategori, Length: 1065, dtype: object
 </ul>
 </section>
 <section id="pencarian-best-model-lda-dan-model">
-<h3>Pencarian best model LDA dan Model<a class="headerlink" href="#pencarian-best-model-lda-dan-model" title="Permalink to this heading">#</a></h3>
+<h4>Pencarian best model LDA dan Model<a class="headerlink" href="#pencarian-best-model-lda-dan-model" title="Permalink to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.decomposition</span> <span class="kn">import</span> <span class="n">LatentDirichletAllocation</span>
@@ -3798,6 +3773,7 @@ Jumlah Topik: 12, Alpha: 0.1, Beta: 0.2, Accuracy: 0.5821596244131455
 <li><p>Proses ini diulang untuk semua kombinasi model, jumlah topik, alpha, dan beta yang mungkin.</p></li>
 </ol>
 <p>Hasil akhir dari proses ini adalah parameter terbaik (<code class="docutils literal notranslate"><span class="pre">best_param</span></code>), model terbaik (<code class="docutils literal notranslate"><span class="pre">best_model</span></code>), model LDA terbaik (<code class="docutils literal notranslate"><span class="pre">best_lda</span></code>), dan daftar hasil dari setiap kombinasi (<code class="docutils literal notranslate"><span class="pre">results</span></code>).</p>
+</section>
 </section>
 <section id="grafik">
 <h3>Grafik<a class="headerlink" href="#grafik" title="Permalink to this heading">#</a></h3>
@@ -4440,18 +4416,27 @@ Jumlah Topik: 12, Alpha: 0.1, Beta: 0.2, Accuracy: 0.5821596244131455
   </div>
 </div></div>
 </div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_history</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s2">&quot;history.csv&quot;</span><span class="p">,</span><span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
 </section>
 <section id="best-akurasi">
 <h4>Best Akurasi<a class="headerlink" href="#best-akurasi" title="Permalink to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">([</span><span class="n">best_param</span><span class="p">])</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_bestParam</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">([</span><span class="n">best_param</span><span class="p">])</span>
+<span class="n">df_bestParam</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s2">&quot;best param.csv&quot;</span><span class="p">,</span><span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">df_bestParam</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-ccf4cd52-f131-44e2-a752-7b804bb7549d" class="colab-df-container">
+  <div id="df-a4e5674c-3196-48a2-8bbf-2feb7f3d92ae" class="colab-df-container">
     <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -4496,7 +4481,7 @@ Jumlah Topik: 12, Alpha: 0.1, Beta: 0.2, Accuracy: 0.5821596244131455
     <div class="colab-df-buttons">
 
   <div class="colab-df-container">
-    <button class="colab-df-convert" onclick="convertToInteractive('df-ccf4cd52-f131-44e2-a752-7b804bb7549d')"
+    <button class="colab-df-convert" onclick="convertToInteractive('df-a4e5674c-3196-48a2-8bbf-2feb7f3d92ae')"
             title="Convert this dataframe to an interactive table."
             style="display:none;">
 
@@ -4548,12 +4533,12 @@ Jumlah Topik: 12, Alpha: 0.1, Beta: 0.2, Accuracy: 0.5821596244131455
 
     <script>
       const buttonEl =
-        document.querySelector('#df-ccf4cd52-f131-44e2-a752-7b804bb7549d button.colab-df-convert');
+        document.querySelector('#df-a4e5674c-3196-48a2-8bbf-2feb7f3d92ae button.colab-df-convert');
       buttonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
 
       async function convertToInteractive(key) {
-        const element = document.querySelector('#df-ccf4cd52-f131-44e2-a752-7b804bb7549d');
+        const element = document.querySelector('#df-a4e5674c-3196-48a2-8bbf-2feb7f3d92ae');
         const dataTable =
           await google.colab.kernel.invokeFunction('convertToInteractive',
                                                     [key], {});
@@ -5021,14 +5006,15 @@ Jumlah Topik: 12, Alpha: 0.1, Beta: 0.2, Accuracy: 0.5821596244131455
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Output distribusi kata pada topik</span>
-<span class="n">proporsi_topik_kata</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">model_lda</span><span class="o">.</span><span class="n">components_</span><span class="p">,</span><span class="n">columns</span><span class="o">=</span><span class="n">terms</span><span class="p">,</span><span class="n">index</span> <span class="o">=</span> <span class="n">koloms</span><span class="p">)</span>
+<span class="n">proporsi_topik_kata</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">model_lda</span><span class="o">.</span><span class="n">components_</span><span class="p">,</span><span class="n">columns</span><span class="o">=</span><span class="n">terms</span><span class="p">)</span>
+<span class="n">proporsi_topik_kata</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;Topik&quot;</span><span class="p">,</span> <span class="n">koloms</span><span class="p">)</span>
 <span class="n">proporsi_topik_kata</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-473d847d-052f-46a9-a044-ea9e63f459e2" class="colab-df-container">
+  <div id="df-45ccfc4c-5cf5-4e63-b6f9-68838865febf" class="colab-df-container">
     <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -5047,6 +5033,7 @@ Jumlah Topik: 12, Alpha: 0.1, Beta: 0.2, Accuracy: 0.5821596244131455
   <thead>
     <tr style="text-align: right;">
       <th></th>
+      <th>Topik</th>
       <th>aac</th>
       <th>aan</th>
       <th>abad</th>
@@ -5056,7 +5043,6 @@ Jumlah Topik: 12, Alpha: 0.1, Beta: 0.2, Accuracy: 0.5821596244131455
       <th>abang</th>
       <th>abbey</th>
       <th>abd</th>
-      <th>abdel</th>
       <th>...</th>
       <th>zuhdiar</th>
       <th>zuhri</th>
@@ -5072,7 +5058,8 @@ Jumlah Topik: 12, Alpha: 0.1, Beta: 0.2, Accuracy: 0.5821596244131455
   </thead>
   <tbody>
     <tr>
-      <th>Topik 1</th>
+      <th>0</th>
+      <td>Topik 1</td>
       <td>0.2</td>
       <td>0.200000</td>
       <td>0.238902</td>
@@ -5081,7 +5068,6 @@ Jumlah Topik: 12, Alpha: 0.1, Beta: 0.2, Accuracy: 0.5821596244131455
       <td>0.248512</td>
       <td>0.2</td>
       <td>0.20000</td>
-      <td>0.200000</td>
       <td>0.200000</td>
       <td>...</td>
       <td>0.266724</td>
@@ -5096,7 +5082,8 @@ Jumlah Topik: 12, Alpha: 0.1, Beta: 0.2, Accuracy: 0.5821596244131455
       <td>0.2</td>
     </tr>
     <tr>
-      <th>Topik 2</th>
+      <th>1</th>
+      <td>Topik 2</td>
       <td>0.2</td>
       <td>0.200000</td>
       <td>0.200000</td>
@@ -5106,7 +5093,6 @@ Jumlah Topik: 12, Alpha: 0.1, Beta: 0.2, Accuracy: 0.5821596244131455
       <td>0.2</td>
       <td>0.26157</td>
       <td>0.336821</td>
-      <td>0.200000</td>
       <td>...</td>
       <td>0.200000</td>
       <td>0.200000</td>
@@ -5120,7 +5106,8 @@ Jumlah Topik: 12, Alpha: 0.1, Beta: 0.2, Accuracy: 0.5821596244131455
       <td>0.2</td>
     </tr>
     <tr>
-      <th>Topik 3</th>
+      <th>2</th>
+      <td>Topik 3</td>
       <td>0.2</td>
       <td>0.200001</td>
       <td>0.200000</td>
@@ -5130,7 +5117,6 @@ Jumlah Topik: 12, Alpha: 0.1, Beta: 0.2, Accuracy: 0.5821596244131455
       <td>0.2</td>
       <td>0.20000</td>
       <td>0.200000</td>
-      <td>0.233606</td>
       <td>...</td>
       <td>0.200000</td>
       <td>0.200000</td>
@@ -5144,7 +5130,8 @@ Jumlah Topik: 12, Alpha: 0.1, Beta: 0.2, Accuracy: 0.5821596244131455
       <td>0.2</td>
     </tr>
     <tr>
-      <th>Topik 4</th>
+      <th>3</th>
+      <td>Topik 4</td>
       <td>0.2</td>
       <td>0.200000</td>
       <td>0.200000</td>
@@ -5154,7 +5141,6 @@ Jumlah Topik: 12, Alpha: 0.1, Beta: 0.2, Accuracy: 0.5821596244131455
       <td>0.2</td>
       <td>0.20000</td>
       <td>0.200000</td>
-      <td>0.200000</td>
       <td>...</td>
       <td>0.200000</td>
       <td>0.200000</td>
@@ -5168,7 +5154,8 @@ Jumlah Topik: 12, Alpha: 0.1, Beta: 0.2, Accuracy: 0.5821596244131455
       <td>0.2</td>
     </tr>
     <tr>
-      <th>Topik 5</th>
+      <th>4</th>
+      <td>Topik 5</td>
       <td>0.2</td>
       <td>0.216417</td>
       <td>0.200000</td>
@@ -5178,7 +5165,6 @@ Jumlah Topik: 12, Alpha: 0.1, Beta: 0.2, Accuracy: 0.5821596244131455
       <td>0.2</td>
       <td>0.20000</td>
       <td>0.200000</td>
-      <td>0.200000</td>
       <td>...</td>
       <td>0.200000</td>
       <td>0.200000</td>
@@ -5192,7 +5178,8 @@ Jumlah Topik: 12, Alpha: 0.1, Beta: 0.2, Accuracy: 0.5821596244131455
       <td>0.2</td>
     </tr>
     <tr>
-      <th>Topik 6</th>
+      <th>5</th>
+      <td>Topik 6</td>
       <td>0.2</td>
       <td>0.259246</td>
       <td>0.200000</td>
@@ -5202,7 +5189,6 @@ Jumlah Topik: 12, Alpha: 0.1, Beta: 0.2, Accuracy: 0.5821596244131455
       <td>0.2</td>
       <td>0.20000</td>
       <td>0.200000</td>
-      <td>0.209292</td>
       <td>...</td>
       <td>0.431186</td>
       <td>0.638464</td>
@@ -5216,7 +5202,8 @@ Jumlah Topik: 12, Alpha: 0.1, Beta: 0.2, Accuracy: 0.5821596244131455
       <td>0.2</td>
     </tr>
     <tr>
-      <th>Topik 7</th>
+      <th>6</th>
+      <td>Topik 7</td>
       <td>0.2</td>
       <td>0.200000</td>
       <td>0.200000</td>
@@ -5225,7 +5212,6 @@ Jumlah Topik: 12, Alpha: 0.1, Beta: 0.2, Accuracy: 0.5821596244131455
       <td>0.200000</td>
       <td>0.2</td>
       <td>0.20000</td>
-      <td>0.200000</td>
       <td>0.200000</td>
       <td>...</td>
       <td>0.200000</td>
@@ -5241,12 +5227,12 @@ Jumlah Topik: 12, Alpha: 0.1, Beta: 0.2, Accuracy: 0.5821596244131455
     </tr>
   </tbody>
 </table>
-<p>7 rows × 18525 columns</p>
+<p>7 rows × 18526 columns</p>
 </div>
     <div class="colab-df-buttons">
 
   <div class="colab-df-container">
-    <button class="colab-df-convert" onclick="convertToInteractive('df-473d847d-052f-46a9-a044-ea9e63f459e2')"
+    <button class="colab-df-convert" onclick="convertToInteractive('df-45ccfc4c-5cf5-4e63-b6f9-68838865febf')"
             title="Convert this dataframe to an interactive table."
             style="display:none;">
 
@@ -5298,12 +5284,12 @@ Jumlah Topik: 12, Alpha: 0.1, Beta: 0.2, Accuracy: 0.5821596244131455
 
     <script>
       const buttonEl =
-        document.querySelector('#df-473d847d-052f-46a9-a044-ea9e63f459e2 button.colab-df-convert');
+        document.querySelector('#df-45ccfc4c-5cf5-4e63-b6f9-68838865febf button.colab-df-convert');
       buttonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
 
       async function convertToInteractive(key) {
-        const element = document.querySelector('#df-473d847d-052f-46a9-a044-ea9e63f459e2');
+        const element = document.querySelector('#df-45ccfc4c-5cf5-4e63-b6f9-68838865febf');
         const dataTable =
           await google.colab.kernel.invokeFunction('convertToInteractive',
                                                     [key], {});
@@ -5323,8 +5309,8 @@ Jumlah Topik: 12, Alpha: 0.1, Beta: 0.2, Accuracy: 0.5821596244131455
   </div>
 
 
-<div id="df-bb3ebd9c-1544-4f68-83e8-59924186c47e">
-  <button class="colab-df-quickchart" onclick="quickchart('df-bb3ebd9c-1544-4f68-83e8-59924186c47e')"
+<div id="df-744b755c-9461-4341-9b8c-d5c8ec0dd53f">
+  <button class="colab-df-quickchart" onclick="quickchart('df-744b755c-9461-4341-9b8c-d5c8ec0dd53f')"
             title="Suggest charts"
             style="display:none;">
 
@@ -5443,7 +5429,7 @@ Jumlah Topik: 12, Alpha: 0.1, Beta: 0.2, Accuracy: 0.5821596244131455
     }
     (() => {
       let quickchartButtonEl =
-        document.querySelector('#df-bb3ebd9c-1544-4f68-83e8-59924186c47e button');
+        document.querySelector('#df-744b755c-9461-4341-9b8c-d5c8ec0dd53f button');
       quickchartButtonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
     })();
@@ -6024,6 +6010,19 @@ zipp                             3.17.0
 </div>
 </div>
 </div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">joblib</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">joblib</span><span class="o">.</span><span class="n">__version__</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.3.2
+</pre></div>
+</div>
+</div>
+</div>
 </section>
 
     <script type="text/x-thebe-config">
@@ -6081,6 +6080,7 @@ zipp                             3.17.0
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#"><strong>Klasifikasi Berita AntaraNews Menggunakan Representasi Fitur LDA (Latenth Dirichlet Allocation)</strong></a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#aplikasi-implementasi-klasifikasi-berita">Aplikasi Implementasi Klasifikasi Berita</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#crawling-berita">Crawling Berita</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#import-library-dan-packages">Import Library dan Packages</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#setting-url-yang-akan-digunakan">Setting URL yang akan digunakan</a></li>
@@ -6105,9 +6105,12 @@ zipp                             3.17.0
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lda">LDA</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#inisial-x-dan-y">Inisial X dan y</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#splitting-data">Splitting data</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pencarian-best-model-lda-dan-model">Pencarian best model LDA dan Model</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#perhitungan-manual-lda">Perhitungan Manual LDA</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#inisial-x-dan-y">Inisial X dan y</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#splitting-data">Splitting data</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pencarian-best-model-lda-dan-model">Pencarian best model LDA dan Model</a></li>
+</ul>
+</li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#grafik">Grafik</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#dataframe-history">Dataframe history</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#best-akurasi">Best Akurasi</a></li>
